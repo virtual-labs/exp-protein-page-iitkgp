@@ -2,38 +2,125 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Electrophoresis is defined as the migration of _____to the ____charged electrode under the influence of an electric field",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Charged particles (ions), oppositely",
+        "b": "Uncharged particles (ions), similarly",
+        "c": "Uncharged particles (ions), oppositely",
+        "d": "Charged particles (ions), oppositely"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The electrophoretic mobility (μ) is the velocity of a macromolecule under a constant electric field. μ of a biomolecule is influenced by its",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Charge",
+        "b": "Mass",
+        "c": "Shape",
+        "d": "All of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "SDS-PAGE is an electrophoretic technique commonly used for analysing ________.",
+      "answers": {
+        "a": "DNA",
+        "b": "RNA",
+        "c": "Proteins",
+        "d": "Lipids"
       },
+      
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "In Polyacrylamide Gel Electrophoresis, proteins will migrate towards the ________.",
+      "answers": {
+        "a": "Cathode or positive electrode",
+        "b": "Anode or positive electrode",
+        "c": "Cathode or negitive electrode",
+        "d": "Anode or negitive electrode"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In SDS-PAGE, the protein molecules are separated on the basis of",
+      "answers": {
+        "a": "Charge",
+        "b": "Mass",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "To study a protein complex, which type of gel electrophoresis is preferred?",
+      "answers": {
+        "a": "SDS-PAGE",
+        "b": "Native PAGE",
+        "c": "Agarose gel electrophoresis",
+        "d": "2D Gel Electrophoresis"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In SDS-PAGE, _________ renders a uniform negative charge to the proteins.",
+      "answers": {
+        "a": "Sodium dodecyl sulphate",
+        "b": "Ammonium persulfate",
+        "c": "Beta-mercaptoethanol",
+        "d": "Both a and c"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Electrophoretic velocity (v) of the protein samples _________ with the increase in voltage.",
+      "answers": {
+        "a": "increases",
+        "b": "decreases",
+        "c": "remains unaffected",
+        "d": "may increase of decrease"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In reducing SDS-PAGE, _________ is used to break disulphide linkages in proteins.",
+      "answers": {
+        "a": "SDS",
+        "b": "Both a and d",
+        "c": "Heat",
+        "d": "Beta-mercaptoethanol"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "To visualize the protein bands after separation using SDS-PAGE, which of the stains is used?",
+      "answers": {
+        "a": "Coomassie Brilliant Blue staining",
+        "b": "Ethidium bromide staining",
+        "c": "Bromophenol blue staining",
+        "d": "Xylene cyanol staining"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     }
+   
   ]
 }
