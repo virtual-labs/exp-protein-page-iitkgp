@@ -1,24 +1,48 @@
 ## Introduction
 
 
-<b>Discipline | <b>Fill your discipline name here
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
+
+<b>Discipline | <b>School of Bioscience
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Experimental Biochemistry
+<b> Experiment|     <b> Analysis of proteins by separation using Polyacrylamide Gel Electrophoresis (PAGE) and experiment number 5
 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
+Polyacrylamide Gel Electrophoresis is used to separate biomolecules based on their differential
+electrophoretic mobility under a constant electric field due to differences in their mass. Among the different
+types of PAGE, BN-PAGE (Blue native-PAGE) is used to study protein complexes in their native state. Here,
+all the interactions between proteins in their folded form are retained. SDS-PAGE (Sodium dodecyl sulphate-
+PAGE) is used to separate denatured proteins uniformly coated with the anionic detergent SDS so that all the
+interacting monomers are separated and the electrophoretic mobility is influenced only by the mass of the
+protein molecules.
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+### Subject Matter Experts
+
+<b>Name of Developer | <b> Prof. Soumya De 
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  somde@iitkgp.ac.in
+<b> Department |  School of Bioscience
+
+<b>Name of Developer | <b>  Prof. Dibyendu Samanta 
+:--|:--|
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  dibyendu.samanta@iitkgp.ac.in
+<b> Department |  School of Bioscience
+
+### Developer and Integration Engineer
+
+SrNo | Name  | Department| Institute| 
+:--|:--|:--|:--|
+1 | **Prakriti Dhang** |  Department of Mechanical Engineering | IIT Kharagpur |
+
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+SrNo | Name | Designation | Department| Institute| 
+:--|:--|:--|:--|:--|
+1 | **Beas Mukherjee** | Research Scholar | School of Bioscience | IIT Kharagpur |
