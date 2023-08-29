@@ -35,7 +35,10 @@ TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 
 S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
 
+<div>
 <img src="images/sdspagegelpolymerization.png" width="30%">
+<p>Figure 1: The polymerization of acrylamide and bisacrylamide to form the polyacrylamide gel used in PAGE.</p>
+</div>
 
 The overall mobility of the protein samples in the polyacrylamide gel is proportional to the pore size, which
 is a function of the concentration of acrylamide (%T) as well as that of bisacrylamide (%C). The pore size
@@ -56,11 +59,18 @@ unfolds and linearizes it by binding at intervals of every 2 residues. The reduc
 or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein. So, in the gel monomers are
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
+<div>
 <img src="images/sdspageprinciple.png" width="30%">
+<p>Figure 2: The principle of SDS-PAGE</p>
+</div>
 
 The molecular weights of the protein samples can be determined from their relative mobility (as shown in
 Figure 3) using SDS-PAGE.
+
+<div>
 <img>
+<p>Figure3: </p>
+</div>
 
 ### SDS-PAGE is a discontinuous gel system
 To improve the resolution, a discontinuous system of stacking and resolving gel is used. The stacking gel
@@ -69,7 +79,10 @@ separation begins. The differences between the ionic strength and pH of the buff
 properties to the stacking and resolving gels. The former has high porosity and a Tris-Cl buffer pH of 6.8,
 the latter has smaller pores and a Tris-Cl buffer pH of 8.8 (Figure 4).
 
+<div>
 <img src="images/SDSPAGErun.png" width="30%">
+<p>Figure 4: Determination of molecular weight of proteins using SDS-PAGE.</p>
+</div>
 
 At the stacking gel, the counter ion (glycine) remains neutral (zwitter ion), and chloride ions act as the
 principal current carriers and migrate towards the anode. The negatively charged SDS-protein complexes are
