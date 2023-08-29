@@ -4,121 +4,121 @@
     {
       "question": "In PAGE, acrylamide and ________ polymerize to form the gel in SDS-PAGE.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Bisacrylamide",
+        "b": "APS",
+        "c": "SDS",
+        "d": "Polyethylene glycol"
       },
      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In the gel polymerization reaction, ammonium persulfate (APS) and TEMED act as",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Initiator (source of free radical) and catalyst respectively",
+        "b": "Catalyst and Initiator (source of free radical) respectively",
+        "c": "A bridge between two acrylamide molecule",
+        "d": "Non-ionic detergents"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The pore size of the gel in PAGE is the key player in the molecular sieving and separation of proteins. For studying proteins of small molecular weight, the gel must have",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Larger pores",
+        "b": "Smaller pores",
+        "c": "Preferably no pores",
+        "d": "Pore size may not matter"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In Laemmli buffer of SDS-PAGE, ________ is used as loading dye.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Coomassie Brilliant Blue",
+        "b": "Bromophenol Blue",
+        "c": "Acridine Orange",
+        "d": "Xylene Cyanol"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Glycerol is added to the protein samples before loading them into the wells of the gel. This is because",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Glycerol makes the samples dense and helps them to decent into the well.",
+        "b": "Glycerol provides a negative charge to the samples.",
+        "c": "Glycerol helps to maintain protein stability",
+        "d": "Glycerol helps to bind the proteins to SDS in SDS-PAGE."
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The pH of (i) stacking gel, (ii) resolving gel and (iii) tank buffer in SDS PAGE is _________respectively.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "(i) 8.30 (ii) 8.80 (iii) 6.80",
+        "b": "(i) 6.80 (ii) 8.80 (iii) 8.30",
+        "c": "(i) 8.30 (ii) 6.80 (iii) 8.80",
+        "d": "(i) 6.80 (ii) 8.80 (iii) 8.80"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "An SDS molecule binds at an interval of every _________ amino acids.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "4"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "For high-resolution study of protein separated by SDS-PAGE, which stating technique may be used?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Silver-staining",
+        "b": "Coomassie staining",
+        "c": "Avidin staining",
+        "d": "All of the above"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "If a protein sample shows a molecular weight of 100kDa in when analysed by PAGE and gives a band at 20kDa and another at 30kDa molecular weight in SDS-PAGE, what is the stoichiometry of the protein complex?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "An oligomer made of a homodimer with each monomer = 20kDa and another homodimer with each monomer = 30kDa",
+        "b": "An oligomer made of a homodimer with each monomer = 10kDa and another homodimer with each monomer = 15kDa",
+        "c": "An oligomer made of a homodimer with each monomer = 50kDa",
+        "d": "An oligomer made of a homodimer with each monomer = 40kDa and another homodimer with each monomer = 60kDa"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In BN-PAGE, the electrophoretic separation of the protein samples is based on _________.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Size of the proteins",
+        "b": "Charge of the proteins",
+        "c": "Shape of the complex",
+        "d": "All of the above"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]

@@ -33,9 +33,9 @@ gives a clear transparent gel with pores. This polymerization process is a free 
 Ammonium persulfate (APS) and catalyzed by N, N, N’N’-Tetramethylenediamine (TEMED) (Figure 1).
 TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 
-S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
+S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
 
-<img>
+<img src="images/sdspagegelpolymerization.png" width="30%">
 
 The overall mobility of the protein samples in the polyacrylamide gel is proportional to the pore size, which
 is a function of the concentration of acrylamide (%T) as well as that of bisacrylamide (%C). The pore size
@@ -56,7 +56,8 @@ unfolds and linearizes it by binding at intervals of every 2 residues. The reduc
 or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein. So, in the gel monomers are
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
-<img>
+<img src="images/sdspageprinciple.png" width="30%">
+
 The molecular weights of the protein samples can be determined from their relative mobility (as shown in
 Figure 3) using SDS-PAGE.
 <img>
@@ -68,7 +69,7 @@ separation begins. The differences between the ionic strength and pH of the buff
 properties to the stacking and resolving gels. The former has high porosity and a Tris-Cl buffer pH of 6.8,
 the latter has smaller pores and a Tris-Cl buffer pH of 8.8 (Figure 4).
 
-<img>
+<img src="images/SDSPAGErun.png" width="30%">
 
 At the stacking gel, the counter ion (glycine) remains neutral (zwitter ion), and chloride ions act as the
 principal current carriers and migrate towards the anode. The negatively charged SDS-protein complexes are
