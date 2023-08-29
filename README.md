@@ -8,7 +8,7 @@
 <b>Discipline | <b>School of Bioscience
 :--|:--|
 <b> Lab | <b> Experimental Biochemistry
-<b> Experiment|     <b> Analysis of proteins by separation using Polyacrylamide Gel Electrophoresis (PAGE) and experiment number 5
+<b> Experiment|     <b> Proteins analysis of polyacrylamide gel electrophoresis (PAGE) and experiment number 5
 
 ### About the Experiment 
 
