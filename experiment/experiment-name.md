@@ -1,1 +1,1 @@
-## Analysis of proteins by separation using Polyacrylamide Gel Electrophoresis (PAGE)
+## Proteins analysis of polyacrylamide gel electrophoresis (PAGE)
