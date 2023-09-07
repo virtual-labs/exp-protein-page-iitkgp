@@ -5,9 +5,9 @@
       "question": "Electrophoresis is defined as the migration of _____to the ____charged electrode under the influence of an electric field",
       "answers": {
         "a": "Charged particles (ions), oppositely",
-        "b": "Uncharged particles (ions), similarly",
+        "b": "Charged particles (ions), similarly",
         "c": "Uncharged particles (ions), oppositely",
-        "d": "Charged particles (ions), oppositely"
+        "d": "Either a or b"
       },
       
       "correctAnswer": "a",
