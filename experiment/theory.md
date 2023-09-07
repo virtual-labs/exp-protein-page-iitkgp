@@ -35,7 +35,7 @@ TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 
 S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
 
-<div>
+<div align="center">
 <img src="images/sdspagegelpolymerization.png" width="30%">
 <p>Figure 1: The polymerization of acrylamide and bisacrylamide to form the polyacrylamide gel used in PAGE.</p>
 </div>
@@ -45,7 +45,15 @@ is a function of the concentration of acrylamide (%T) as well as that of bisacry
 decreases with an increase in the acrylamide content (%T). Based on the molecular weight of the proteins to
 be analysed, gels of varying acrylamide content (hence different pore size) are used.
 
-<img>
+<div align="center">
+<img src="images/eqn3.png" width="30%">
+
+</div>
+
+<div align="center">
+<img src="images/Image.png" width="30%">
+
+</div>
 
 
 ### Types of PAGE
@@ -59,7 +67,7 @@ unfolds and linearizes it by binding at intervals of every 2 residues. The reduc
 or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein. So, in the gel monomers are
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
-<div>
+<div align="center">
 <img src="images/sdspageprinciple.png" width="30%">
 <p>Figure 2: The principle of SDS-PAGE</p>
 </div>
@@ -67,9 +75,9 @@ seen as distinct bands corresponding to their molecular weights (Figure 2).
 The molecular weights of the protein samples can be determined from their relative mobility (as shown in
 Figure 3) using SDS-PAGE.
 
-<div>
-<img>
-<p>Figure3: </p>
+<div align="center">
+<img src="images/Graph.png" width="30%">
+<p>Figure3: Determination of molecular weight of proteins using SDS-PAGE</p>
 </div>
 
 ### SDS-PAGE is a discontinuous gel system
@@ -79,7 +87,7 @@ separation begins. The differences between the ionic strength and pH of the buff
 properties to the stacking and resolving gels. The former has high porosity and a Tris-Cl buffer pH of 6.8,
 the latter has smaller pores and a Tris-Cl buffer pH of 8.8 (Figure 4).
 
-<div>
+<div align="center">
 <img src="images/SDSPAGErun.png" width="30%">
 <p>Figure 4: Determination of molecular weight of proteins using SDS-PAGE.</p>
 </div>
