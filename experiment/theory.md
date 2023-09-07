@@ -46,7 +46,7 @@ decreases with an increase in the acrylamide content (%T). Based on the molecula
 be analysed, gels of varying acrylamide content (hence different pore size) are used.
 
 <div align="center">
-<img src="images/eqn3.png" width="30%">
+<img src="images/Eqn3.png" width="30%">
 
 </div>
 
@@ -68,7 +68,7 @@ or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein.
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
 <div align="center">
-<img src="images/sdspageprinciple.png" width="30%">
+<img src="images/sdspageprinciple.png" width="40%">
 <p>Figure 2: The principle of SDS-PAGE</p>
 </div>
 
@@ -77,7 +77,7 @@ Figure 3) using SDS-PAGE.
 
 <div align="center">
 <img src="images/Graph.png" width="30%">
-<p>Figure3: Determination of molecular weight of proteins using SDS-PAGE</p>
+<p>Figure 3: Determination of molecular weight of proteins using SDS-PAGE</p>
 </div>
 
 ### SDS-PAGE is a discontinuous gel system
@@ -88,7 +88,7 @@ properties to the stacking and resolving gels. The former has high porosity and 
 the latter has smaller pores and a Tris-Cl buffer pH of 8.8 (Figure 4).
 
 <div align="center">
-<img src="images/SDSPAGErun.png" width="30%">
+<img src="images/SDSPAGErun.png" width="40%">
 <p>Figure 4: Determination of molecular weight of proteins using SDS-PAGE.</p>
 </div>
 
