@@ -1,13 +1,249 @@
+<!--
+Lab name: Experimental Biochemistry
+Exp name: Protein analysis of Polyacrylamide gel electrophoresis (PAGE)
+File name: index.html
+Developer: Prakriti Dhang
+-->
+
+
+
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+	<div class="container-fluid p-2 mt-2 ">
+
+
+
+		<div class="row ">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Instructions
+					</div>
+
+					<div class="card-body">
+						<ol id="inst1">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+
+						</ol>
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+
+
+			<!--/div>
+
+		<div class="row "-->
+			<div class="col-md-6">
+				<div class="card">
+
+
+					<div class="card-body">
+
+						<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
+						<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Click to
+							Start the Experiment</button>
+
+						<button class="btn btn-warning" type="button" id="restart" style="float: right;"
+							onclick="restartexp()">Re-Do the Experiment</button>
+					</div>
+				</div>
+
+				<div class="card p-2">
+					<!-- <div class="card-header fs-5 fw-bold">
+						Input Panels
+					</div> -->
+
+					<div class="card-body ">
+
+
+					</div>
+
+					<button class="btn btn-primary col-md-2 " type="button" id="gelprep" onclick="gel_resolve()"
+						disabled>Resolving Gel</button>
+
+				</div>
+
+				<div class="card p-2">
+					<!-- <div class="card-header fs-5 fw-bold">
+						Input Panels
+					</div> -->
+
+					<div class="card-body ">
+
+
+					</div>
+
+					<button class="btn btn-primary col-md-2" type="button" id="sampleprep" onclick="stacking_gel()"
+						disabled>Stacking Gel</button>
+
+				</div>
+
+				<div class="card p-2">
+					
+						<div class="card-body">
+							<button class="btn btn-primary" type="button" id="addbuffer" onclick="addbuffer()">Add Buffer
+							</button>
+
+						<button class="btn btn-primary" type="button" id="proteinsample" disabled onclick="protein_sample()">Protein Samples
+						</button>
+
+
+						<button class="btn btn-primary" type="button" id="gelrun" disabled onclick="start_ele()">Setting up Electrophoresis
+						</button>
+
+						<button class="btn btn-primary" type="button" id="staingel" onclick="staining()" disabled>Staining</button>
+						<button class="btn btn-primary" type="button" id="viewsample" onclick="view_sample_UVlight()">Visualization under UV light</button>
+
+						
+					
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="row ">
+		<div class="col-md-12">
+			<div class="card card-body border border-0">
+				<!-- <div class="card-header fs-5 fw-bold">
+						Experimental Setup
+					</div>
+					<div class=""> -->
+				<div class="img-container">
+
+					<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
+					<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
+					<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
+
+					<div id="cd1"></div>
+					<div id="cd2"></div>
+					<div id="cd3"></div>
+					<div id="cd4"></div>
+
+
+					<div id="cd5"></div>
+					<div id="cd6"></div>
+					<div id="cd7"></div>
+					<div id="cd8"></div>
+					<div id="cd9"></div>
+					<div id="cd10"></div>
+
+					<!--- sample load canvases -->
+
+                    <canvas id="sampleload1" style="border: 1px solid black;"></canvas>
+				<!-- 	<canvas id="sampleload2" style="border: 1px solid black;"></canvas>
+					<canvas id="sampleload3" style="border: 1px solid black;"></canvas>
+					<canvas id="sampleload4" style="border: 1px solid black;"></canvas> -->
+
+					<canvas id="canvasbufferfill" style="border: 1px solid black;"></canvas>
+					<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
+					<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
+					<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
+					<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
+					<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
+					<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
+					<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+				</div>
+				<!-- </div> -->
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Viewing message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>A desktop or laptop is the preferred choice for an enhanced viewing experience.</p>
+					<p> When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing
+						experience.</p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="start()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/jsplumb.js"></script>
+	<script src="./js/volconnection.js"></script>
+
+	<script>
+		// Get a reference to the canvas element
+		const canvas = document.getElementById('textvoltimer');
+
+		// Check if the browser supports the canvas element
+		if (canvas.getContext) {
+			// Get the 2D drawing context
+			const ctx = canvas.getContext('2d');
+
+			// Set font properties
+			ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+			// Set text properties
+			ctx.fillStyle = 'black'; // Text color
+			ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+			ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+			// Define the text to be displayed
+			const text = '';
+
+			// Get the position to place the text (in this case, centered on the canvas)
+			const x = canvas.width / 2;
+			const y = canvas.height / 2;
+
+			// Draw the text on the canvas
+			ctx.fillText(text, x, y);
+		} else {
+			// Canvas not supported, provide a fallback or error message
+			console.log('Canvas is not supported in this browser.');
+		}
+
+
+
+
+		
+	</script>
 </body>
+
 </html>
