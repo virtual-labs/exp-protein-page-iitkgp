@@ -12,7 +12,10 @@ Developer: Prakriti Dhang */
     display: inline-block;
 }
 
-
+.div-inline{
+    
+    display:inline-block;
+}
 
 #voltagetimer {
     position: relative;
@@ -22,21 +25,62 @@ Developer: Prakriti Dhang */
 }
 
 
-#setup {
+#topsetup {
+    position: absolute;
+    width: 20.6%;
+    top:120%; /* 120 -141*/
+    left: 4.8%;
+    
+}   
+
+#bottomsetup {
     position: absolute;
     width: 20%;
-    top:120%;
+    top:190%;
     left: 5%;
 }   
+
+#canvasbufferfill{
+    position: absolute;
+    width:11.7%;
+    height:79%;
+    top: 195%;
+    left: 9%; 
+}
 
 
 #sampleload1{
     position: absolute;
     width:1.5%;
-    top: 171.2%;
-    left: 15%;
+    top: 195%;
+    left: 9.5%;
+    z-index: 10;
 }
 
+
+#sampleload2{
+    position: absolute;
+    width:1.5%;
+    top: 195%;
+    left: 12.5%;
+    z-index: 10;
+}
+
+#sampleload3{
+    position: absolute;
+    width:1.5%;
+    top: 195%;
+    left: 15.5%;
+    z-index: 10;
+}
+
+#sampleload4{
+    position: absolute;
+    width:1.5%;
+    top: 195%;
+    left: 18.5%;
+    z-index: 10;
+}
 
 /* Connect negative -negative  , positive-positive*/
 
@@ -84,15 +128,15 @@ Developer: Prakriti Dhang */
 #cd1 {
     position: absolute;
     width: 0.8%;
-    top: 130.5%;
+    top: 150%;
     left: 6.9%;
 }
 
 #cd2 {
     position: absolute;
     width: 0.8%;
-    top: 130.5%;
-    left: 22.3%;
+    top: 150%;
+    left: 22.5%;
 }
 
 
@@ -165,20 +209,13 @@ path,
 }
 
 
-#canvasbufferfill{
-    position: absolute;
-    width:11.7%;
-    height:79%;
-    top: 170.8%;
-    left: 9%; 
-}
 
 #textvoltimer{
     position: absolute;
     width:4.8%;
     top: 27.8%;
     left: 15%;
-    z-index: 10;
+    z-index: 40;
 }
 
 
@@ -250,4 +287,58 @@ path,
     left: 85%;
     display: block;
     rotate:180deg;
+}
+
+#ladder{
+    position: absolute;
+    width: 18%;
+    top: 130%;
+    left: 50%;
+   
+}
+
+#tubesabcd{
+    position: absolute;
+    width: 14%;
+    top: 50%;
+    left: 50%;  
+}
+
+#peptitea{
+    position: absolute;
+    width: 2%;
+    top: 15%;
+    left: 51%;
+    cursor:pointer;
+    z-index: 2;
+    
+}
+
+#peptiteb{
+    position: absolute;
+    width: 2%;
+    top: 15%;
+    left: 55%;
+    cursor:pointer;
+    z-index: 2;
+    
+}
+
+#peptitec{
+    position: absolute;
+    width: 2%;
+    top: 15%;
+    left: 58%;
+    cursor:pointer;
+    z-index: 2;
+    
+}
+#peptited{
+    position: absolute;
+    width: 2%;
+    top: 15%;
+    left: 61.4%;
+    cursor:pointer;
+    z-index: 2;
+    
 }

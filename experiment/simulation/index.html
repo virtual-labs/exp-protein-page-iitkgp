@@ -24,7 +24,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-5">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -57,7 +57,7 @@ Developer: Prakriti Dhang
 			<!--/div>
 
 		<div class="row "-->
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<div class="card">
 
 
@@ -73,57 +73,69 @@ Developer: Prakriti Dhang
 					</div>
 				</div>
 
-				<div class="card p-2">
+				<div class="card ">
 					<!-- <div class="card-header fs-5 fw-bold">
 						Input Panels
 					</div> -->
 
 					<div class="card-body ">
+<table class="table table-bordered">
+	<tr>
+		
+		<td><button class="btn btn-primary col-md-4 " type="button" id="gelprep" onclick="gel_resolve()"
+			>Resolving Gel</button></td>
+	</tr>
 
+	<tr>
+		
+		<td><button class="btn btn-primary col-md-4" type="button" id="sampleprep" onclick="stacking_gel()"
+			>Stacking Gel</button>
+			
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+
+	<!-- <button class="btn btn-primary" type="button" id="proteinsample"  onclick="protein_sample()">Protein Samples
+	</button> -->
+	<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()">Add Buffer
+	</button>
+	<div class="dropdown div-inline">
+		<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button" data-bs-toggle="dropdown" >
+			Load Protein Samples
+		</button>
+		<ul class="dropdown-menu">
+		
+		  <li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" >Load Protein Sample A </a></li>
+		  <li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" >Load Protein Sample B </a></li>
+		  <li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" >Load Protein Sample C </a></li>
+		  <li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" >Load Protein Sample D </a></li>
+		</ul>
+	  </div>
+	
+	  </td>
+	</tr>
+
+	<tr>
+		
+		<td><button class="btn btn-primary" type="button" id="gelrun"  onclick="start_ele()" >Setting up Electrophoresis
+		</button></td>
+	</tr>
+	<tr>
+		
+		<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()" >Staining</button> 
+			<button class="btn btn-primary " type="button" id="viewsample" onclick="view_sample_UVlight()">Visualization under UV light</button></td>
+	</tr>
+	
+</table>
 
 					</div>
 
-					<button class="btn btn-primary col-md-2 " type="button" id="gelprep" onclick="gel_resolve()"
-						disabled>Resolving Gel</button>
-
-				</div>
-
-				<div class="card p-2">
-					<!-- <div class="card-header fs-5 fw-bold">
-						Input Panels
-					</div> -->
-
-					<div class="card-body ">
-
-
-					</div>
-
-					<button class="btn btn-primary col-md-2" type="button" id="sampleprep" onclick="stacking_gel()"
-						disabled>Stacking Gel</button>
-
-				</div>
-
-				<div class="card p-2">
-					
-						<div class="card-body">
-							<button class="btn btn-primary" type="button" id="addbuffer" onclick="addbuffer()">Add Buffer
-							</button>
-
-						<button class="btn btn-primary" type="button" id="proteinsample" disabled onclick="protein_sample()">Protein Samples
-						</button>
-
-
-						<button class="btn btn-primary" type="button" id="gelrun" disabled onclick="start_ele()">Setting up Electrophoresis
-						</button>
-
-						<button class="btn btn-primary" type="button" id="staingel" onclick="staining()" disabled>Staining</button>
-						<button class="btn btn-primary" type="button" id="viewsample" onclick="view_sample_UVlight()">Visualization under UV light</button>
-
-						
 					
 				</div>
 
-			</div>
+				
 		</div>
 
 	</div>
@@ -139,7 +151,7 @@ Developer: Prakriti Dhang
 				<div class="img-container">
 
 					<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
-					<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
+					<img src="./images/top-cover.png" class="img-fluid" id="topsetup" >
 					<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
 
 					<div id="cd1"></div>
@@ -155,12 +167,19 @@ Developer: Prakriti Dhang
 					<div id="cd9"></div>
 					<div id="cd10"></div>
 
+					<!-- samples and peptite-->
+					<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
+					<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
+					<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
+					<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
+					<img src="./images/peptited.png" class="img-fluid" id="peptited">
+
 					<!--- sample load canvases -->
 
                     <canvas id="sampleload1" style="border: 1px solid black;"></canvas>
-				<!-- 	<canvas id="sampleload2" style="border: 1px solid black;"></canvas>
+				<canvas id="sampleload2" style="border: 1px solid black;"></canvas>
 					<canvas id="sampleload3" style="border: 1px solid black;"></canvas>
-					<canvas id="sampleload4" style="border: 1px solid black;"></canvas> -->
+					<canvas id="sampleload4" style="border: 1px solid black;"></canvas> 
 
 					<canvas id="canvasbufferfill" style="border: 1px solid black;"></canvas>
 					<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
@@ -171,6 +190,9 @@ Developer: Prakriti Dhang
 					<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
 					<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+
+						<img src="./images/ladder.png" class="img-fluid" id="ladder">
+
 				</div>
 				<!-- </div> -->
 
