@@ -63,26 +63,125 @@ function addbuffer(){
 }
 
 function protein_sample(){
-    document.getElementById("gelrun").disabled=false;
+  document.getElementById("gelrun").disabled=false;
 }
 
 
-
+var imgtopsetup = null;
 function start_ele(){
     document.getElementById("staingel").disabled=false;
     document.getElementById("cvt").style.display="block";
     document.getElementById("crun").style.display="block";
+    var topsetup = document.getElementById("topsetup");
+ 
+  var topsetupt =120; //initial  position
+  clearInterval(imgtopsetup);
+  //clearInterval(imgtbdown);
+  imgtopsetup = setInterval(frame, 10); /* frame is 10 denotes the speed of the movement*/
+
+  function frame() {
+    if (topsetupt == 141) {
+
+      clearInterval(imgtopsetup);
+     
+    
+      //imgtbdown = setInterval(frame, 20);
+     
+
+    } else {
+
+      topsetupt++;
+      topsetup.style.top = topsetupt + '%';
+
+    }
+  }
+
 }
 
 function txtvolt(){
     document.getElementById("cvp").style.display="block";
+    const canvas = document.getElementById('textvoltimer');
+  var volt = 0;
+  // Check if the browser supports the canvas element
+
+  // Get the 2D drawing context
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Set font properties
+  ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+  // Set text properties
+  ctx.fillStyle = 'black'; // Text color
+  ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+  ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+  // Define the text to be displayed
+  const text = volt;
+
+  // Get the position to place the text (in this case, centered on the canvas)
+  const x = canvas.width / 2;
+  const y = canvas.height / 2;
+
+  // Draw the text on the canvas
+  ctx.fillText(text, x, y);
 }
+
+var volt = 10;
  function txtvoltp(){
     document.getElementById("cvn").style.display="block";
+    const canvas = document.getElementById('textvoltimer');
+
+
+  // Get the 2D drawing context
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Set font properties
+  ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+  // Set text properties
+  ctx.fillStyle = 'black'; // Text color
+  ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+  ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+  // Define the text to be displayed
+  const text = volt;
+
+
+  // Get the position to place the text (in this case, centered on the canvas)
+  const x = canvas.width / 2;
+  const y = canvas.height / 2;
+
+  // Draw the text on the canvas
+  ctx.fillText(text, x, y);
+
+  volt = volt + 10;
 
  }
 function txtvoltd(){
+  const canvas = document.getElementById('textvoltimer');
 
+
+  // Get the 2D drawing context
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Set font properties
+  ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+  // Set text properties
+  ctx.fillStyle = 'black'; // Text color
+  ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+  ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+  volt = volt - 10;
+  // Define the text to be displayed
+  const text = volt;
+
+
+  // Get the position to place the text (in this case, centered on the canvas)
+  const x = canvas.width / 2;
+  const y = canvas.height / 2;
+
+  // Draw the text on the canvas
+  ctx.fillText(text, x, y);
 }
 
 function runningel(){
@@ -90,11 +189,12 @@ function runningel(){
   if(volt == null){
 alert("Enter volt between 80 and 120");
   }
-  else if( volt >=80 || volt<=120){
-    rungelsample();
+  else if( volt <80 || volt > 120){
+    alert("Enter volt between 80 and 120");
   }
   else{
-    alert("Enter volt between 80 and 120");
+    
+    rungelsample();
   }
 }
 

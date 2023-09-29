@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "In PAGE, acrylamide and ________ polymerize to form the gel in SDS-PAGE.",
+      "question": "1. In PAGE, acrylamide and ________ polymerize to form the gel in SDS-PAGE.",
       "answers": {
         "a": "Bisacrylamide",
         "b": "APS",
@@ -14,7 +14,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "In the gel polymerization reaction, ammonium persulfate (APS) and TEMED act as",
+      "question": "2. In the gel polymerization reaction, ammonium persulfate (APS) and TEMED act as",
       "answers": {
         "a": "Initiator (source of free radical) and catalyst respectively",
         "b": "Catalyst and Initiator (source of free radical) respectively",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The pore size of the gel in PAGE is the key player in the molecular sieving and separation of proteins. For studying proteins of small molecular weight, the gel must have",
+      "question": "3. The pore size of the gel in PAGE is the key player in the molecular sieving and separation of proteins. For studying proteins of small molecular weight, the gel must have",
       "answers": {
         "a": "Larger pores",
         "b": "Smaller pores",
@@ -38,7 +38,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "In Laemmli buffer of SDS-PAGE, ________ is used as loading dye.",
+      "question": "4. In Laemmli buffer of SDS-PAGE, ________ is used as loading dye.",
       "answers": {
         "a": "Coomassie Brilliant Blue",
         "b": "Bromophenol Blue",
@@ -50,7 +50,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Glycerol is added to the protein samples before loading them into the wells of the gel. This is because",
+      "question": "5. Glycerol is added to the protein samples before loading them into the wells of the gel. This is because",
       "answers": {
         "a": "Glycerol makes the samples dense and helps them to decent into the well.",
         "b": "Glycerol provides a negative charge to the samples.",
@@ -62,7 +62,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The pH of (i) stacking gel, (ii) resolving gel and (iii) tank buffer in SDS PAGE is _________respectively.",
+      "question": "6. The pH of (i) stacking gel, (ii) resolving gel and (iii) tank buffer in SDS PAGE is _________respectively.",
       "answers": {
         "a": "(i) 8.30 (ii) 8.80 (iii) 6.80",
         "b": "(i) 6.80 (ii) 8.80 (iii) 8.30",
@@ -74,7 +74,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "An SDS molecule binds at an interval of every _________ amino acids.",
+      "question": "7. An SDS molecule binds at an interval of every _________ amino acids.",
       "answers": {
         "a": "2",
         "b": "3",
@@ -86,7 +86,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For high-resolution study of protein separated by SDS-PAGE, which stating technique may be used?",
+      "question": "8. For high-resolution study of protein separated by SDS-PAGE, which stating technique may be used?",
       "answers": {
         "a": "Silver-staining",
         "b": "Coomassie staining",
@@ -98,7 +98,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If a protein sample shows a molecular weight of 100kDa in when analysed by PAGE and gives a band at 20kDa and another at 30kDa molecular weight in SDS-PAGE, what is the stoichiometry of the protein complex?",
+      "question": "9. If a protein sample shows a molecular weight of 100kDa in when analysed by PAGE and gives a band at 20kDa and another at 30kDa molecular weight in SDS-PAGE, what is the stoichiometry of the protein complex?",
       "answers": {
         "a": "An oligomer made of a homodimer with each monomer = 20kDa and another homodimer with each monomer = 30kDa",
         "b": "An oligomer made of a homodimer with each monomer = 10kDa and another homodimer with each monomer = 15kDa",
@@ -110,7 +110,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "In BN-PAGE, the electrophoretic separation of the protein samples is based on _________.",
+      "question": "10. In BN-PAGE, the electrophoretic separation of the protein samples is based on _________.",
       "answers": {
         "a": "Size of the proteins",
         "b": "Charge of the proteins",
