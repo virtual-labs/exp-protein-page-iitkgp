@@ -97,20 +97,20 @@ Developer: Prakriti Dhang
 		
 		<td>
 
-	<!-- <button class="btn btn-primary" type="button" id="proteinsample"  onclick="protein_sample()">Protein Samples
-	</button> -->
+	<button class="btn btn-primary" type="button" id="prepproteinsample"  onclick="preprotein_sample()">Prepare Protein Samples
+	</button> 
 	<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()">Add Buffer
 	</button>
 	<div class="dropdown div-inline">
-		<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button" data-bs-toggle="dropdown" >
-			Load Protein Samples
+		<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"  data-bs-toggle="dropdown" >
+			Load Samples
 		</button>
 		<ul class="dropdown-menu">
 		
-		  <li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" >Load Protein Sample A </a></li>
-		  <li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" >Load Protein Sample B </a></li>
-		  <li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" >Load Protein Sample C </a></li>
-		  <li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" >Load Protein Sample D </a></li>
+		  <li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"  >Load  Sample A </a></li>
+		  <li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" >Load Sample B </a></li>
+		  <li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" >Load  Sample C </a></li>
+		  <li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" >Load  Sample D </a></li>
 		</ul>
 	  </div>
 	
@@ -176,17 +176,28 @@ Developer: Prakriti Dhang
 
 					<!--- sample load canvases -->
 
-                    <canvas id="sampleload1" style="border: 1px solid black;"></canvas>
-				<canvas id="sampleload2" style="border: 1px solid black;"></canvas>
-					<canvas id="sampleload3" style="border: 1px solid black;"></canvas>
-					<canvas id="sampleload4" style="border: 1px solid black;"></canvas> 
+                    <canvas id="sampleload1" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+				<canvas id="sampleload2" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+					<canvas id="sampleload3" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+					<canvas id="sampleload4" style="border: 1px solid rgb(150, 148, 148);"></canvas> 
 
-					<canvas id="canvasbufferfill" style="border: 1px solid black;"></canvas>
+					<canvas id="canvasbufferfill" style="border: 0px solid black;"></canvas>
 					<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
 					<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
 					<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
 					<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
 					<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
+				
+<!-- sample  top to bottom movement-->
+<canvas id="sample1" style="border: 0px solid black;"></canvas>
+<canvas id="sample2" style="border: 0px solid black;"></canvas>
+	<canvas id="sample3" style="border: 0px solid black;"></canvas>
+	<canvas id="sample4" style="border: 0px solid black;"></canvas> 
+
+	<div id="rotatingElement"></div>
+	<div id="rotatingElementbowl"></div>
+
+	<img src="./images/staining.png" class="img-fluid" id="staining">
 					<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
 					<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
