@@ -583,18 +583,68 @@ jsPlumb.ready(function () {
             //document.getElementById("samplerun").disabled = true;
         } else {
             alert("WRONG CONNECTION");
+            const canvas = document.getElementById('textvoltimer');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Set font properties
+            ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+          
+            // Set text properties
+            ctx.fillStyle = 'black'; // Text color
+            ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+            ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+          
+            // Define the text to be displayed
+            const text = " ";
+          
+            // Get the position to place the text (in this case, centered on the canvas)
+            const x = canvas.width / 2;
+            const y = canvas.height / 2;
+          
+            // Draw the text on the canvas
+            ctx.fillText(text, x, y);
+                      return;
+    
             return;
         }
 
 
 
     });
+
+
+    document.getElementById('cstop').addEventListener('click', function () {
+        // Delete all connections
+        instance.deleteEveryConnection();
+
+        document.getElementById("staingel").disabled=false;
+        document.getElementById("gelrun").disabled = true;
+        const canvas = document.getElementById('textvoltimer');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Set font properties
+        ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+      
+        // Set text properties
+        ctx.fillStyle = 'black'; // Text color
+        ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+        ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+      
+        // Define the text to be displayed
+        const text = " ";
+      
+        // Get the position to place the text (in this case, centered on the canvas)
+        const x = canvas.width / 2;
+        const y = canvas.height / 2;
+      
+        // Draw the text on the canvas
+        ctx.fillText(text, x, y);
+                  return;
+
+
+    });
+	
 });
 
-
-
-function deleteconnection() {
-    window.location.reload();
-}
 
 

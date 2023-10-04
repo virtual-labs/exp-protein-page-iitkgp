@@ -3,18 +3,19 @@ Exp name: Protein analysis of Polyacrylamide gel electrophoresis (PAGE)
 File name: main.css
 Developer: Prakriti Dhang */
 
-.card{
+.card {
     margin-bottom: 5px;
 
 }
+
 .img-container {
     position: relative;
     display: inline-block;
 }
 
-.div-inline{
-    
-    display:inline-block;
+.div-inline {
+
+    display: inline-block;
 }
 
 #voltagetimer {
@@ -28,93 +29,95 @@ Developer: Prakriti Dhang */
 #topsetup {
     position: absolute;
     width: 20.6%;
-    top:120%; /* 120 -141*/
+    top: 120%;
+    /* 120 -141*/
     left: 4.8%;
-    
-}   
+
+}
 
 #bottomsetup {
     position: absolute;
     width: 20%;
-    top:190%;
+    top: 190%;
     left: 5%;
-}   
+}
 
-#canvasbufferfill{
+#canvasbufferfill {
     position: absolute;
-    width:11.7%;
-    height:79%;
+    width: 11.7%;
+    height: 79%;
     top: 196%;
-    left: 9%; 
+    left: 9%;
 }
 
 
-#sampleload1{
+#sampleload1 {
     position: absolute;
-    width:1.5%;
+    width: 1.5%;
     top: 197%;
     left: 9.5%;
-    z-index: 10;
+
 }
 
 
-#sampleload2{
+#sampleload2 {
     position: absolute;
-    width:1.5%;
+    width: 1.5%;
     top: 197%;
     left: 12.5%;
-    z-index: 10;
+
 }
 
-#sampleload3{
+#sampleload3 {
     position: absolute;
-    width:1.5%;
+    width: 1.5%;
     top: 197%;
     left: 15.5%;
-    z-index: 10;
+
 }
 
-#sampleload4{
+#sampleload4 {
     position: absolute;
-    width:1.5%;
+    width: 1.5%;
     top: 197%;
     left: 18.5%;
-    z-index: 10;
-}
- /* sample movement */
 
-#sample1{
+}
+
+/* sample movement */
+
+#sample1 {
     position: absolute;
-    width:1.5%;
-    height:72%;
+    width: 1.5%;
+    height: 72%;
     top: 197%;
     left: 9.5%;
     z-index: 10;
 }
 
 
-#sample2{
+#sample2 {
     position: absolute;
-    width:1.5%;
-    height:72%;
+    width: 1.5%;
+    height: 72%;
     top: 197%;
     left: 12.5%;
     z-index: 10;
 }
 
-#sample3{
+#sample3 {
     position: absolute;
-    width:1.5%;
-    height:72%;
+    width: 1.5%;
+    height: 72%;
     top: 197%;
     left: 15.5%;
     z-index: 10;
 }
 
-#sample4{
+#sample4 {
     position: absolute;
-    width:1.5%;
-    height:72%;
+    width: 1.5%;
+    height: 72%;
     top: 197%;
     left: 18.5%;
     z-index: 10;
@@ -192,11 +195,12 @@ Developer: Prakriti Dhang */
 #cd4 {
     position: absolute;
     width: 1%;
-    top:30.5%;
+    top: 30.5%;
     left: 9.5%;
 
 }
- #cd5 {
+
+#cd5 {
     position: absolute;
     width: 0.8%;
     top: 69.5%;
@@ -220,7 +224,7 @@ Developer: Prakriti Dhang */
 #cd8 {
     position: absolute;
     width: 1%;
-    top:30.5%;
+    top: 30.5%;
     left: 26.5%;
 
 }
@@ -252,19 +256,19 @@ path,
 
 
 
-#textvoltimer{
+#textvoltimer {
     position: absolute;
-    width:4.8%;
+    width: 4.8%;
     top: 27.8%;
     left: 15%;
     z-index: 40;
 }
 
 
-#cvt{
+#cvt {
     position: absolute;
-    width:1.5%;
-    height:10.5%;
+    width: 1.5%;
+    height: 10.5%;
     top: 25%;
     left: 12%;
     z-index: 10;
@@ -272,10 +276,10 @@ path,
     display: none;
 }
 
-#cvp{
+#cvp {
     position: absolute;
-    width:1.5%;
-    height:10.5%;
+    width: 1.5%;
+    height: 10.5%;
     top: 25%;
     left: 21.52%;
     z-index: 10;
@@ -284,10 +288,10 @@ path,
 }
 
 
-#cvn{
+#cvn {
     position: absolute;
-    width:1.5%;
-    height:10.5%;
+    width: 1.5%;
+    height: 10.5%;
     top: 41%;
     left: 21.5%;
     z-index: 10;
@@ -295,10 +299,10 @@ path,
     display: none;
 }
 
-#crun{
+#crun {
     position: absolute;
-    width:1.5%;
-    height:10.5%;
+    width: 1.5%;
+    height: 10.5%;
     top: 68%;
     left: 15.2%;
     z-index: 10;
@@ -306,119 +310,144 @@ path,
     display: none;
 }
 
-#uv-machine{
+#cstop {
+    position: absolute;
+    width: 2.3%;
+    height: 10.2%;
+    top: 68%;
+    left: 11.8%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#uv-machine {
     position: absolute;
     width: 30%;
-    top:130%;
+    top: 130%;
     left: 70%;
 }
 
-#myCanvasuv1{
+#myCanvasuv1 {
     position: absolute;
     width: 15%;
-    height:120%;
+    height: 120%;
     top: 163%;
     left: 71%;
     display: block;
 }
+
 #myCanvasuv2 {
     position: absolute;
     width: 14%;
-    height:120%;
+    height: 120%;
     top: 163%;
     left: 85%;
     display: block;
-    rotate:180deg;
+    rotate: 180deg;
 }
 
-#ladder{
-    position: absolute;
-    width: 18%;
-    top: 130%;
-    left: 50%;
-    display: none;
-   
-}
-
-#tubesabcd{
+#ladder {
     position: absolute;
     width: 14%;
+    top: 150%;
+    left: 55.6%;
+    display: none;
+
+}
+
+#buffer{
+    position: absolute;
+    width: 5%;
+    top: 30%;
+    left: 80%;
+    display: none;
+    cursor:pointer
+}
+
+#tubesabcd {
+    position: absolute;
+    width: 11%;
     top: 50%;
-    left: 50%;  
+    left: 50%;
     display: none;
 }
 
-#peptitea{
+#peptitea {
     position: absolute;
     width: 2%;
-    top: 15%;
-    left: 51%;
-    cursor:pointer;
+    top: 6%;
+    left: 50.9%;
+    cursor: pointer;
     z-index: 2;
     display: none;
-    
+
+
 }
 
-#peptiteb{
+#peptiteb {
     position: absolute;
     width: 2%;
-    top: 15%;
-    left: 55%;
-    cursor:pointer;
+    top: 6%;
+    left: 53.8%;
+    cursor: pointer;
     z-index: 2;
     display: none;
-    
+
 }
 
-#peptitec{
+#peptitec {
     position: absolute;
     width: 2%;
-    top: 15%;
-    left: 58%;
-    cursor:pointer;
+    top: 6%;
+    left: 56.6%;
+    cursor: pointer;
     z-index: 2;
     display: none;
-    
-}
-#peptited{
-    position: absolute;
-    width: 2%;
-    top: 15%;
-    left: 61.4%;
-    cursor:pointer;
-    z-index: 2;
-    display: none;
-    
+
 }
 
-#staining{
+#peptited {
     position: absolute;
-    width: 25;
-    top: 200%;
-    left:42%;
-    cursor:pointer;
+    width: 2%;
+    top: 6%;
+    left: 59%;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+
+}
+
+#staining {
+    position: absolute;
+    width: 10%;
+    top: 258.5%;
+    left: 42%;
+    cursor: pointer;
 }
 
 #rotatingElement {
-    width:30%;
+    width: 23.7%;
     height: 30%;
     background-color: #b1dbf7;
-    position:absolute;
+    position: absolute;
     margin: 50px auto;
-    border-radius: 0 0 100px 100px ; /* Border-radius for a semicircle */
-    top:143%;
-    left:35%;
-    z-index:10;
-  }
+    border-radius: 0 0 100px 100px;
+    /* Border-radius for a semicircle */
+    top: 210%;
+    left: 35%;
+    z-index: 10;
+}
 
-  #rotatingElementbowl {
-    width:31%;
-    height: 45%;
-   border: 1px solid black;
-    position:absolute;
+#rotatingElementbowl {
+    width: 25%;
+    height: 38%;
+    border: 3px solid black;
+    position: absolute;
     margin: 50px auto;
-    border-radius: 0 0 100px 100px ; /* Border-radius for a semicircle */
-    top:130%;
-    left:34.4%;
-    z-index:10;
-  }
+    border-radius: 0 0 100px 100px;
+    /* Border-radius for a semicircle */
+    top: 202%;
+    left: 34.4%;
+    z-index: 10;
+}

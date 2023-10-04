@@ -7,6 +7,10 @@ Developer: Prakriti Dhang */
 function start() {
   document.getElementById("gelprep").disabled = false;
   document.getElementById("start").disabled = true;
+  document.getElementById('loadsamplea').style.pointerEvents="none";
+  document.getElementById('loadsampleb').style.pointerEvents="none";
+  document.getElementById('loadsamplec').style.pointerEvents="none";
+  document.getElementById('loadsampled').style.pointerEvents="none";
 }
 
 function restartexp() {
@@ -15,20 +19,31 @@ function restartexp() {
 
 function gel_resolve() {
   document.getElementById("sampleprep").disabled = false;
+  document.getElementById("gelprep").disabled = true;
 }
 
 
 function stacking_gel() {
-  document.getElementById("addbuffer").disabled = false;
+  document.getElementById("sampleprep").disabled = true;
+  document.getElementById("prepproteinsample").disabled = false;
+
 }
 function preprotein_sample() {
-
+  document.getElementById("prepproteinsample").disabled = true;
   document.getElementById("tubesabcd").style.display = "block";
+  document.getElementById("addbuffer").disabled = false;
 }
 
 
 function addbuffer() {
+  document.getElementById("buffer").style.display="block";
+  document.getElementById("buffer").setAttribute("onclick", "addbuffertoelec()");
+
+}
+ function addbuffertoelec(){
+  document.getElementById("addbuffer").disabled = true;
   document.getElementById("sampleload").disabled = false;
+  document.getElementById('loadsamplea').style.pointerEvents="auto";
   /**side 1 */
   canvaside1 = document.getElementById("canvasbufferfill");
   ctxs1 = canvaside1.getContext("2d");
@@ -65,12 +80,11 @@ function addbuffer() {
 
 }
 
-function protein_sample() {
-  document.getElementById("gelrun").disabled = false;
-}
+
 
 
 function sample_loadA() {
+  document.getElementById('loadsampleb').style.pointerEvents="auto";
   const canvassdrop1 = document.getElementById('sampleload1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
   document.getElementById("peptitea").style.display = "block";
@@ -155,6 +169,7 @@ function sample_loadA() {
 
 }
 function sample_loadB() {
+  document.getElementById('loadsamplec').style.pointerEvents="auto";
   document.getElementById("peptitea").style.display = "none";
   const canvassdrop2 = document.getElementById('sampleload2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
@@ -240,6 +255,7 @@ function sample_loadB() {
 }
 
 function sample_loadC() {
+  document.getElementById('loadsampled').style.pointerEvents="auto";
   document.getElementById("peptiteb").style.display = "none";
   const canvassdrop3 = document.getElementById('sampleload3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
@@ -325,6 +341,8 @@ function sample_loadC() {
 }
 
 function sample_loadD() {
+  document.getElementById("gelrun").disabled = false;
+ 
   document.getElementById("peptitec").style.display = "none";
   const canvassdrop4 = document.getElementById('sampleload4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
@@ -412,7 +430,8 @@ function sample_loadD() {
 
 var imgtopsetup = null;
 function start_ele() {
-  document.getElementById("staingel").disabled = false;
+
+  document.getElementById("sampleload").disabled = true;
   document.getElementById("cvt").style.display = "block";
   document.getElementById("crun").style.display = "block";
   var topsetup = document.getElementById("topsetup");
@@ -473,7 +492,7 @@ function txtvolt() {
   ctx.fillText(text, x, y);
 }
 
-var volt = 10;
+var volt = 0;
 function txtvoltp() {
   document.getElementById("cvn").style.display = "block";
   const canvas = document.getElementById('textvoltimer');
@@ -489,7 +508,7 @@ function txtvoltp() {
   ctx.fillStyle = 'black'; // Text color
   ctx.textAlign = 'center'; // Text alignment (centered horizontally)
   ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
-
+  volt = volt + 10;
   // Define the text to be displayed
   const text = volt;
 
@@ -501,7 +520,7 @@ function txtvoltp() {
   // Draw the text on the canvas
   ctx.fillText(text, x, y);
 
-  volt = volt + 10;
+  
 
 }
 function txtvoltd() {
@@ -542,18 +561,43 @@ function runningel() {
   else {
 
     rungelsample();
+    document.getElementById("cstop").style.display = "block";
   }
 }
 
 function staining() {
-  document.getElementById("viewsample").disabled = false;
+
   // Start the rotation animation
-rotateElement();
-//rotateElementb();
+
+
+  var btnstaintext = document.getElementById("staingel");
+  if (btnstaintext.innerHTML === "Start Staining") {
+    btnstaintext.innerHTML = "Stop Staining";
+
+    rotateElement();
+    rotateElementb();
+    //tubeimg.addEventListener('click', tubeinsert);
+  } else {
+    btnstaintext.innerHTML = "Start Staining";
+    document.getElementById("viewsample").disabled = false;
+    cancelAnimationFrame(animationId);
+    cancelAnimationFrame(animationId1);
+    document.getElementById("sample1").style.display = "none";
+    document.getElementById("sample2").style.display = "none";
+    document.getElementById("sample3").style.display = "none";
+    document.getElementById("sample4").style.display = "none";
+  }
+
+
 }
 
 function view_sample_UVlight() {
   document.getElementById("ladder").style.display = "block";
+  document.getElementById("rotatingElement").style.display = "none";
+  document.getElementById("rotatingElementbowl").style.display = "none";
+  document.getElementById("staining").style.display = "none";
+  document.getElementById("staingel").disabled=true;
+
   window.scrollBy(0, 500);
   // document.getElementById("output").style.display="block";
   canvasuv1 = document.getElementById("myCanvasuv1");
@@ -793,10 +837,10 @@ function rungelsample() {
 
 
 }
-
+var animationId1, animationId;
 
 const rotatingElement = document.getElementById('rotatingElement');
-let rotation = 5; // Initial rotation value
+let rotation = 10; // Initial rotation value
 let rotateClockwise = true; // Initial direction
 
 function rotateElement() {
@@ -804,18 +848,48 @@ function rotateElement() {
 
   // Update rotation based on direction
   if (rotateClockwise) {
-    rotation -= 1;
-    if (rotation <= -5) {
+    rotation -= 0.2;
+    if (rotation <= -10) {
       rotateClockwise = false;
     }
   } else {
-    rotation += 1;
-    if (rotation >= 5) {
+    rotation += 0.2;
+    if (rotation >= 10) {
       rotateClockwise = true;
     }
   }
 
-  requestAnimationFrame(rotateElement);
+  animationId = requestAnimationFrame(rotateElement);
 }
 
 
+const rotatingElementb = document.getElementById('rotatingElementbowl');
+let rotationb = 10; // Initial rotation value
+let rotateClockwiseb = true; // Initial direction
+
+function rotateElementb() {
+  rotatingElementb.style.transform = `rotate(${rotationb}deg)`;
+
+  // Update rotation based on direction
+  if (rotateClockwiseb) {
+    rotationb -= 0.2;
+    if (rotationb <= -10) {
+      rotateClockwiseb = false;
+    }
+  } else {
+    rotationb += 0.2;
+    if (rotationb >= 10) {
+      rotateClockwiseb = true;
+    }
+  }
+
+  animationId1 = requestAnimationFrame(rotateElementb);
+}
+
+/* // To stop the animation
+function stopAnimation() {
+  cancelAnimationFrame(animationId);
+}
+
+// Example: Stop the animation when a button is clicked
+document.getElementById('stopButton').addEventListener('click', stopAnimation); */
