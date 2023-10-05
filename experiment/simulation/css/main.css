@@ -29,7 +29,7 @@ Developer: Prakriti Dhang */
 #topsetup {
     position: absolute;
     width: 20.6%;
-    top: 120%;
+    top: 141%;
     /* 120 -141*/
     left: 4.8%;
     cursor: pointer;
@@ -173,73 +173,73 @@ Developer: Prakriti Dhang */
 
 #cd1 {
     position: absolute;
-    width: 0.8%;
-    top: 150%;
-    left: 6.9%;
+    width: 1%;
+    top: 151%;
+    left: 6.7%;
 }
 
 #cd2 {
     position: absolute;
     width: 0.8%;
-    top: 150%;
-    left: 22.5%;
+    top: 151%;
+    left: 22.6%;
 }
 
 
 #cd3 {
     position: absolute;
     width: 1%;
-    top: 30.5%;
+    top: 30.8%;
     left: 7.3%;
 }
 
 #cd4 {
     position: absolute;
     width: 1%;
-    top: 30.5%;
-    left: 9.5%;
+    top: 30.8%;
+    left: 9.4%;
 
 }
 
 #cd5 {
     position: absolute;
-    width: 0.8%;
+    width: 1.2%;
     top: 69.5%;
-    left: 7.4%;
+    left: 7.2%;
 }
 
 #cd6 {
     position: absolute;
-    width: 0.8%;
+    width: 1%;
     top: 69.5%;
-    left: 9.5%;
+    left: 9.4%;
 }
 
 #cd7 {
     position: absolute;
     width: 1%;
-    top: 30.5%;
+    top: 30.8%;
     left: 24.3%;
 }
 
 #cd8 {
     position: absolute;
     width: 1%;
-    top: 30.5%;
+    top: 30.8%;
     left: 26.5%;
 
 }
 
 #cd9 {
     position: absolute;
-    width: 0.8%;
-    top: 69.5%;
-    left: 24.4%;
+    width: 1%;
+    top: 69.8%;
+    left: 24.3%;
 }
 
 #cd10 {
     position: absolute;
-    width: 0.8%;
+    width: 1%;
     top: 69.5%;
     left: 26.6%;
 }

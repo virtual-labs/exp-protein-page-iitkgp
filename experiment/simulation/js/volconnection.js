@@ -70,7 +70,7 @@ jsPlumb.ready(function () {
         //--------for negative voltage connections--------//
         endpointblack = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 5, stroke: "black" },
+            connectorStyle: { strokeWidth: 4, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -85,7 +85,7 @@ jsPlumb.ready(function () {
 
         endpointred = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 5, stroke: "red" },
+            connectorStyle: { strokeWidth: 4, stroke: "red" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
