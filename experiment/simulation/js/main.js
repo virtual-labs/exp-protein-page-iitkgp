@@ -581,6 +581,14 @@ function staining() {
   var btnstaintext = document.getElementById("staingel");
   if (btnstaintext.innerHTML === "Start Staining") {
     btnstaintext.innerHTML = "Stop Staining";
+    document.getElementById("sample1").style.display = "none";
+    document.getElementById("sample2").style.display = "none";
+    document.getElementById("sample3").style.display = "none";
+    document.getElementById("sample4").style.display = "none";
+    document.getElementById("sampleload1").style.display = "none";
+    document.getElementById("sampleload2").style.display = "none";
+    document.getElementById("sampleload3").style.display = "none";
+    document.getElementById("sampleload4").style.display = "none";
 
     rotateElement();
     rotateElementb();
@@ -590,14 +598,7 @@ function staining() {
     document.getElementById("viewsample").disabled = false;
     cancelAnimationFrame(animationId);
     cancelAnimationFrame(animationId1);
-    document.getElementById("sample1").style.display = "none";
-    document.getElementById("sample2").style.display = "none";
-    document.getElementById("sample3").style.display = "none";
-    document.getElementById("sample4").style.display = "none";
-    document.getElementById("sampleload1").style.display = "none";
-    document.getElementById("sampleload2").style.display = "none";
-    document.getElementById("sampleload3").style.display = "none";
-    document.getElementById("sampleload4").style.display = "none";
+   
   }
 
 
