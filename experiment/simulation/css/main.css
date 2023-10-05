@@ -32,6 +32,7 @@ Developer: Prakriti Dhang */
     top: 120%;
     /* 120 -141*/
     left: 4.8%;
+    cursor: pointer;
 
 }
 
@@ -347,6 +348,15 @@ path,
     rotate: 180deg;
 }
 
+#output{
+    position: absolute;
+    width: 10%;
+    top: 185%;
+    left: 80%;
+    display: none;
+}
+
+
 #ladder {
     position: absolute;
     width: 14%;
@@ -422,32 +432,30 @@ path,
     position: absolute;
     width: 10%;
     top: 258.5%;
-    left: 42%;
+    left: 41.2%;
     cursor: pointer;
 }
 
 #rotatingElement {
-    width: 23.7%;
-    height: 30%;
-    background-color: #b1dbf7;
     position: absolute;
-    margin: 50px auto;
-    border-radius: 0 0 100px 100px;
+    width: 22.5%;
+    height: 30%;
+    background-color: #cbe6f8;
+    border-radius: 0 0 100% 100%;
     /* Border-radius for a semicircle */
-    top: 210%;
-    left: 35%;
+    top: 229%;
+    left: 34.6%;
     z-index: 10;
 }
 
 #rotatingElementbowl {
-    width: 25%;
-    height: 38%;
-    border: 3px solid black;
     position: absolute;
-    margin: 50px auto;
-    border-radius: 0 0 100px 100px;
+    width: 22.9%;
+    height: 38%;
+    border: 2px solid black;
+    border-radius: 0 0 100% 100%;
     /* Border-radius for a semicircle */
-    top: 202%;
+    top: 222%;
     left: 34.4%;
     z-index: 10;
 }

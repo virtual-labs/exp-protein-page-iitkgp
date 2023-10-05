@@ -36,13 +36,22 @@ Developer: Prakriti Dhang
 							<li>Now, click on "Resolving Gel" button. </li>
 							<li>Next click on "Stacking Gel" button.</li>
 							<li>Click on "Prepare Protein Samples" button.</li>
-							<li>Now click on "Add buffer" button, then on the buffer bottle to fill up the electrophoresis chamber with SDS gel running buffer.</li>
-							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the peptite A and drag the peptite to the first well of the gel. Repeat for Load Sample B, C, and D to the consecutive wells.</li>
-							<li>Click on "Setting up Electrophoresis" button. Next connect the negative wire of electrophorersis chamber to negative of voltage meter and positive wire of electrophorersis chamber to positive wire of voltage meter. (To delete the connection click on the wire.)</li>
-							<li>Now click on "V" and "+" sign to set the voltage. Range is 80 V to 100 V.</li>
-							<li>Click on the run icon button to run the gel. The sample will move from negative to positive side. It will stop once it reaches the positive end.</li>
+							<li>Now click on "Add buffer" button, then on the buffer bottle to fill up the
+								electrophoresis chamber with SDS gel running buffer.</li>
+							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the peptite A
+								and drag the peptite to the first well of the gel. Repeat for Load Sample B, C, and D to
+								the consecutive wells.</li>
+							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis chamber. </li>
+							<li>Next connect the negative wire of
+								electrophorersis chamber to negative of voltage meter and positive wire of
+								electrophorersis chamber to positive wire of voltage meter. (To delete the connection
+								click on the wire.)</li>
+							<li>Now click on "V" and "+" sign to set the voltage bewteen 80 V and 100 V.</li>
+							<li>Click on the run icon button to run the gel. The sample will move from negative to
+								positive side. It will stop once it reaches the positive end.</li>
 							<li>Click on the stop icon button to switch off the power.</li>
-							<li>Click on "Start Staining" button. After few minutes click on "Stop Staining" button.</li>
+							<li>Click on "Start Staining" button. After few minutes click on "Stop Staining" button.
+							</li>
 							<li>Next Click on "Visualization under UV light" button, to see the result.</li>
 
 						</ol>
@@ -82,137 +91,151 @@ Developer: Prakriti Dhang
 					</div> -->
 
 					<div class="card-body ">
-<table class="table table-bordered">
-	<tr>
-		
-		<td><button class="btn btn-primary col-md-2 " type="button" id="gelprep" onclick="gel_resolve()" disabled>Resolving Gel</button></td>
-	</tr>
+						<table class="table table-bordered">
+							<tr>
 
-	<tr>
-		
-		<td><button class="btn btn-primary col-md-2" type="button" id="sampleprep" onclick="stacking_gel()" disabled>Stacking Gel</button>
-			
-		</td>
-	</tr>
-	<tr>
-		
-		<td>
+								<td><button class="btn btn-primary col-md-2 " type="button" id="gelprep"
+										onclick="gel_resolve()" disabled>Resolving Gel</button></td>
+							</tr>
 
-	<button class="btn btn-primary" type="button" id="prepproteinsample"  onclick="preprotein_sample()" disabled>Prepare Protein Samples
-	</button> 
-	<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()" disabled>Add Buffer
-	</button>
-	<div class="dropdown div-inline">
-		<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"  data-bs-toggle="dropdown" disabled>
-			Load Samples
-		</button>
-		<ul class="dropdown-menu">
-		
-		  <li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" style="cursor: pointer;" >Load  Sample A </a></li>
-		  <li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" style="cursor: pointer;">Load Sample B </a></li>
-		  <li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" style="cursor: pointer;">Load  Sample C </a></li>
-		  <li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" style="cursor: pointer;">Load  Sample D </a></li>
-		</ul>
-	  </div>
-	
-	  </td>
-	</tr>
+							<tr>
 
-	<tr>
-		
-		<td><button class="btn btn-primary" type="button" id="gelrun"  onclick="start_ele()" disabled>Setting up Electrophoresis
-		</button></td>
-	</tr>
-	<tr>
-		
-		<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()"  disabled>Start Staining</button> 
-			<button class="btn btn-primary " type="button" id="viewsample" onclick="view_sample_UVlight()" disabled>Visualization under UV light</button></td>
-	</tr>
-	
-</table>
+								<td><button class="btn btn-primary col-md-2" type="button" id="sampleprep"
+										onclick="stacking_gel()" disabled>Stacking Gel</button>
+
+								</td>
+							</tr>
+							<tr>
+
+								<td>
+
+									<button class="btn btn-primary" type="button" id="prepproteinsample"
+										onclick="preprotein_sample()" disabled>Prepare Protein Samples
+									</button>
+									<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()"
+										disabled>Add Buffer
+									</button>
+									<div class="dropdown div-inline">
+										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
+											data-bs-toggle="dropdown" disabled>
+											Load Samples
+										</button>
+										<ul class="dropdown-menu">
+
+											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
+													style="cursor: pointer;">Load Sample A </a></li>
+											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
+													style="cursor: pointer;">Load Sample B </a></li>
+											<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
+													style="cursor: pointer;">Load Sample C </a></li>
+											<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()"
+													style="cursor: pointer;">Load Sample D </a></li>
+										</ul>
+									</div>
+
+								</td>
+							</tr>
+
+							<tr>
+
+								<td><button class="btn btn-primary" type="button" id="gelrun" onclick="start_ele()"
+										disabled>Setting up Electrophoresis
+									</button></td>
+							</tr>
+							<tr>
+
+								<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
+										disabled>Start Staining</button>
+									<button class="btn btn-primary " type="button" id="viewsample"
+										onclick="view_sample_UVlight()" disabled>Visualization under UV light</button>
+								</td>
+							</tr>
+
+						</table>
 
 					</div>
 
-					
+
 				</div>
 
-				
+
+			</div>
+
 		</div>
 
-	</div>
 
-
-	<div class="row ">
-		<div class="col-md-12">
-			<div class="card card-body border border-0">
-				<!-- <div class="card-header fs-5 fw-bold">
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="card card-body border border-0">
+					<!-- <div class="card-header fs-5 fw-bold">
 						Experimental Setup
 					</div>
 					<div class=""> -->
-				<div class="img-container">
+					<div class="img-container">
 
-					<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
-					<img src="./images/top-cover.png" class="img-fluid" id="topsetup" >
-					<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
-					<img src="./images/buffer.png" class="img-fluid" id="buffer">
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
+						<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
+						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
+						<img src="./images/buffer.png" class="img-fluid" id="buffer">
 
-					<div id="cd1"></div>
-					<div id="cd2"></div>
-					<div id="cd3"></div>
-					<div id="cd4"></div>
+						<div id="cd1"></div>
+						<div id="cd2"></div>
+						<div id="cd3"></div>
+						<div id="cd4"></div>
 
 
-					<div id="cd5"></div>
-					<div id="cd6"></div>
-					<div id="cd7"></div>
-					<div id="cd8"></div>
-					<div id="cd9"></div>
-					<div id="cd10"></div>
+						<div id="cd5"></div>
+						<div id="cd6"></div>
+						<div id="cd7"></div>
+						<div id="cd8"></div>
+						<div id="cd9"></div>
+						<div id="cd10"></div>
 
-					<!-- samples and peptite-->
-					<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
-					<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
-					<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
-					<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
-					<img src="./images/peptited.png" class="img-fluid" id="peptited">
+						<!-- samples and peptite-->
+						<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
+						<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
+						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
+						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
+						<img src="./images/peptited.png" class="img-fluid" id="peptited">
 
-					<!--- sample load canvases -->
+						<!--- sample load canvases -->
 
-                    <canvas id="sampleload1" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-				<canvas id="sampleload2" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-					<canvas id="sampleload3" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-					<canvas id="sampleload4" style="border: 1px solid rgb(150, 148, 148);"></canvas> 
+						<canvas id="sampleload1" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+						<canvas id="sampleload2" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+						<canvas id="sampleload3" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+						<canvas id="sampleload4" style="border: 1px solid rgb(150, 148, 148);"></canvas>
 
-					<canvas id="canvasbufferfill" style="border: 0px solid black;"></canvas>
-					<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
-					<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
-					<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
-					<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
-					<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
-					<canvas id="cstop" style="border: 0px solid black;" onclick="stopgel()"></canvas>
-				
-<!-- sample  top to bottom movement-->
-<canvas id="sample1" style="border: 0px solid black;"></canvas>
-<canvas id="sample2" style="border: 0px solid black;"></canvas>
-	<canvas id="sample3" style="border: 0px solid black;"></canvas>
-	<canvas id="sample4" style="border: 0px solid black;"></canvas> 
+						<canvas id="canvasbufferfill" style="border: 0px solid black;"></canvas>
+						<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
+						<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
+						<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
+						<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
+						<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
+						<canvas id="cstop" style="border: 0px solid black;" onclick="stopgel()"></canvas>
 
-	<div id="rotatingElement"></div>
-	<div id="rotatingElementbowl"></div>
+						<!-- sample  top to bottom movement-->
+						<canvas id="sample1" style="border: 0px solid black;"></canvas>
+						<canvas id="sample2" style="border: 0px solid black;"></canvas>
+						<canvas id="sample3" style="border: 0px solid black;"></canvas>
+						<canvas id="sample4" style="border: 0px solid black;"></canvas>
 
-	<img src="./images/staining.png" class="img-fluid" id="staining">
-					<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
-					<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<div id="rotatingElement"></div>
+						<div id="rotatingElementbowl"></div>
+
+						<img src="./images/staining.png" class="img-fluid" id="staining">
+						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
+						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
-
+						<img src="./images/output.png" class="img-fluid" id="output">
 						<img src="./images/ladder.png" class="img-fluid" id="ladder">
 
-				</div>
-				<!-- </div> -->
 
+					</div>
+					<!-- </div> -->
+
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 
 
@@ -278,7 +301,7 @@ Developer: Prakriti Dhang
 
 
 
-		
+
 	</script>
 </body>
 

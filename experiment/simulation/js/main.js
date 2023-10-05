@@ -428,18 +428,25 @@ function sample_loadD() {
 }
 
 
-var imgtopsetup = null;
+
 function start_ele() {
 
   document.getElementById("sampleload").disabled = true;
-  document.getElementById("cvt").style.display = "block";
-  document.getElementById("crun").style.display = "block";
-  var topsetup = document.getElementById("topsetup");
+  
+  document.getElementById("topsetup").setAttribute("onclick", "closetopcover()");
   document.getElementById("peptitea").style.display = "none";
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptited").style.display = "none";
 
+  
+}
+
+var imgtopsetup = null;
+function closetopcover(){
+  document.getElementById("cvt").style.display = "block";
+  document.getElementById("crun").style.display = "block";
+  var topsetup = document.getElementById("topsetup");
   var topsetupt = 120; //initial  position
   clearInterval(imgtopsetup);
   //clearInterval(imgtbdown);
@@ -465,6 +472,7 @@ function start_ele() {
 }
 
 function txtvolt() {
+  document.getElementById("topsetup").removeAttribute("onclick");
   document.getElementById("cvp").style.display = "block";
   const canvas = document.getElementById('textvoltimer');
   var volt = 0;
@@ -586,6 +594,10 @@ function staining() {
     document.getElementById("sample2").style.display = "none";
     document.getElementById("sample3").style.display = "none";
     document.getElementById("sample4").style.display = "none";
+    document.getElementById("sampleload1").style.display = "none";
+    document.getElementById("sampleload2").style.display = "none";
+    document.getElementById("sampleload3").style.display = "none";
+    document.getElementById("sampleload4").style.display = "none";
   }
 
 
@@ -597,6 +609,7 @@ function view_sample_UVlight() {
   document.getElementById("rotatingElementbowl").style.display = "none";
   document.getElementById("staining").style.display = "none";
   document.getElementById("staingel").disabled=true;
+  document.getElementById("output").style.display="block";
 
   window.scrollBy(0, 500);
   // document.getElementById("output").style.display="block";
