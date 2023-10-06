@@ -433,7 +433,7 @@ path,
    left: 53.8%; 
     cursor: grab;
     z-index: 2;
-    display: block;
+    display: none;
 
 }
 
