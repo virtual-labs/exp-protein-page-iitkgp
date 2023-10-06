@@ -12,7 +12,7 @@ Developer: Prakriti Dhang
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/main.css">
 
@@ -32,7 +32,7 @@ Developer: Prakriti Dhang
 
 					<div class="card-body">
 						<ol id="inst1">
-							<li>Click on "Start the Experiment" button.</li>
+							<li>Click on "Click to Start the Experiment" button.</li>
 							<li>Now, click on "Resolving Gel" button. </li>
 							<li>Next click on "Stacking Gel" button.</li>
 							<li>Click on "Prepare Protein Samples" button.</li>
@@ -41,15 +41,15 @@ Developer: Prakriti Dhang
 							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the peptite A
 								and drag the peptite to the first well of the gel. Repeat for Load Sample B, C, and D to
 								the consecutive wells.</li>
-							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis chamber. </li>
+							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
+								chamber. </li>
 							<li>Next connect the negative wire of
 								electrophorersis chamber to negative of voltage meter and positive wire of
-								electrophorersis chamber to positive wire of voltage meter. (To delete the connection
-								click on the wire.)</li>
+								electrophorersis chamber to positive wire of voltage meter. (For any wrong connection, click on the wire to disconnect.)</li>
 							<li>Now click on "V" and "+" sign to set the voltage bewteen 80 V and 100 V.</li>
 							<li>Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
-							<li>Click on the stop icon button to switch off the power.</li>
+							<li>Click on the stop icon button to switch off the power and disconnect the wires(click on the wire to disconnect).</li>
 							<li>Click on "Start Staining" button. After few minutes click on "Stop Staining" button.
 							</li>
 							<li>Next Click on "Visualization under UV light" button, to see the result.</li>
@@ -70,48 +70,51 @@ Developer: Prakriti Dhang
 
 		<div class="row "-->
 			<div class="col-md-7">
-				<div class="card">
 
-
-					<div class="card-body">
-
-						<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
-						<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
-							data-bs-target="#exampleModal">Click to
-							Start the Experiment</button>
-
-						<button class="btn btn-warning" type="button" id="restart" style="float: right;"
-							onclick="restartexp()">Re-Do the Experiment</button>
-					</div>
-				</div>
 
 				<div class="card ">
-					<!-- <div class="card-header fs-5 fw-bold">
+					<div class="card-header fs-5 fw-bold">
 						Input Panels
-					</div> -->
+					</div>
 
 					<div class="card-body ">
 						<table class="table table-bordered">
 							<tr>
+								<td colspan="2">
+									<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
+										data-bs-target="#exampleModal">Click to
+										Start the Experiment</button>
 
-								<td><button class="btn btn-primary col-md-2 " type="button" id="gelprep"
+									<button class="btn btn-warning" type="button" id="restart" style="float: right;"
+										onclick="restartexp()">Re-Do the Experiment</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Step 1</td>
+								<td><button class="btn btn-primary  " type="button" id="gelprep"
 										onclick="gel_resolve()" disabled>Resolving Gel</button></td>
 							</tr>
 
 							<tr>
-
-								<td><button class="btn btn-primary col-md-2" type="button" id="sampleprep"
+								<td>Step 2</td>
+								<td><button class="btn btn-primary " type="button" id="sampleprep"
 										onclick="stacking_gel()" disabled>Stacking Gel</button>
 
 								</td>
 							</tr>
 							<tr>
 
-								<td>
+								<td>Step 3</td>
 
-									<button class="btn btn-primary" type="button" id="prepproteinsample"
+									<td><button class="btn btn-primary" type="button" id="prepproteinsample"
 										onclick="preprotein_sample()" disabled>Prepare Protein Samples
 									</button>
+									</td>
+									</tr>
+									<tr>
+										<td>Step 4</td>
+										<td>
+								
 									<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()"
 										disabled>Add Buffer
 									</button>
@@ -137,13 +140,13 @@ Developer: Prakriti Dhang
 							</tr>
 
 							<tr>
-
+								<td>Step 5</td>
 								<td><button class="btn btn-primary" type="button" id="gelrun" onclick="start_ele()"
 										disabled>Setting up Electrophoresis
 									</button></td>
 							</tr>
 							<tr>
-
+								<td>Step 6</td>
 								<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
 										disabled>Start Staining</button>
 									<button class="btn btn-primary " type="button" id="viewsample"
@@ -197,13 +200,14 @@ Developer: Prakriti Dhang
 						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
 						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
 						<img src="./images/peptited.png" class="img-fluid" id="peptited">
+						<img src="./images/gel.png" class="img-fluid" id="gel">
 
 						<!--- sample load canvases -->
 
-						<canvas id="sampleload1" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-						<canvas id="sampleload2" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-						<canvas id="sampleload3" style="border: 1px solid rgb(150, 148, 148);"></canvas>
-						<canvas id="sampleload4" style="border: 1px solid rgb(150, 148, 148);"></canvas>
+						<canvas id="sampleload1" ></canvas>
+						<canvas id="sampleload2" ></canvas>
+						<canvas id="sampleload3" ></canvas>
+						<canvas id="sampleload4" ></canvas>
 
 						<canvas id="canvasbufferfill" style="border: 0px solid black;"></canvas>
 						<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
@@ -226,7 +230,7 @@ Developer: Prakriti Dhang
 						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
 						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
-						<img src="./images/output.png" class="img-fluid" id="output">
+						<img src="./images/outputgel.png" class="img-fluid" id="output">
 						<img src="./images/ladder.png" class="img-fluid" id="ladder">
 
 
@@ -300,7 +304,7 @@ Developer: Prakriti Dhang
 
 
 
-
+		
 
 	</script>
 </body>
