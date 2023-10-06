@@ -43,6 +43,14 @@ Developer: Prakriti Dhang */
     left: 5%;
 }
 
+#gel{
+    position: absolute;
+    width: 11.7%;
+    height: 79%;
+    top: 196%;
+    left: 9%;
+}
+
 #canvasbufferfill {
     position: absolute;
     width: 11.7%;
@@ -57,6 +65,12 @@ Developer: Prakriti Dhang */
     width: 1.5%;
     top: 197%;
     left: 9.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
 
 }
 
@@ -66,7 +80,12 @@ Developer: Prakriti Dhang */
     width: 1.5%;
     top: 197%;
     left: 12.5%;
-
+ border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
 }
 
 #sampleload3 {
@@ -74,6 +93,12 @@ Developer: Prakriti Dhang */
     width: 1.5%;
     top: 197%;
     left: 15.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
 
 }
 
@@ -82,6 +107,12 @@ Developer: Prakriti Dhang */
     width: 1.5%;
     top: 197%;
     left: 18.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
 
 }
 
@@ -399,12 +430,13 @@ path,
     position: absolute;
     width: 2%;
     top: 6%;
-    left: 53.8%;
-    cursor: pointer;
+   left: 53.8%; 
+    cursor: grab;
     z-index: 2;
-    display: none;
+    display: block;
 
 }
+
 
 #peptitec {
     position: absolute;

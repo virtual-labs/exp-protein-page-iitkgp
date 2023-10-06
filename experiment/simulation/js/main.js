@@ -94,21 +94,25 @@ function sample_loadA() {
 
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
+    console.log('Touchstart event triggered');
+    event.preventDefault();
     isDragging = true;
-    imagepp.style.cursor = 'pointer';
+    imagepp.style.cursor = 'grabbing';
     /*  imageppb.style.cursor = 'grabbing';
      imageppc.style.cursor = 'grabbing';
      imageppd.style.cursor = 'grabbing'; */
 
     // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp.getBoundingClientRect().top;
+    let offsetX = event.clientX - imagepp.getBoundingClientRect().left;
+    let offsetY = event.clientY - imagepp.getBoundingClientRect().top;
 
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
+      console.log('Touchmove event triggered');
       if (isDragging) {
         // Update the position of the image based on mouse/touch position
+       
         imagepp.style.left = event.clientX - offsetX + 'px';
         imagepp.style.top = event.clientY - offsetY + 'px';
 
@@ -138,8 +142,9 @@ function sample_loadA() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
+      console.log('Touchend event triggered');
       isDragging = false;
-      imagepp.style.cursor = 'pointer';
+      imagepp.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
@@ -182,14 +187,11 @@ function sample_loadB() {
   function handleMouseDown(event) {
     isDragging2 = true;
     imagepp2.style.cursor = 'pointer';
-    /*  imageppb.style.cursor = 'grabbing';
-     imageppc.style.cursor = 'grabbing';
-     imageppd.style.cursor = 'grabbing'; */
+   
 
     // Calculate the offset of the mouse/touch position relative to the image
-    const offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
-    const offsetY = event.clientY - imagepp2.getBoundingClientRect().top;
-
+   let offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
+    let offsetY = event.clientY - imagepp2.getBoundingClientRect().top;
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
@@ -197,14 +199,11 @@ function sample_loadB() {
         // Update the position of the image based on mouse/touch position
         imagepp2.style.left = event.clientX - offsetX + 'px';
         imagepp2.style.top = event.clientY - offsetY + 'px';
-
-
+  
 
         const imageRect = imagepp2.getBoundingClientRect();
         const canvasRect = canvassdrop2.getBoundingClientRect();
-        /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
-         const canvasRect3 = canvassdrop3.getBoundingClientRect();
-         const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+     
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
@@ -254,6 +253,7 @@ function sample_loadB() {
 
 }
 
+
 function sample_loadC() {
   document.getElementById('loadsampled').style.pointerEvents="auto";
   document.getElementById("peptiteb").style.display = "none";
@@ -279,6 +279,7 @@ function sample_loadC() {
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
+     
       if (isDragging3) {
         // Update the position of the image based on mouse/touch position
         imagepp3.style.left = event.clientX - offsetX + 'px';
