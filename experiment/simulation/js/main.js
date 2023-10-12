@@ -186,7 +186,7 @@ function sample_loadB() {
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
     isDragging2 = true;
-    imagepp2.style.cursor = 'pointer';
+    imagepp2.style.cursor = 'grabbing';
    
 
     // Calculate the offset of the mouse/touch position relative to the image
@@ -224,20 +224,20 @@ function sample_loadB() {
     // Function to handle mouse/touch up event
     function handleMouseUp() {
       isDragging2 = false;
-      imagepp2.style.cursor = 'pointer';
+      imagepp2.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
-      imagepp2.removeEventListener('touchmove', handleMouseMove);
-      imagepp2.removeEventListener('touchend', handleMouseUp);
+    //  imagepp2.removeEventListener('touchmove', handleMouseMove);
+    //  imagepp2.removeEventListener('touchend', handleMouseUp);
 
     }
 
     // Add event listeners for mouse/touch move and up events
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-    imagepp2.addEventListener('touchmove', handleMouseMove);
-    imagepp2.addEventListener('touchend', handleMouseUp);
+   // imagepp2.addEventListener('touchmove', handleMouseMove);
+   // imagepp2.addEventListener('touchend', handleMouseUp);
   }
 
   // Function to change the color when clicked/touched
@@ -247,9 +247,9 @@ function sample_loadB() {
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp2.addEventListener('mousedown', handleMouseDown);
-  imagepp2.addEventListener('touchstart', handleMouseDown);
+ // imagepp2.addEventListener('touchstart', handleMouseDown);
   imagepp2.addEventListener('click', changeColor);
-  imagepp2.addEventListener('touchend', changeColor);
+ // imagepp2.addEventListener('touchend', changeColor);
 
 }
 
@@ -267,7 +267,7 @@ function sample_loadC() {
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
     isDragging3 = true;
-    imagepp3.style.cursor = 'pointer';
+    imagepp3.style.cursor = 'grabbing';
     /*  imageppb.style.cursor = 'grabbing';
      imageppc.style.cursor = 'grabbing';
      imageppd.style.cursor = 'grabbing'; */
@@ -312,7 +312,7 @@ function sample_loadC() {
     // Function to handle mouse/touch up event
     function handleMouseUp() {
       isDragging3 = false;
-      imagepp3.style.cursor = 'pointer';
+      imagepp3.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
@@ -355,7 +355,7 @@ function sample_loadD() {
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
     isDragging4 = true;
-    imagepp4.style.cursor = 'pointer';
+    imagepp4.style.cursor = 'grabbing';
     /*  imageppb.style.cursor = 'grabbing';
      imageppc.style.cursor = 'grabbing';
      imageppd.style.cursor = 'grabbing'; */
@@ -399,7 +399,7 @@ function sample_loadD() {
     // Function to handle mouse/touch up event
     function handleMouseUp() {
       isDragging4 = false;
-      imagepp4.style.cursor = 'pointer';
+      imagepp4.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
