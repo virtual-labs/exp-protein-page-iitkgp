@@ -48,7 +48,7 @@ function sample_loadA(){
     
             if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
               // Change the canvas color when the image touches it
-              canvassdrop.style.backgroundColor = '#7FA9FF';
+              canvassdrop1.style.backgroundColor = '#7FA9FF';
     
             }
         }
