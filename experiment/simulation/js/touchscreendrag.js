@@ -1,4 +1,4 @@
-function sample_loadA(){
+/*function sample_loadAt(){
 
     document.getElementById('loadsampleb').style.pointerEvents="auto";
    
@@ -69,7 +69,7 @@ function sample_loadA(){
 }
 
 
-function sample_loadB(){
+function sample_loadBt(){
     document.getElementById('loadsamplec').style.pointerEvents="auto";
   document.getElementById("peptitea").style.display = "none";
     const canvassdrop2 = document.getElementById('sampleload2');
@@ -138,7 +138,7 @@ function sample_loadB(){
 }
 
 
-function sample_loadC(){
+function sample_loadCt(){
     
 
 document.getElementById('loadsampled').style.pointerEvents="auto";
@@ -197,7 +197,7 @@ document.getElementById('loadsampled').style.pointerEvents="auto";
     
     function handleTouchEnd() {
         console.log('Touchend event triggered');
-        isDragging = false;
+        isDragging3 = false;
     
         // Remove the touchmove and touchend event listeners when dragging is complete
         window.removeEventListener('touchmove', handleTouchMove);
@@ -210,7 +210,7 @@ document.getElementById('loadsampled').style.pointerEvents="auto";
 }
 
 
-function sample_loadD(){
+function sample_loadDt(){
     document.getElementById("gelrun").disabled = false;
    document.getElementById("peptitec").style.display = "none";
       const canvassdrop4 = document.getElementById('sampleload4');
@@ -267,7 +267,7 @@ function sample_loadD(){
     
     function handleTouchEnd() {
         console.log('Touchend event triggered');
-        isDragging = false;
+        isDragging4 = false;
     
         // Remove the touchmove and touchend event listeners when dragging is complete
         window.removeEventListener('touchmove', handleTouchMove);
@@ -275,4 +275,6 @@ function sample_loadD(){
     }
     
     imagepp4.addEventListener('touchstart', handleTouchStart);
-}
+
+    
+}*/
