@@ -19,10 +19,10 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
     5. Allow polymerization for 30 min
 
 3. **Preparation of the protein samples**
-    1. Dilute the samples with loading buffer and add the 4X tracking dye in the ratio 3:1 to get 40-50μL
+    1. Dilute the samples with water and add the 4X tracking dye in the ratio 3:1 to get 40-50μL
     total sample.
     2. The protein samples are heated at 95 degree Centigrade for 15-20min, then centrifuged at 11000rpm for
-3min before loaging into the SDS-PAGE gel.  
+3min before loading into wells of the polyacrylamide gel.  
 
 4. **Setting up the apparatus for SDS-PAGE**
      The apparatus must be set up as shown in figure 5, and connected to the power supply.
