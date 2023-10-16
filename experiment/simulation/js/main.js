@@ -94,8 +94,8 @@ function sample_loadA() {
 
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
-    console.log('Touchstart event triggered');
-    event.preventDefault();
+   
+   
     isDragging = true;
     imagepp.style.cursor = 'grabbing';
     /*  imageppb.style.cursor = 'grabbing';
@@ -103,13 +103,13 @@ function sample_loadA() {
      imageppd.style.cursor = 'grabbing'; */
 
     // Calculate the offset of the mouse/touch position relative to the image
-    let offsetX = event.clientX - imagepp.getBoundingClientRect().left;
-    let offsetY = event.clientY - imagepp.getBoundingClientRect().top;
+    const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
+    const offsetY = event.clientY - imagepp.getBoundingClientRect().top;
 
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
-      console.log('Touchmove event triggered');
+     
       if (isDragging) {
         // Update the position of the image based on mouse/touch position
        
@@ -142,7 +142,7 @@ function sample_loadA() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
-      console.log('Touchend event triggered');
+     
       isDragging = false;
       imagepp.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
@@ -889,9 +889,30 @@ function view_sample_UVlight() {
   ctxuv2.stroke();
 
 }
-
+var imgobj1 = null;
 function rungelsample() {
+
+  document.getElementById("sampleload1").style.display="block";
+  var canvassd1 = document.getElementById("sampleload1");
+  var orgtop = 197; /* initial position */
+  clearInterval(imgobj1);
+  imgobj1 = setInterval(frame1, 100); /* frame is 5 denotes the speed of the movement*/
+  function frame1() {
+    if (orgtop == 260) { /* moves to 260 top positon*/
+      clearInterval(imgobj1); /* stops at 260 postion*/
+      //
+    } else {
+      orgtop++; 
+      canvassd1.style.top = orgtop + '%'; 
+     
+  
+       
+    }
+  }
+
+
   /** Sample 1 */
+  /*
   canvass11 = document.getElementById("sample1");
   ctxgs11 = canvass11.getContext("2d");
   var posY = 0;
@@ -915,7 +936,7 @@ function rungelsample() {
     //ctxs1.fillRect(10,10,150,80);
     ctxgs11.lineWidth = 600;
     ctxgs11.beginPath();
-    ctxgs11.moveTo(0, posY); /*  */
+    ctxgs11.moveTo(0, posY); 
     ctxgs11.lineTo(0, 0);
     ctxgs11.stroke();
   }
@@ -938,7 +959,7 @@ function rungelsample() {
   requestAnimationFrame(loop);
 
 
-
+*/
 
 
   /*sample 2 */

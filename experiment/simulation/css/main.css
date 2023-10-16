@@ -71,6 +71,7 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
+  z-index: 5;
 
 }
 
@@ -86,6 +87,8 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
+  z-index: 5;
+
 }
 
 #sampleload3 {
@@ -99,6 +102,8 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
+  z-index: 5;
+
 
 }
 
@@ -113,6 +118,8 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
+  z-index: 5;
+
 
 }
 
@@ -422,7 +429,7 @@ path,
     cursor: pointer;
     z-index: 2;
     display: none;
-
+   
 
 }
 
