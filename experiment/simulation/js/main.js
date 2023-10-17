@@ -140,6 +140,8 @@ draggable.addEventListener('dragstart', handleDragStart);
 droppable.addEventListener('dragover', handleDragOver);
 droppable.addEventListener('drop', handleDrop);
 
+
+
 // Drag start handler
 function handleDragStart(event) {
   // Set the drag data (image URL in this case)
@@ -173,6 +175,34 @@ function handleDrop(event) {
   document.getElementById('stacking').style.display="none";
   document.getElementById('comb').style.display="none";
   document.getElementById("prepproteinsample").disabled = false;
+
+
+
+  /****************** Touch screen***************** */
+
+  draggable.addEventListener('touchstart', handleTouchStart);
+droppable.addEventListener('touchmove', handleTouchMove);
+droppable.addEventListener('touchend', handleTouchEnd);
+
+let  offsetX, offsetY;
+  function handleTouchStart(event) {
+    event.preventDefault();
+  event.dataTransfer.setData('text/plain', event.target.src);
+  offsetX = event.touches[0].clientX - draggable.getBoundingClientRect().left;
+  offsetY = event.touches[0].clientY - draggable.getBoundingClientRect().top;
+  }
+
+  function handleTouchMove(event) {
+    event.preventDefault();
+  const x = event.touches[0].clientX - offsetX;
+  const y = event.touches[0].clientY - offsetY;
+  draggable.style.left = `${x}px`;
+  draggable.style.top = `${y}px`;
+  }
+
+  function handleTouchEnd(event) {
+    event.preventDefault();
+  }
 }
 
 //}
@@ -276,7 +306,9 @@ function check3(){
 function spin_sample(){
   document.getElementById("tubesabcd").style.display = "block";
   document.getElementById("addbuffer").disabled = false;
+  document.getElementById("spinsample").disabled = true;
   document.getElementById("bme").style.display="none";
+  document.getElementById("check3").checked=false;
 }
 
 function addbuffer() {
@@ -289,6 +321,7 @@ function addbuffer() {
   document.getElementById("sampleload").disabled = false;
   document.getElementById('loadsamplea').style.pointerEvents="auto";
   document.getElementById("canvasbufferfill").style.zIndex=10;
+  window.scrollBy(0,500);
   /**side 1 */
   canvaside1 = document.getElementById("canvasbufferfill");
   ctxs1 = canvaside1.getContext("2d");
@@ -1127,10 +1160,11 @@ function view_sample_UVlight() {
   document.getElementById("rotatingElementbowld").style.display = "none";
   document.getElementById("staining").style.display = "none";
   document.getElementById("staingel").disabled=true;
+  document.getElementById("dstaingel").disabled=true;
   document.getElementById("output").style.display="block";
   document.getElementById("gel").style.display = "none";
 
-  window.scrollBy(0, 500);
+  window.scrollBy(0, 600);
   // document.getElementById("output").style.display="block";
   canvasuv1 = document.getElementById("myCanvasuv1");
   ctxuv1 = canvasuv1.getContext("2d");
