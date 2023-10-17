@@ -45,10 +45,32 @@ Developer: Prakriti Dhang */
 
 #gel{
     position: absolute;
-    width: 11.7%;
-    height: 79%;
-    top: 196%;
-    left: 9%;
+    width: 11%;
+    height: 10%;
+    top: 235%;
+    left: 40%;
+    z-index: 10;
+    display: none;
+}
+
+
+#case{
+
+    position: absolute;
+    width: 15%;
+    top:5%; /* 195.5*/
+    left: 40%;  /*7.3*/
+    cursor: move;
+}
+
+
+#casein{
+
+    position: absolute;
+    width: 15%;
+    top:195%; /* 195.5*/
+    left: 7.3%;  /*7.3*/
+    cursor: pointer;
 }
 
 #canvasbufferfill {
@@ -57,8 +79,78 @@ Developer: Prakriti Dhang */
     height: 79%;
     top: 196%;
     left: 9%;
+   
+   
 }
 
+#folded{
+    position: absolute;
+    width: 7%;
+    top:5%; /* 195.5*/
+    left: 70%;  /*7.3*/
+    display: none;
+  
+}
+
+#heatd{
+    position: absolute;
+    width: 7%;
+    top:5%; /* 195.5*/
+    left: 70%;  /*7.3*/
+    display: none;
+}
+
+#bme{
+    position: absolute;
+    width: 7%;
+    top:5%; /* 195.5*/
+    left: 70%;  /*7.3*/
+    display: none;
+}
+
+
+#droppable {
+    position: absolute;
+    width: 15.2%;
+    height: 90.9%;
+    border: 1px dashed #2ecc71;
+    top:195%;
+    left:7.2%;
+    z-index: 5;
+  }
+
+#resolve {
+    position: absolute;
+    width: 11.6%;
+    height: 50%;
+    top: 37%;
+    left: 41.7%;
+}
+
+#stacking {
+    position: absolute;
+    width: 11.6%;
+    height: 32%;
+    top: 5%;
+    left: 41.7%;
+}
+
+#comb {
+    position: absolute;
+    width: 11.6%;
+    top:6%; /* 6*/
+    left: 60%; /* 41.7*/
+    cursor: pointer;
+}
+
+#combin {
+    position: absolute;
+    width: 11.6%;
+    top:196%; /* 6*/
+    left: 9%; /* 41.7*/
+    cursor: pointer;
+    z-index: 10;
+}
 
 #sampleload1 {
     position: absolute;
@@ -72,6 +164,7 @@ Developer: Prakriti Dhang */
   border-bottom-style: solid;
   border-left-style: solid;
   z-index: 5;
+  display: none;
 
 }
 
@@ -88,7 +181,7 @@ Developer: Prakriti Dhang */
   border-bottom-style: solid;
   border-left-style: solid;
   z-index: 5;
-
+  display: none;
 }
 
 #sampleload3 {
@@ -103,7 +196,7 @@ Developer: Prakriti Dhang */
   border-bottom-style: solid;
   border-left-style: solid;
   z-index: 5;
-
+  display: none;
 
 }
 
@@ -119,7 +212,7 @@ Developer: Prakriti Dhang */
   border-bottom-style: solid;
   border-left-style: solid;
   z-index: 5;
-
+  display: none;
 
 }
 
@@ -427,7 +520,7 @@ path,
     top: 6%;
     left: 50.9%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 11;
     display: none;
    
 
@@ -439,7 +532,7 @@ path,
     top: 6%;
    left: 53.8%; 
     cursor: grab;
-    z-index: 2;
+    z-index: 11;
     display: none;
 
 }
@@ -451,7 +544,7 @@ path,
     top: 6%;
     left: 56.6%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 11;
     display: none;
 
 }
@@ -462,7 +555,7 @@ path,
     top: 6%;
     left: 59%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 11;
     display: none;
 
 }
@@ -475,11 +568,11 @@ path,
     cursor: pointer;
 }
 
-#rotatingElement {
+#rotatingElementst {
     position: absolute;
     width: 22.5%;
     height: 30%;
-    background-color: #cbe6f8;
+    background-color: #0066aa;
     border-radius: 0 0 100% 100%;
     /* Border-radius for a semicircle */
     top: 229%;
@@ -497,4 +590,33 @@ path,
     top: 222%;
     left: 34.4%;
     z-index: 10;
+}
+
+
+#rotatingElementdst {
+    position: absolute;
+    width: 22.5%;
+    height: 30%;
+    background-color: #cbe6f8;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 229%;
+    left: 34.6%;
+    z-index: 10;
+display: none;
+   
+}
+
+
+#rotatingElementbowld {
+    position: absolute;
+    width: 22.9%;
+    height: 38%;
+    border: 2px solid black;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 222%;
+    left: 34.4%;
+    z-index: 10;
+    display: none;
 }

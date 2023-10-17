@@ -20,20 +20,264 @@ function restartexp() {
 function gel_resolve() {
   document.getElementById("sampleprep").disabled = false;
   document.getElementById("gelprep").disabled = true;
+  window.scrollBy(0,500);
+ /**side 1 */
+ canvasider = document.getElementById("resolve");
+ ctxsr = canvasider.getContext("2d");
+ var posYr = 150;
+ var speedr = 1;
+
+ function drawLiner() {
+
+   ctxsr.strokeStyle = '#D2FCFF  ';
+   ctxsr.globalAlpha = 0.03;
+   ctxsr.lineWidth = 600;
+   ctxsr.beginPath();
+   ctxsr.moveTo(0, posYr); /*  0-130*/
+   ctxsr.lineTo(0, 150);
+   ctxsr.stroke();
+ }
+
+ function moveLiner() {
+   posYr += speedr;
+
+   if (posYr < 0 || posYr > canvasider.height) {
+     speedr = speedr * -1;
+   }
+ }
+
+ function loopr() {
+   // clear old frame;
+   // ctx.clearRect(0,0,canvas.width, canvas.height);
+   moveLiner();
+   drawLiner();
+   cancelani = requestAnimationFrame(loopr);
+ }
+ requestAnimationFrame(loopr);
+
+
 }
 
 
 function stacking_gel() {
   document.getElementById("sampleprep").disabled = true;
-  document.getElementById("prepproteinsample").disabled = false;
+
+  document.getElementById("placecomb").disabled = false;
+ // document.getElementById("comb").style.display="block";
+ window.scrollBy(0,500);
+  /**side 1 */
+ canvasides = document.getElementById("stacking");
+ ctxss = canvasides.getContext("2d");
+ var posYs = 150;
+ var speeds = 1;
+
+ function drawLines() {
+
+   ctxss.strokeStyle = '#D1F7FF ';
+   ctxss.globalAlpha = 0.03;
+   ctxss.lineWidth = 600;
+   ctxss.beginPath();
+   ctxss.moveTo(0, posYs); /*  0-130*/
+   ctxss.lineTo(0, 150);
+   ctxss.stroke();
+ }
+
+ function moveLines() {
+   posYs += speeds;
+
+   if (posYs < 0 || posYs > canvasides.height) {
+     speeds = speeds * -1;
+   }
+ }
+
+ function loops() {
+   // clear old frame;
+   // ctx.clearRect(0,0,canvas.width, canvas.height);
+   moveLines();
+   drawLines();
+   cancelani = requestAnimationFrame(loops);
+ }
+ requestAnimationFrame(loops);
 
 }
+ var imgcomb=null;
+function placecomb(){
+  
+  document.getElementById("placecomb").disabled = true;
+  document.getElementById("comb").style.display="block";
+  var combimg = document.getElementById("comb");
+  var orgleft = 60; //initial position
+  clearInterval(imgcomb);
+  imgcomb = setInterval(frame1, 100); 
+  function frame1() {
+    if (orgleft == 42) { 
+      clearInterval(imgcomb); 
+      document.getElementById("case").setAttribute("onclick", "movecase()");
+      //
+    } else {
+      orgleft--; 
+      combimg.style.left = orgleft + '%'; 
+     
+  
+       
+    }
+
+
+
+  
+  
+}
+}
+
+//function movecase(){
+
+
+const draggable = document.getElementById('case');
+const droppable = document.getElementById('droppable');
+
+// Event listeners for drag and drop
+draggable.addEventListener('dragstart', handleDragStart);
+droppable.addEventListener('dragover', handleDragOver);
+droppable.addEventListener('drop', handleDrop);
+
+// Drag start handler
+function handleDragStart(event) {
+  // Set the drag data (image URL in this case)
+  event.dataTransfer.setData('text/plain', event.target.src);
+}
+
+// Drag over handler to allow the drop
+function handleDragOver(event) {
+  event.preventDefault();
+}
+
+// Drop handler
+function handleDrop(event) {
+  event.preventDefault();
+
+  // Get the dragged data (image URL)
+  const imageUrl = event.dataTransfer.getData('text/plain');
+
+  // Create an image element
+  const droppedImage = new Image();
+  droppedImage.src = imageUrl;
+  droppedImage.style.width = droppable.clientWidth + 'px'; // Set the width as desired
+  droppedImage.style.height = droppable.clientHeight + 'px';
+  // Append the image to the droppable element
+  droppable.innerHTML = '';
+  droppable.appendChild(droppedImage);
+  document.getElementById("combin").style.display="block";
+  document.getElementById('case').style.display="none";
+  document.getElementById("combin").setAttribute("onclick", "removecomb()");
+  document.getElementById('resolve').style.display="none";
+  document.getElementById('stacking').style.display="none";
+  document.getElementById('comb').style.display="none";
+  document.getElementById("prepproteinsample").disabled = false;
+}
+
+//}
+var imgcombin=null;
+function removecomb(){
+  
+  var combimgin = document.getElementById("combin");
+  var orgtop = 195; //initial position
+  clearInterval(imgcombin);
+  imgcombin = setInterval(frame1, 100); 
+  function frame1() {
+    if (orgtop == 180) { 
+      clearInterval(imgcombin); 
+   document.getElementById("sampleload1").style.display="block";
+   document.getElementById("sampleload2").style.display="block";
+   document.getElementById("sampleload3").style.display="block";
+   document.getElementById("sampleload4").style.display="block";
+   document.getElementById("combin").style.display="none";
+
+      //document.getElementById("case").setAttribute("onclick", "movecase()");
+      //
+    } else {
+      orgtop--; 
+      combimgin.style.top = orgtop + '%'; 
+     
+  
+       
+    }
+
+
+
+  
+  
+}
+}
+
 function preprotein_sample() {
   document.getElementById("prepproteinsample").disabled = true;
-  document.getElementById("tubesabcd").style.display = "block";
-  document.getElementById("addbuffer").disabled = false;
+  document.getElementById("spinsample").disabled = false;
+  document.getElementById("check1").disabled=false;
+  document.getElementById("check2").disabled=false;
+  document.getElementById("check3").disabled=false;
 }
 
+function check1(){
+  var checkBox1 = document.getElementById("check1");
+
+  if (checkBox1.checked == true){
+    //image display block
+    document.getElementById("folded").style.display="block";
+    document.getElementById("bme").style.display="none";
+    document.getElementById("heatd").style.display="none";
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+    //window.scrollBy(0,700);
+  } else {
+    // image display "none";
+   
+    document.getElementById("folded").style.display="none";
+  
+  }
+}
+
+function check2(){
+  var checkBox2 = document.getElementById("check2");
+
+  if (checkBox2.checked == true){
+    //image display block
+    document.getElementById("heatd").style.display="block";
+    document.getElementById("folded").style.display="none";
+    document.getElementById("bme").style.display="none";
+    document.getElementById("check1").checked=false;
+    document.getElementById("check3").checked=false;
+    //window.scrollBy(0,700);
+  } else {
+    // image display "none";
+   
+    document.getElementById("heatd").style.display="none";
+  }
+}
+
+function check3(){
+  var checkBox3 = document.getElementById("check3");
+
+  if (checkBox3.checked == true){
+    //image display block
+    document.getElementById("bme").style.display="block";
+    document.getElementById("folded").style.display="none";
+    document.getElementById("heatd").style.display="none";
+    document.getElementById("check2").checked=false;
+    document.getElementById("check1").checked=false;
+    //window.scrollBy(0,700);
+  } else {
+    // image display "none";
+    
+    document.getElementById("bme").style.display="none";
+    
+  }
+}
+
+function spin_sample(){
+  document.getElementById("tubesabcd").style.display = "block";
+  document.getElementById("addbuffer").disabled = false;
+  document.getElementById("bme").style.display="none";
+}
 
 function addbuffer() {
   document.getElementById("buffer").style.display="block";
@@ -44,6 +288,7 @@ function addbuffer() {
   document.getElementById("addbuffer").disabled = true;
   document.getElementById("sampleload").disabled = false;
   document.getElementById('loadsamplea').style.pointerEvents="auto";
+  document.getElementById("canvasbufferfill").style.zIndex=10;
   /**side 1 */
   canvaside1 = document.getElementById("canvasbufferfill");
   ctxs1 = canvaside1.getContext("2d");
@@ -811,7 +1056,7 @@ function runningel() {
 function staining() {
 
   // Start the rotation animation
-
+  document.getElementById("gel").style.display = "block";
 
   var btnstaintext = document.getElementById("staingel");
   if (btnstaintext.innerHTML === "Start Staining") {
@@ -824,15 +1069,50 @@ function staining() {
     document.getElementById("sampleload2").style.display = "none";
     document.getElementById("sampleload3").style.display = "none";
     document.getElementById("sampleload4").style.display = "none";
-
-    rotateElement();
+    rotateElementst()
+    
     rotateElementb();
     //tubeimg.addEventListener('click', tubeinsert);
   } else {
     btnstaintext.innerHTML = "Start Staining";
+    document.getElementById("dstaingel").disabled = false;
+    
+    cancelAnimationFrame(animationIst);
+    cancelAnimationFrame(animationIstb);
+   
+  }
+
+
+}
+
+
+
+function dstaining() {
+
+  // Start the rotation animation
+
+
+  var btnstaintext = document.getElementById("dstaingel");
+  if (btnstaintext.innerHTML === "Start De-staining") {
+    btnstaintext.innerHTML = "Stop De-staining";
+    document.getElementById("sample1").style.display = "none";
+    document.getElementById("sample2").style.display = "none";
+    document.getElementById("sample3").style.display = "none";
+    document.getElementById("sample4").style.display = "none";
+    document.getElementById("sampleload1").style.display = "none";
+    document.getElementById("sampleload2").style.display = "none";
+    document.getElementById("sampleload3").style.display = "none";
+    document.getElementById("sampleload4").style.display = "none";
+   
+    rotateElement();
+    rotateElementbd();
+    //tubeimg.addEventListener('click', tubeinsert);
+  } else {
+    btnstaintext.innerHTML = "Start De-staining";
     document.getElementById("viewsample").disabled = false;
-    cancelAnimationFrame(animationId);
-    cancelAnimationFrame(animationId1);
+
+    cancelAnimationFrame(animationIdst1);
+    cancelAnimationFrame(animationIdstbd);
    
   }
 
@@ -841,11 +1121,14 @@ function staining() {
 
 function view_sample_UVlight() {
   document.getElementById("ladder").style.display = "block";
-  document.getElementById("rotatingElement").style.display = "none";
+  document.getElementById("rotatingElementst").style.display = "none";
   document.getElementById("rotatingElementbowl").style.display = "none";
+  document.getElementById("rotatingElementdst").style.display = "none";
+  document.getElementById("rotatingElementbowld").style.display = "none";
   document.getElementById("staining").style.display = "none";
   document.getElementById("staingel").disabled=true;
   document.getElementById("output").style.display="block";
+  document.getElementById("gel").style.display = "none";
 
   window.scrollBy(0, 500);
   // document.getElementById("output").style.display="block";
@@ -892,14 +1175,15 @@ function view_sample_UVlight() {
 var imgobj1 = null;
 function rungelsample() {
 
+  /*
   document.getElementById("sampleload1").style.display="block";
   var canvassd1 = document.getElementById("sampleload1");
-  var orgtop = 197; /* initial position */
+  var orgtop = 197; 
   clearInterval(imgobj1);
-  imgobj1 = setInterval(frame1, 100); /* frame is 5 denotes the speed of the movement*/
+  imgobj1 = setInterval(frame1, 100); 
   function frame1() {
-    if (orgtop == 260) { /* moves to 260 top positon*/
-      clearInterval(imgobj1); /* stops at 260 postion*/
+    if (orgtop == 260) { 
+      clearInterval(imgobj1); 
       //
     } else {
       orgtop++; 
@@ -908,11 +1192,11 @@ function rungelsample() {
   
        
     }
-  }
+  }*/
 
 
   /** Sample 1 */
-  /*
+  
   canvass11 = document.getElementById("sample1");
   ctxgs11 = canvass11.getContext("2d");
   var posY = 0;
@@ -959,7 +1243,7 @@ function rungelsample() {
   requestAnimationFrame(loop);
 
 
-*/
+
 
 
   /*sample 2 */
@@ -1107,14 +1391,41 @@ function rungelsample() {
 
 
 }
-var animationId1, animationId;
+var animationIst, animationIstb,animationIdst1,  animationIdstbd ;
 
-const rotatingElement = document.getElementById('rotatingElement');
+
+const rotatingElementst = document.getElementById('rotatingElementst');
+let rotationst = 10; // Initial rotation value
+let rotateClockwisest = true; // Initial direction
+
+function rotateElementst() {
+  rotatingElementst.style.transform = `rotate(${rotationst}deg)`;
+
+  // Update rotation based on direction
+  if (rotateClockwisest) {
+    rotationst -= 0.2;
+    if (rotationst <= -10) {
+      rotateClockwisest = false;
+    }
+  } else {
+    rotationst += 0.2;
+    if (rotationst >= 10) {
+      rotateClockwisest = true;
+    }
+  }
+
+  animationIst = requestAnimationFrame(rotateElementst);
+}
+
+
+const rotatingElement = document.getElementById('rotatingElementdst');
 let rotation = 10; // Initial rotation value
 let rotateClockwise = true; // Initial direction
 
 function rotateElement() {
   rotatingElement.style.transform = `rotate(${rotation}deg)`;
+  document.getElementById('rotatingElementdst').style.display="block";
+  document.getElementById('rotatingElementst').style.display="none";
 
   // Update rotation based on direction
   if (rotateClockwise) {
@@ -1129,7 +1440,7 @@ function rotateElement() {
     }
   }
 
-  animationId = requestAnimationFrame(rotateElement);
+  animationIdst1 = requestAnimationFrame(rotateElement);
 }
 
 
@@ -1139,7 +1450,7 @@ let rotateClockwiseb = true; // Initial direction
 
 function rotateElementb() {
   rotatingElementb.style.transform = `rotate(${rotationb}deg)`;
-
+ 
   // Update rotation based on direction
   if (rotateClockwiseb) {
     rotationb -= 0.2;
@@ -1153,8 +1464,33 @@ function rotateElementb() {
     }
   }
 
-  animationId1 = requestAnimationFrame(rotateElementb);
+  animationIstb = requestAnimationFrame(rotateElementb);
 }
+
+const rotatingElementbd = document.getElementById('rotatingElementbowld');
+let rotationbd = 10; // Initial rotation value
+let rotateClockwisebd = true; // Initial direction
+
+function rotateElementbd() {
+  rotatingElementbd.style.transform = `rotate(${rotationbd}deg)`;
+  document.getElementById('rotatingElementbowl').style.display="none";
+  document.getElementById('rotatingElementbowld').style.display="block";
+  // Update rotation based on direction
+  if (rotateClockwisebd) {
+    rotationbd -= 0.2;
+    if (rotationbd <= -10) {
+      rotateClockwisebd = false;
+    }
+  } else {
+    rotationbd += 0.2;
+    if (rotationbd >= 10) {
+      rotateClockwisebd = true;
+    }
+  }
+
+  animationIdstbd = requestAnimationFrame(rotateElementbd);
+}
+
 
 /* // To stop the animation
 function stopAnimation() {

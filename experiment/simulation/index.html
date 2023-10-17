@@ -34,23 +34,26 @@ Developer: Prakriti Dhang
 						<ol id="inst1">
 							<li>Click on "Click to Start the Experiment" button.</li>
 							<li>Now, click on "Resolving Gel" button. </li>
-							<li>Next click on "Stacking Gel" button.</li>
-							<li>Click on "Prepare Protein Samples" button.</li>
-							<li>Now click on "Add buffer" button, then on the buffer bottle to fill up the
+							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next drag the
+								green tray and drop near the text "Drop here". Then click on the comb to remove.</li>
+							<li>Click on "Prepare Protein Samples" button. Check the checkboxes and click "Spin(1100rpm for 1 min)".</li>
+							<li>Now click on "Add Running Buffer" button, then on the buffer bottle to fill up the
 								electrophoresis chamber with SDS gel running buffer.</li>
-							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the peptite A
+							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the pipette A
 								and drag the peptite to the first well of the gel. Repeat for Load Sample B, C, and D to
 								the consecutive wells.</li>
 							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
 								chamber. </li>
 							<li>Next connect the negative wire of
 								electrophorersis chamber to negative of voltage meter and positive wire of
-								electrophorersis chamber to positive wire of voltage meter. (For any wrong connection, click on the wire to disconnect.)</li>
+								electrophorersis chamber to positive wire of voltage meter. (For any wrong connection,
+								click on the wire to disconnect.)</li>
 							<li>Now click on "V" and "+" sign to set the voltage bewteen 80 V and 100 V.</li>
 							<li>Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
-							<li>Click on the stop icon button to switch off the power and disconnect the wires(click on the wire to disconnect).</li>
-							<li>Click on "Start Staining" button. After few minutes click on "Stop Staining" button.
+							<li>Click on the stop icon button to switch off the power and disconnect the wires(click on
+								the wire to disconnect).</li>
+							<li>Click on "Start Staining" button. Click on "Stop Staining" button. The click on "Start De-staining" button and stop it.
 							</li>
 							<li>Next Click on "Visualization under UV light" button, to see the result.</li>
 
@@ -91,32 +94,52 @@ Developer: Prakriti Dhang
 							</tr>
 							<tr>
 								<td>Step 1</td>
-								<td><button class="btn btn-primary  " type="button" id="gelprep"
-										onclick="gel_resolve()" disabled>Resolving Gel</button></td>
+								<td><button class="btn btn-primary  " type="button" id="gelprep" onclick="gel_resolve()"
+										disabled>Resolving Gel</button></td>
 							</tr>
 
 							<tr>
 								<td>Step 2</td>
 								<td><button class="btn btn-primary " type="button" id="sampleprep"
-										onclick="stacking_gel()" disabled>Stacking Gel</button>
-
+										onclick="stacking_gel()" disabled> Stacking Gel</button>
+									<button class="btn btn-primary " type="button" id="placecomb" onclick="placecomb()"
+										disabled>Place Comb</button>
 								</td>
 							</tr>
 							<tr>
 
 								<td>Step 3</td>
 
-									<td><button class="btn btn-primary" type="button" id="prepproteinsample"
+								<td><button class="btn btn-primary" type="button" id="prepproteinsample"
 										onclick="preprotein_sample()" disabled>Prepare Protein Samples
 									</button>
-									</td>
-									</tr>
-									<tr>
-										<td>Step 4</td>
-										<td>
-								
+									<br>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check1" name="option1"
+											value="Add Loading Dye" onclick="check1()" disabled>
+										<label class="form-check-label">Add Loading Dye</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check2" name="option2"
+											value="Heat Denature" onclick="check2()" disabled>
+										<label class="form-check-label">Heat Denature</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check3" name="option3"
+											value="Add Beta-mercaptoethanol" onclick="check3()" disabled>
+										<label class="form-check-label">Add Beta-mercaptoethanol</label>
+									</div>
+									<button class="btn btn-success" type="button" id="spinsample"
+										onclick="spin_sample()" disabled>Spin (1100rpm for 1 min)
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Step 4</td>
+								<td>
+
 									<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()"
-										disabled>Add Buffer
+										disabled>Add Running Buffer
 									</button>
 									<div class="dropdown div-inline">
 										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
@@ -125,9 +148,9 @@ Developer: Prakriti Dhang
 										</button>
 										<ul class="dropdown-menu">
 
-											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" 
+											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
 													style="cursor: pointer;">Load Sample A </a></li>
-											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" 
+											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
 													style="cursor: pointer;">Load Sample B </a></li>
 											<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
 													style="cursor: pointer;">Load Sample C </a></li>
@@ -149,6 +172,8 @@ Developer: Prakriti Dhang
 								<td>Step 6</td>
 								<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
 										disabled>Start Staining</button>
+									<button class="btn btn-primary" type="button" id="dstaingel" onclick="dstaining()"
+										disabled>Start De-staining</button>
 									<button class="btn btn-primary " type="button" id="viewsample"
 										onclick="view_sample_UVlight()" disabled>Visualization under UV light</button>
 								</td>
@@ -178,8 +203,24 @@ Developer: Prakriti Dhang
 
 						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
 						<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
-						<img src="./images/bottom-setup.png" class="img-fluid" id="bottomsetup">
+						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup">
 						<img src="./images/buffer.png" class="img-fluid" id="buffer">
+
+						<img src="./images/case.png" class="img-fluid" id="case" draggable="true">
+						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);"></canvas>
+						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);"></canvas>
+						<img src="./images/comb.png" class="img-fluid" id="comb" style="display: none;">
+						<img src="./images/comb.png" class="img-fluid" id="combin" style="display: none;">
+						<!--img src="./images/case.png" class="img-fluid" id="casein"-->
+
+
+						<img src="./images/foldedprt.png" class="img-fluid" id="folded">
+						<img src="./images/heatd.png" class="img-fluid" id="heatd">
+						<img src="./images/bme.png" class="img-fluid" id="bme">
+
+						<div id="droppable">
+							Drop here!
+						</div>
 
 						<div id="cd1"></div>
 						<div id="cd2"></div>
@@ -194,22 +235,24 @@ Developer: Prakriti Dhang
 						<div id="cd9"></div>
 						<div id="cd10"></div>
 
+
+
 						<!-- samples and peptite-->
 						<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
 						<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
 						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
 						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
 						<img src="./images/peptited.png" class="img-fluid" id="peptited">
-						<img src="./images/gel.png" class="img-fluid" id="gel">
+						<!--img src="./images/gel.png" class="img-fluid" id="gel"-->
 
 						<!--- sample load canvases -->
 
-						<canvas id="sampleload1" ></canvas>
-						<canvas id="sampleload2" ></canvas>
-						<canvas id="sampleload3" ></canvas>
-						<canvas id="sampleload4" ></canvas>
+						<canvas id="sampleload1"></canvas>
+						<canvas id="sampleload2"></canvas>
+						<canvas id="sampleload3"></canvas>
+						<canvas id="sampleload4"></canvas>
 
-						<canvas id="canvasbufferfill" style="border: 0px solid black;"></canvas>
+						<canvas id="canvasbufferfill" style="border: 0px solid rgb(226, 226, 226);"></canvas>
 						<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
 						<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
 						<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
@@ -223,8 +266,12 @@ Developer: Prakriti Dhang
 						<canvas id="sample3" style="border: 0px solid black;"></canvas>
 						<canvas id="sample4" style="border: 0px solid black;"></canvas>
 
-						<div id="rotatingElement"></div>
+						<div id="rotatingElementst"></div>
 						<div id="rotatingElementbowl"></div>
+						<div id="rotatingElementdst"></div>
+						<div id="rotatingElementbowld"></div>
+
+						<canvas style="border: 1px solid black;" id="gel"></canvas>
 
 						<img src="./images/staining.png" class="img-fluid" id="staining">
 						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
@@ -305,7 +352,7 @@ Developer: Prakriti Dhang
 
 
 
-		
+
 
 	</script>
 </body>
