@@ -222,6 +222,7 @@ function removecomb(){
    document.getElementById("sampleload4").style.display="block";
    document.getElementById("combin").style.display="none";
    document.getElementById("prepproteinsample").disabled = false;
+   document.getElementById("removecomb").disabled = true;
       //document.getElementById("case").setAttribute("onclick", "movecase()");
       //
     } else {
@@ -1160,7 +1161,7 @@ function dstaining() {
   }
   }
   else {
-    alert("DeSelect the component except Coomassie Brilliant blue for de-staining the gel");
+    alert("Select components for de-staining the gel");
   }
 
 }
