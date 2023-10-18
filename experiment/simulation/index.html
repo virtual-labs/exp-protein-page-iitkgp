@@ -170,10 +170,37 @@ Developer: Prakriti Dhang
 							</tr>
 							<tr>
 								<td>Step 6</td>
-								<td><button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
+								<td><div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks1" name="options1"
+										value="Add Loading Dye"  disabled>
+									<label class="form-check-label">Acetic acid (10%, 100ml)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks2" name="options2"
+										value="Add Loading Dye"  disabled>
+									<label class="form-check-label">Methanol (45%, 450 ml)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks3" name="options3"
+										value="Add Loading Dye"  disabled>
+									<label class="form-check-label">Water (45%, 450ml)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks4" name="options4"
+										value="Add Loading Dye"  disabled>
+									<label class="form-check-label">Coomassie Brilliant blue (1gm)</label>
+								</div>
+									
+									<button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
 										disabled>Start Staining</button>
 									<button class="btn btn-primary" type="button" id="dstaingel" onclick="dstaining()"
 										disabled>Start De-staining</button>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>Step &</td>
+								<td>
 									<button class="btn btn-primary " type="button" id="viewsample"
 										onclick="view_sample_UVlight()" disabled>Visualization under UV light</button>
 								</td>

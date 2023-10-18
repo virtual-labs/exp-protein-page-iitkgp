@@ -1087,7 +1087,9 @@ function runningel() {
 }
 
 function staining() {
+ if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked)&&(document.getElementById("checks4").checked)) {
 
+ 
   // Start the rotation animation
   document.getElementById("gel").style.display = "block";
 
@@ -1109,12 +1111,20 @@ function staining() {
   } else {
     btnstaintext.innerHTML = "Start Staining";
     document.getElementById("dstaingel").disabled = false;
-    
+    document.getElementById("checks1").checked=false;
+    document.getElementById("checks2").checked=false;
+    document.getElementById("checks3").checked=false;
+    document.getElementById("checks4").checked=false;
+    document.getElementById("checks4").disabled=true;
     cancelAnimationFrame(animationIst);
     cancelAnimationFrame(animationIstb);
    
   }
+ }
 
+ else{
+  alert("Select all the component for staining the gel");
+ }
 
 }
 
@@ -1122,9 +1132,9 @@ function staining() {
 
 function dstaining() {
 
-  // Start the rotation animation
+  if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked)) {
 
-
+    document.getElementById("staingel").disabled=true;
   var btnstaintext = document.getElementById("dstaingel");
   if (btnstaintext.innerHTML === "Start De-staining") {
     btnstaintext.innerHTML = "Stop De-staining";
@@ -1148,7 +1158,10 @@ function dstaining() {
     cancelAnimationFrame(animationIdstbd);
    
   }
-
+  }
+  else {
+    alert("DeSelect the component except Coomassie Brilliant blue for de-staining the gel");
+  }
 
 }
 
