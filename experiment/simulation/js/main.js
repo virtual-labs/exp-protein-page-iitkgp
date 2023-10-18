@@ -170,11 +170,11 @@ function handleDrop(event) {
   droppable.appendChild(droppedImage);
   document.getElementById("combin").style.display="block";
   document.getElementById('case').style.display="none";
-  document.getElementById("combin").setAttribute("onclick", "removecomb()");
+  //document.getElementById("combin").setAttribute("onclick", "removecomb()");
   document.getElementById('resolve').style.display="none";
   document.getElementById('stacking').style.display="none";
   document.getElementById('comb').style.display="none";
-  document.getElementById("prepproteinsample").disabled = false;
+  document.getElementById("removecomb").disabled = false;
 
 
 
@@ -221,7 +221,7 @@ function removecomb(){
    document.getElementById("sampleload3").style.display="block";
    document.getElementById("sampleload4").style.display="block";
    document.getElementById("combin").style.display="none";
-
+   document.getElementById("prepproteinsample").disabled = false;
       //document.getElementById("case").setAttribute("onclick", "movecase()");
       //
     } else {
