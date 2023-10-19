@@ -298,7 +298,7 @@ function removecomb(){
 
 function preprotein_sample() {
   document.getElementById("prepproteinsample").disabled = true;
-  document.getElementById("spinsample").disabled = false;
+  
   document.getElementById("check1").disabled=false;
   document.getElementById("check2").disabled=false;
   document.getElementById("check3").disabled=false;
@@ -351,6 +351,7 @@ function check3(){
     document.getElementById("heatd").style.display="none";
     document.getElementById("check2").checked=false;
     document.getElementById("check1").checked=false;
+    document.getElementById("spinsample").disabled = false;
     //window.scrollBy(0,700);
   } else {
     // image display "none";
