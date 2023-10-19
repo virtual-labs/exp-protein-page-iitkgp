@@ -131,7 +131,7 @@ function placecomb(){
 
 //function movecase(){
 
-
+/* drag green case */
 const draggable = document.getElementById('case');
 const droppable = document.getElementById('droppable');
 
@@ -176,34 +176,90 @@ function handleDrop(event) {
   document.getElementById('comb').style.display="none";
   document.getElementById("removecomb").disabled = false;
 
-
+}
 
   /****************** Touch screen***************** */
+  let startX, startY, offsetX, offsetY, isDragging = false;
+  document.addEventListener('touchstart', handleTouchStart);
+  document.addEventListener('touchmove', handleTouchMove);
+  document.addEventListener('touchend', handleTouchEnd);
 
-  draggable.addEventListener('touchstart', handleTouchStart);
-droppable.addEventListener('touchmove', handleTouchMove);
-droppable.addEventListener('touchend', handleTouchEnd);
-
-let  offsetX, offsetY;
   function handleTouchStart(event) {
-    event.preventDefault();
-  event.dataTransfer.setData('text/plain', event.target.src);
-  offsetX = event.touches[0].clientX - draggable.getBoundingClientRect().left;
-  offsetY = event.touches[0].clientY - draggable.getBoundingClientRect().top;
+    if (event.target === draggable) {
+      isDragging = true;
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+      offsetX = parseFloat(getComputedStyle(event.target).left);
+      offsetY = parseFloat(getComputedStyle(event.target).top);
+    }
   }
 
   function handleTouchMove(event) {
-    event.preventDefault();
-  const x = event.touches[0].clientX - offsetX;
-  const y = event.touches[0].clientY - offsetY;
-  draggable.style.left = `${x}px`;
-  draggable.style.top = `${y}px`;
+    if (isDragging) {
+      const currentX = event.touches[0].clientX;
+      const currentY = event.touches[0].clientY;
+      const deltaX = currentX - startX;
+      const deltaY = currentY - startY;
+      
+      draggable.style.left = offsetX + deltaX + 'px';
+      draggable.style.top = offsetY + deltaY + 'px';
+    }
   }
 
-  function handleTouchEnd(event) {
-    event.preventDefault();
+  function handleTouchEnd() {
+    if (isDragging) {
+      isDragging = false;
+
+      // Check if the draggable is inside the drop zone
+      const rect1 = draggable.getBoundingClientRect();
+      const rect2 = droppable.getBoundingClientRect();
+
+      if (
+        rect1.left >= rect2.left &&
+        rect1.right <= rect2.right &&
+        rect1.top >= rect2.top &&
+        rect1.bottom <= rect2.bottom
+      ) {
+        // The draggable is inside the drop zone, you can handle the drop logic here
+        console.log('Dropped into the drop zone!');
+      }
+    }
   }
-}
+
+
+/*let startX, startY, offsetX, offsetY, isDragging = false;
+draggable.addEventListener('touchstart', handleTouchStart);
+  draggable.addEventListener('touchmove', handleTouchMove);
+  draggable.addEventListener('touchend', handleTouchEnd);
+
+  function handleTouchStart(event) {
+    if (event.target === draggable) {
+      isDragging = true;
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+      offsetX = parseFloat(getComputedStyle(event.target).left);
+      offsetY = parseFloat(getComputedStyle(event.target).top);
+    }
+  }
+
+  function handleTouchMove(event) {
+    if (isDragging) {
+      const currentX = event.touches[0].clientX;
+      const currentY = event.touches[0].clientY;
+      const deltaX = currentX - startX;
+      const deltaY = currentY - startY;
+      
+      draggable.style.left = offsetX + deltaX + 'px';
+      draggable.style.top = offsetY + deltaY + 'px';
+    }
+  }
+
+  function handleTouchEnd() {
+    isDragging = false;
+  }
+*/
+
+/* drag green case ended*/
 
 //}
 var imgcombin=null;
@@ -242,7 +298,7 @@ function removecomb(){
 
 function preprotein_sample() {
   document.getElementById("prepproteinsample").disabled = true;
-  document.getElementById("spinsample").disabled = false;
+  
   document.getElementById("check1").disabled=false;
   document.getElementById("check2").disabled=false;
   document.getElementById("check3").disabled=false;
@@ -295,6 +351,7 @@ function check3(){
     document.getElementById("heatd").style.display="none";
     document.getElementById("check2").checked=false;
     document.getElementById("check1").checked=false;
+    document.getElementById("spinsample").disabled = false;
     //window.scrollBy(0,700);
   } else {
     // image display "none";
@@ -1116,7 +1173,7 @@ function staining() {
     document.getElementById("checks2").checked=false;
     document.getElementById("checks3").checked=false;
     document.getElementById("checks4").checked=false;
-    document.getElementById("checks4").disabled=true;
+    //document.getElementById("checks4").disabled=true;
     cancelAnimationFrame(animationIst);
     cancelAnimationFrame(animationIstb);
    
@@ -1133,7 +1190,7 @@ function staining() {
 
 function dstaining() {
 
-  if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked)) {
+  if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked) && (document.getElementById("checks4").checked == false)) {
 
     document.getElementById("staingel").disabled=true;
   var btnstaintext = document.getElementById("dstaingel");
@@ -1160,8 +1217,12 @@ function dstaining() {
    
   }
   }
+  else if ((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked) && (document.getElementById("checks4").checked))
+  {
+    alert("De-select Coomassie Brilliant blue (1gm) component");
+  }
   else {
-    alert("Select components for de-staining the gel");
+    alert("Select correct components for de-staining the gel");
   }
 
 }
@@ -1220,7 +1281,7 @@ function view_sample_UVlight() {
   ctxuv2.stroke();
 
 }
-var imgobj1 = null;
+//var imgobj1 = null;
 function rungelsample() {
 
   /*
@@ -1540,10 +1601,3 @@ function rotateElementbd() {
 }
 
 
-/* // To stop the animation
-function stopAnimation() {
-  cancelAnimationFrame(animationId);
-}
-
-// Example: Stop the animation when a button is clicked
-document.getElementById('stopButton').addEventListener('click', stopAnimation); */
