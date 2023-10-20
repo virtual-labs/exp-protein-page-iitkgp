@@ -118,17 +118,17 @@ Developer: Prakriti Dhang
 									<br>
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" type="checkbox" id="check1" name="option1"
-											value="Add Loading Dye" onclick="check1()" disabled>
+											value="Add Loading Dye" onclick="check1()" style="cursor: pointer;" disabled>
 										<label class="form-check-label">Add Loading Dye</label>
 									</div>
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" type="checkbox" id="check2" name="option2"
-											value="Heat Denature" onclick="check2()" disabled>
+											value="Heat Denature" onclick="check2()" style="cursor: pointer;" disabled>
 										<label class="form-check-label">Heat Denature</label>
 									</div>
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" type="checkbox" id="check3" name="option3"
-											value="Add Beta-mercaptoethanol" onclick="check3()" disabled>
+											value="Add Beta-mercaptoethanol" onclick="check3()"  style="cursor: pointer;" disabled>
 										<label class="form-check-label">Add Beta-mercaptoethanol</label>
 									</div>
 									<button class="btn btn-success" type="button" id="spinsample"
@@ -174,22 +174,22 @@ Developer: Prakriti Dhang
 								<td>Step 6</td>
 								<td><div class="form-check form-check-inline">
 									<input class="form-check-input" type="checkbox" id="checks1" name="options1"
-										value="Add Loading Dye"  disabled>
+										value="Add Loading Dye"  style="cursor:pointer;"  disabled>
 									<label class="form-check-label">Acetic acid (10%)</label>
 								</div>
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="checkbox" id="checks2" name="options2"
-										value="Add Loading Dye"  disabled>
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
 									<label class="form-check-label">Methanol (45%)</label>
 								</div>
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="checkbox" id="checks3" name="options3"
-										value="Add Loading Dye"  disabled>
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
 									<label class="form-check-label">Water (45%)</label>
 								</div>
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="checkbox" id="checks4" name="options4"
-										value="Add Loading Dye"  disabled>
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
 									<label class="form-check-label">Coomassie Brilliant blue (1gm)</label>
 								</div>
 									<br>
@@ -251,6 +251,8 @@ Developer: Prakriti Dhang
 							Drop here!
 						</div>
 
+						
+
 						<div id="cd1"></div>
 						<div id="cd2"></div>
 						<div id="cd3"></div>
@@ -287,7 +289,7 @@ Developer: Prakriti Dhang
 						<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
 						<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
 						<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
-						<canvas id="cstop" style="border: 0px solid black;" onclick="stopgel()"></canvas>
+						<canvas id="cstop" style="border: 0px solid black;" ></canvas>
 
 						<!-- sample  top to bottom movement-->
 						<canvas id="sample1" style="border: 0px solid black;"></canvas>

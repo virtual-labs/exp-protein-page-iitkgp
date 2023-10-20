@@ -57,10 +57,15 @@ Developer: Prakriti Dhang */
 #case{
 
     position: absolute;
-    width: 15%;
-    top:5%; /* 195.5*/
-    left: 40%;  /*7.3*/
+    width: 15%; 
+    top:5%; 
+    left: 40%;  
     cursor: move;
+    /*width: 100px;
+    height: 100px;
+    position: absolute;
+    touch-action: none;*/
+   
 }
 
 
@@ -116,7 +121,17 @@ Developer: Prakriti Dhang */
     border: 1px dashed #2ecc71;
     top:195%;
     left:7.2%;
-    z-index: 5;
+    z-index: 10;
+  }
+
+  #droppable1 {
+    position: absolute;
+    width: 15.2%;
+    height: 90.9%;
+    border: 1px dashed #2ecc71;
+    top:30%;
+    left:70%;
+    z-index: 10;
   }
 
 #resolve {
@@ -149,7 +164,7 @@ Developer: Prakriti Dhang */
     top:196%; /* 6*/
     left: 9%; /* 41.7*/
     cursor: pointer;
-    z-index: 10;
+    z-index: 12;
 }
 
 #sampleload1 {
@@ -163,7 +178,7 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
-  z-index: 7;
+  z-index: 12;
   display: none;
 
 }
@@ -180,7 +195,7 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
-  z-index: 7;
+  z-index: 12;
   display: none;
 }
 
@@ -195,7 +210,7 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
-  z-index: 7;
+  z-index: 12;
   display: none;
 
 }
@@ -211,7 +226,7 @@ Developer: Prakriti Dhang */
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
-  z-index: 7;
+  z-index: 12;
   display: none;
 
 }
@@ -224,7 +239,7 @@ Developer: Prakriti Dhang */
     height: 72%;
     top: 197%;
     left: 9.5%;
-    z-index: 10;
+    z-index: 12;
 }
 
 
@@ -234,7 +249,7 @@ Developer: Prakriti Dhang */
     height: 72%;
     top: 197%;
     left: 12.5%;
-    z-index: 10;
+    z-index: 12;
 }
 
 #sample3 {
@@ -243,7 +258,7 @@ Developer: Prakriti Dhang */
     height: 72%;
     top: 197%;
     left: 15.5%;
-    z-index: 10;
+    z-index: 12;
 }
 
 #sample4 {
@@ -252,7 +267,7 @@ Developer: Prakriti Dhang */
     height: 72%;
     top: 197%;
     left: 18.5%;
-    z-index: 10;
+    z-index: 12;
 }
 
 
@@ -520,7 +535,7 @@ path,
     top: 6%;
     left: 50.9%;
     cursor: pointer;
-    z-index: 11;
+    z-index: 13;
     display: none;
    
 
@@ -532,7 +547,7 @@ path,
     top: 6%;
    left: 53.8%; 
     cursor: grab;
-    z-index: 11;
+    z-index: 13;
     display: none;
 
 }
@@ -544,7 +559,7 @@ path,
     top: 6%;
     left: 56.6%;
     cursor: pointer;
-    z-index: 11;
+    z-index: 13;
     display: none;
 
 }
@@ -555,7 +570,7 @@ path,
     top: 6%;
     left: 59%;
     cursor: pointer;
-    z-index: 11;
+    z-index: 13;
     display: none;
 
 }
