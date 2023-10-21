@@ -137,8 +137,13 @@ const droppable = document.getElementById('droppable');
 
 // Event listeners for drag and drop
 draggable.addEventListener('dragstart', handleDragStart);
+draggable.addEventListener('touchstart', handleTouchStart);
 droppable.addEventListener('dragover', handleDragOver);
 droppable.addEventListener('drop', handleDrop);
+
+draggable.addEventListener('touchstart', handleTouchStart);
+  draggable.addEventListener('touchmove', handleTouchMove);
+  draggable.addEventListener('touchend', handleTouchEnd);
 
 
 
@@ -179,19 +184,52 @@ function handleDrop(event) {
 }
 
   /****************** Touch screen***************** */
-  let startX, startY, offsetX, offsetY, isDragging = false;
-  document.addEventListener('touchstart', handleTouchStart);
-  document.addEventListener('touchmove', handleTouchMove);
-  document.addEventListener('touchend', handleTouchEnd);
+
+  
+ 
+  let offsetX, offsetY;
 
   function handleTouchStart(event) {
-    if (event.target === draggable) {
-      isDragging = true;
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-      offsetX = parseFloat(getComputedStyle(event.target).left);
-      offsetY = parseFloat(getComputedStyle(event.target).top);
-    }
+    event.preventDefault();
+   //event.dataTransfer.setData('text/plain', event.target.src);
+    offsetX = event.touches[0].clientX - draggable.getBoundingClientRect().left;
+    offsetY = event.touches[0].clientY - draggable.getBoundingClientRect().top;
+  }
+  function handleTouchMove(event) {
+    event.preventDefault();
+    const x = event.touches[0].clientX - offsetX;
+    const y = event.touches[0].clientY - offsetY;
+    draggable.style.left = `${x}px`;
+    draggable.style.top = `${y}px`;
+    document.getElementById('resolve').style.display="none";
+    document.getElementById('stacking').style.display="none";
+    document.getElementById('comb').style.display="none";
+  }
+  
+  // Touch end handler
+  function handleTouchEnd(event) {
+    event.preventDefault();
+    document.getElementById("combin").style.display="block";
+  document.getElementById('case').style.display="block";
+  //document.getElementById("combin").setAttribute("onclick", "removecomb()");
+ 
+  document.getElementById("removecomb").disabled = false;
+  droppable.innerHTML = '';
+  }
+  
+ 
+  /*let startX, startY, offsetX, offsetY, isDragging = false;
+ 
+  draggable.addEventListener('touchstart', handleTouchStart);
+  draggable.addEventListener('touchmove', handleTouchMove);
+  draggable.addEventListener('touchend', handleTouchEnd);
+
+  function handleTouchStart(event) {
+    isDragging = true;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    offsetX = parseFloat(getComputedStyle(event.target).left);
+    offsetY = parseFloat(getComputedStyle(event.target).top);
   }
 
   function handleTouchMove(event) {
@@ -206,7 +244,7 @@ function handleDrop(event) {
     }
   }
 
-  function handleTouchEnd() {
+  function handleTouchEnd(event) {
     if (isDragging) {
       isDragging = false;
 
@@ -220,44 +258,13 @@ function handleDrop(event) {
         rect1.top >= rect2.top &&
         rect1.bottom <= rect2.bottom
       ) {
-        // The draggable is inside the drop zone, you can handle the drop logic here
+        // Log a message to the console
         console.log('Dropped into the drop zone!');
       }
     }
-  }
+  }*/
 
 
-/*let startX, startY, offsetX, offsetY, isDragging = false;
-draggable.addEventListener('touchstart', handleTouchStart);
-  draggable.addEventListener('touchmove', handleTouchMove);
-  draggable.addEventListener('touchend', handleTouchEnd);
-
-  function handleTouchStart(event) {
-    if (event.target === draggable) {
-      isDragging = true;
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-      offsetX = parseFloat(getComputedStyle(event.target).left);
-      offsetY = parseFloat(getComputedStyle(event.target).top);
-    }
-  }
-
-  function handleTouchMove(event) {
-    if (isDragging) {
-      const currentX = event.touches[0].clientX;
-      const currentY = event.touches[0].clientY;
-      const deltaX = currentX - startX;
-      const deltaY = currentY - startY;
-      
-      draggable.style.left = offsetX + deltaX + 'px';
-      draggable.style.top = offsetY + deltaY + 'px';
-    }
-  }
-
-  function handleTouchEnd() {
-    isDragging = false;
-  }
-*/
 
 /* drag green case ended*/
 
@@ -424,6 +431,9 @@ function sample_loadA() {
   const canvassdrop1 = document.getElementById('sampleload1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
   document.getElementById("peptitea").style.display = "block";
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptited").style.display = "none";
   const imagepp = document.getElementById('peptitea');
 
   let isDragging = false;
@@ -571,6 +581,9 @@ function sample_loadB() {
   const canvassdrop2 = document.getElementById('sampleload2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
   document.getElementById("peptiteb").style.display = "block";
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptited").style.display = "none";
   const imagepp2 = document.getElementById('peptiteb');
 
   let isDragging2 = false;
@@ -711,6 +724,9 @@ function sample_loadC() {
   const canvassdrop3 = document.getElementById('sampleload3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
   document.getElementById("peptitec").style.display = "block";
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptitea").style.display = "none";
+  document.getElementById("peptited").style.display = "none";
   const imagepp3 = document.getElementById('peptitec');
 
   let isDragging3 = false;
@@ -860,6 +876,9 @@ function sample_loadD() {
   const canvassdrop4 = document.getElementById('sampleload4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
   document.getElementById("peptited").style.display = "block";
+  document.getElementById("peptiteb").style.display = "none";
+  document.getElementById("peptitec").style.display = "none";
+  document.getElementById("peptitea").style.display = "none";
   const imagepp4 = document.getElementById('peptited');
 
   let isDragging4 = false;
