@@ -1336,9 +1336,9 @@ function rungelsample() {
     const gradient = ctxgs11.createLinearGradient(0, 0, 0, canvass11.height);
 
     // Add color stops to the gradient
-    gradient.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient.addColorStop(1, '#7FA9FF');      // End color (position 1)
+    gradient.addColorStop(0, '#B2C9FF  ');     // Start color (position 0)
+    gradient.addColorStop(0.9, '#B2C9FF ');  // Middle color (position 0.8)
+    gradient.addColorStop(1, '#B2C9FF ');      // End color (position 1)
 
     // Set the stroke style to the gradient
     ctxgs11.strokeStyle = gradient;
@@ -1387,9 +1387,9 @@ function rungelsample() {
     const gradient2 = ctxgs21.createLinearGradient(0, 0, 0, canvass21.height);
 
     // Add color stops to the gradient
-    gradient2.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient2.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient2.addColorStop(1, '#7FA9FF');      // End color (position 1)
+    gradient2.addColorStop(0, '#B2C9FF  ');     // Start color (position 0) //#EBFCFF
+    gradient2.addColorStop(0.9, '#B2C9FF ');  // Middle color (position 0.8) //#E8F8FF
+    gradient2.addColorStop(1, '#B2C9FF ');      // End color (position 1) //#7FA9FF
 
     // Set the stroke style to the gradient
     ctxgs21.strokeStyle = gradient2;
@@ -1435,9 +1435,9 @@ function rungelsample() {
     const gradient3 = ctxgs31.createLinearGradient(0, 0, 0, canvass31.height);
 
     // Add color stops to the gradient
-    gradient3.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient3.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient3.addColorStop(1, '#7FA9FF');      // End color (position 1)
+    gradient3.addColorStop(0, '#B2C9FF  ');     // Start color (position 0)
+    gradient3.addColorStop(0.9, '#B2C9FF ');  // Middle color (position 0.8)
+    gradient3.addColorStop(1, '#B2C9FF ');      // End color (position 1)
 
     // Set the stroke style to the gradient
     ctxgs31.strokeStyle = gradient3;
@@ -1482,9 +1482,9 @@ function rungelsample() {
     const gradient4 = ctxgs41.createLinearGradient(0, 0, 0, canvass41.height);
 
     // Add color stops to the gradient
-    gradient4.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient4.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient4.addColorStop(1, '#7FA9FF');      // End color (position 1)
+    gradient4.addColorStop(0, '#B2C9FF ');     // Start color (position 0)
+    gradient4.addColorStop(0.9, '#B2C9FF ');  // Middle color (position 0.8)
+    gradient4.addColorStop(1, '#B2C9FF ');      // End color (position 1)
 
     // Set the stroke style to the gradient
     ctxgs41.strokeStyle = gradient4;

@@ -36,7 +36,7 @@ TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
 
 <div align="center">
-<img src="images/sdspagegelpolymerization.png" width="30%">
+<img src="images/Fig1.png" width="30%">
 <p>Figure 1: The polymerization of acrylamide and bisacrylamide to form the polyacrylamide gel used in PAGE.</p>
 </div>
 
@@ -68,7 +68,7 @@ or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein.
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
 <div align="center">
-<img src="images/sdspageprinciple.png" width="40%">
+<img src="images/Fig2.png" width="40%">
 <p>Figure 2: The principle of SDS-PAGE</p>
 </div>
 
