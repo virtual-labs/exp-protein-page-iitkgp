@@ -90,7 +90,7 @@ Developer: Prakriti Dhang */
 
 #folded{
     position: absolute;
-    width: 7%;
+    width: 9%;
     top:5%; /* 195.5*/
     left: 60%;  /*7.3*/
     display: none;
@@ -99,7 +99,7 @@ Developer: Prakriti Dhang */
 
 #heatd{
     position: absolute;
-    width: 7%;
+    width: 9%;
     top:5%; /* 195.5*/
     left: 60%;  /*7.3*/
     display: none;
@@ -107,7 +107,7 @@ Developer: Prakriti Dhang */
 
 #bme{
     position: absolute;
-    width: 14%;
+    width: 15%;
     top:5%; /* 195.5*/
     left: 60%;  /*7.3*/
     display: none;
