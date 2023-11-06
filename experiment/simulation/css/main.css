@@ -92,7 +92,7 @@ Developer: Prakriti Dhang */
     position: absolute;
     width: 7%;
     top:5%; /* 195.5*/
-    left: 70%;  /*7.3*/
+    left: 60%;  /*7.3*/
     display: none;
   
 }
@@ -101,15 +101,15 @@ Developer: Prakriti Dhang */
     position: absolute;
     width: 7%;
     top:5%; /* 195.5*/
-    left: 70%;  /*7.3*/
+    left: 60%;  /*7.3*/
     display: none;
 }
 
 #bme{
     position: absolute;
-    width: 7%;
+    width: 14%;
     top:5%; /* 195.5*/
-    left: 70%;  /*7.3*/
+    left: 60%;  /*7.3*/
     display: none;
 }
 
