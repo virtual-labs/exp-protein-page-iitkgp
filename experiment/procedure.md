@@ -31,7 +31,7 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
       3. Remove the comb and fill with running buffer
 
 <div align="center">
-<img src="images/Image1.png" width="30%">
+<img src="images/Image1.png" class="img-fluid">
 <p>Figure1: Set up of an SDS-PAGE experiment.</p>
 </div>
 
