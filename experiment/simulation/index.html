@@ -34,12 +34,12 @@ Developer: Prakriti Dhang
 						<ol id="inst1">
 							<li>Click on "Start the Experiment" button.</li>
 							<li>Now, click on "Resolving Gel" button. </li>
-							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next click on the green planel; and drag and drop near the text "Drop here". Then click on the "Remove Comb" button.</li>
+							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next click on the gel casting stand; and drag and drop in the green dashed box of the buffer tank (leave the mouse when you see the cursor). Then click on the "Remove Comb" button.</li>
 							<li>Click on "Prepare Protein Samples" button. Check the checkboxes and click "Spin (1100rpm for 1 min)" button.</li>
 							<li>Now click on "Add Running Buffer" button, then on the buffer bottle to fill up the
 								electrophoresis chamber with SDS gel running buffer.</li>
-							<li>From the "Load Samples" dropdown button select "Load Sample A". Click on the pipette A
-								and drag the peptite to the first well of the gel. Repeat for Load Sample B, C, and D to
+							<li>From the "Load Samples" dropdown button select "Load Molecular Marker". Click on the pipette A
+								and drag the peptite to the first well of the gel. Repeat for Load Sample A, B, and C to
 								the consecutive wells.</li>
 							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
 								chamber to close it. </li>
@@ -151,13 +151,13 @@ Developer: Prakriti Dhang
 										<ul class="dropdown-menu">
 
 											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
-													style="cursor: pointer;">Load Sample A </a></li>
+													style="cursor: pointer;">Load Molecular Marker </a></li>
 											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
-													style="cursor: pointer;">Load Sample B </a></li>
+													style="cursor: pointer;">Load Sample A </a></li>
 											<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
-													style="cursor: pointer;">Load Sample C </a></li>
+													style="cursor: pointer;">Load Sample B </a></li>
 											<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()"
-													style="cursor: pointer;">Load Sample D </a></li>
+													style="cursor: pointer;">Load Sample C </a></li>
 										</ul>
 									</div>
 
@@ -233,11 +233,11 @@ Developer: Prakriti Dhang
 						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
 						<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
 						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup">
-						<img src="./images/buffer.png" class="img-fluid" id="buffer">
+						<img src="./images/buffer.png" class="img-fluid" id="buffer" draggable="false">
 
 						<img src="./images/case.png" class="img-fluid" id="case" draggable="true">
-						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);"></canvas>
-						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);"></canvas>
+						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);display: block;"></canvas>
+						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);display: block;"></canvas>
 						<img src="./images/comb.png" class="img-fluid" id="comb" style="display: none;">
 						<img src="./images/comb.png" class="img-fluid" id="combin" style="display: none;">
 						<!--img src="./images/case.png" class="img-fluid" id="casein"-->
@@ -270,10 +270,10 @@ Developer: Prakriti Dhang
 
 						<!-- samples and peptite-->
 						<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
-						<img src="./images/peptitea.png" class="img-fluid" id="peptitea">
-						<img src="./images/peptiteb.png" class="img-fluid" id="peptiteb">
-						<img src="./images/peptitec.png" class="img-fluid" id="peptitec">
-						<img src="./images/peptited.png" class="img-fluid" id="peptited">
+						<img src="./images/peptited.png" class="img-fluid" id="peptitea"> <!-- for molecular marker -->
+						<img src="./images/peptitea.png" class="img-fluid" id="peptiteb"> <!-- for load sample a -->
+						<img src="./images/peptiteb.png" class="img-fluid" id="peptitec"> <!-- for load sample b  -->
+						<img src="./images/peptitec.png" class="img-fluid" id="peptited"> <!-- for load sample c -->
 						<!--img src="./images/gel.png" class="img-fluid" id="gel"-->
 
 						<!--- sample load canvases -->

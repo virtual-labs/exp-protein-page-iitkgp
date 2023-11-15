@@ -7,10 +7,10 @@ Developer: Prakriti Dhang */
 function start() {
   document.getElementById("gelprep").disabled = false;
   document.getElementById("start").disabled = true;
-  document.getElementById('loadsamplea').style.pointerEvents="none";
-  document.getElementById('loadsampleb').style.pointerEvents="none";
-  document.getElementById('loadsamplec').style.pointerEvents="none";
-  document.getElementById('loadsampled').style.pointerEvents="none";
+  document.getElementById('loadsamplea').style.pointerEvents = "none";
+  document.getElementById('loadsampleb').style.pointerEvents = "none";
+  document.getElementById('loadsamplec').style.pointerEvents = "none";
+  document.getElementById('loadsampled').style.pointerEvents = "none";
 }
 
 function restartexp() {
@@ -20,40 +20,41 @@ function restartexp() {
 function gel_resolve() {
   document.getElementById("sampleprep").disabled = false;
   document.getElementById("gelprep").disabled = true;
-  window.scrollBy(0,500);
- /**side 1 */
- canvasider = document.getElementById("resolve");
- ctxsr = canvasider.getContext("2d");
- var posYr = 150;
- var speedr = 1;
+  document.getElementById("resolve").style.display = "block";
+  window.scrollBy(0, 600);
+  /**side 1 */
+  canvasider = document.getElementById("resolve");
+  ctxsr = canvasider.getContext("2d");
+  var posYr = 150;
+  var speedr = 1;
 
- function drawLiner() {
+  function drawLiner() {
 
-   ctxsr.strokeStyle = '#D2FCFF  ';
-   ctxsr.globalAlpha = 0.03;
-   ctxsr.lineWidth = 600;
-   ctxsr.beginPath();
-   ctxsr.moveTo(0, posYr); /*  0-130*/
-   ctxsr.lineTo(0, 150);
-   ctxsr.stroke();
- }
+    ctxsr.strokeStyle = '#D2FCFF  ';
+    ctxsr.globalAlpha = 0.03;
+    ctxsr.lineWidth = 600;
+    ctxsr.beginPath();
+    ctxsr.moveTo(0, posYr); /*  0-130*/
+    ctxsr.lineTo(0, 150);
+    ctxsr.stroke();
+  }
 
- function moveLiner() {
-   posYr += speedr;
+  function moveLiner() {
+    posYr += speedr;
 
-   if (posYr < 0 || posYr > canvasider.height) {
-     speedr = speedr * -1;
-   }
- }
+    if (posYr < 0 || posYr > canvasider.height) {
+      speedr = speedr * -1;
+    }
+  }
 
- function loopr() {
-   // clear old frame;
-   // ctx.clearRect(0,0,canvas.width, canvas.height);
-   moveLiner();
-   drawLiner();
-   cancelani = requestAnimationFrame(loopr);
- }
- requestAnimationFrame(loopr);
+  function loopr() {
+    // clear old frame;
+    // ctx.clearRect(0,0,canvas.width, canvas.height);
+    moveLiner();
+    drawLiner();
+    cancelani = requestAnimationFrame(loopr);
+  }
+  requestAnimationFrame(loopr);
 
 
 }
@@ -61,72 +62,73 @@ function gel_resolve() {
 
 function stacking_gel() {
   document.getElementById("sampleprep").disabled = true;
-
+  document.getElementById("stacking").style.display = "block";
   document.getElementById("placecomb").disabled = false;
- // document.getElementById("comb").style.display="block";
- window.scrollBy(0,500);
+  // document.getElementById("comb").style.display="block";
+  window.scrollBy(0, 500);
   /**side 1 */
- canvasides = document.getElementById("stacking");
- ctxss = canvasides.getContext("2d");
- var posYs = 150;
- var speeds = 1;
+  canvasides = document.getElementById("stacking");
+  ctxss = canvasides.getContext("2d");
+  var posYs = 150;
+  var speeds = 1;
 
- function drawLines() {
+  function drawLines() {
 
-   ctxss.strokeStyle = '#D1F7FF ';
-   ctxss.globalAlpha = 0.03;
-   ctxss.lineWidth = 600;
-   ctxss.beginPath();
-   ctxss.moveTo(0, posYs); /*  0-130*/
-   ctxss.lineTo(0, 150);
-   ctxss.stroke();
- }
+    ctxss.strokeStyle = '#D1F7FF ';
+    ctxss.globalAlpha = 0.03;
+    ctxss.lineWidth = 600;
+    ctxss.beginPath();
+    ctxss.moveTo(0, posYs); /*  0-130*/
+    ctxss.lineTo(0, 150);
+    ctxss.stroke();
+  }
 
- function moveLines() {
-   posYs += speeds;
+  function moveLines() {
+    posYs += speeds;
 
-   if (posYs < 0 || posYs > canvasides.height) {
-     speeds = speeds * -1;
-   }
- }
+    if (posYs < 0 || posYs > canvasides.height) {
+      speeds = speeds * -1;
+    }
+  }
 
- function loops() {
-   // clear old frame;
-   // ctx.clearRect(0,0,canvas.width, canvas.height);
-   moveLines();
-   drawLines();
-   cancelani = requestAnimationFrame(loops);
- }
- requestAnimationFrame(loops);
+  function loops() {
+    // clear old frame;
+    // ctx.clearRect(0,0,canvas.width, canvas.height);
+    moveLines();
+    drawLines();
+    cancelani = requestAnimationFrame(loops);
+  }
+  requestAnimationFrame(loops);
 
 }
- var imgcomb=null;
-function placecomb(){
-  
+var imgcomb = null;
+function placecomb() {
+  window.scrollBy(0, 500);
   document.getElementById("placecomb").disabled = true;
-  document.getElementById("comb").style.display="block";
+  document.getElementById("comb").style.display = "block";
   var combimg = document.getElementById("comb");
-  var orgleft = 60; //initial position
+  //var orgleft = 60; 
+  var orgtop =-10;//initial position
   clearInterval(imgcomb);
-  imgcomb = setInterval(frame1, 100); 
+  imgcomb = setInterval(frame1, 100);
   function frame1() {
-    if (orgleft == 42) { 
-      clearInterval(imgcomb); 
+    if (orgtop == 6) {
+      clearInterval(imgcomb);
       document.getElementById("case").setAttribute("onclick", "movecase()");
       //
     } else {
-      orgleft--; 
-      combimg.style.left = orgleft + '%'; 
-     
-  
-       
+      orgtop++;
+      combimg.style.top = orgtop + '%';
+
+
+
     }
 
 
 
-  
-  
-}
+
+
+  }
 }
 
 //function movecase(){
@@ -142,8 +144,8 @@ droppable.addEventListener('dragover', handleDragOver);
 droppable.addEventListener('drop', handleDrop);
 
 draggable.addEventListener('touchstart', handleTouchStart);
-  draggable.addEventListener('touchmove', handleTouchMove);
-  draggable.addEventListener('touchend', handleTouchEnd);
+draggable.addEventListener('touchmove', handleTouchMove);
+draggable.addEventListener('touchend', handleTouchEnd);
 
 
 
@@ -173,153 +175,157 @@ function handleDrop(event) {
   // Append the image to the droppable element
   droppable.innerHTML = '';
   droppable.appendChild(droppedImage);
-  document.getElementById("combin").style.display="block";
-  document.getElementById('case').style.display="none";
+  document.getElementById("combin").style.display = "block";
+  document.getElementById('case').style.display = "none";
   //document.getElementById("combin").setAttribute("onclick", "removecomb()");
-  document.getElementById('resolve').style.display="none";
-  document.getElementById('stacking').style.display="none";
-  document.getElementById('comb').style.display="none";
+  document.getElementById('resolve').style.display = "none";
+  document.getElementById('stacking').style.display = "none";
+  document.getElementById('comb').style.display = "none";
   document.getElementById("removecomb").disabled = false;
 
 }
 
-  /****************** Touch screen***************** */
+/****************** Touch screen***************** */
 
-  
- 
-  let offsetX, offsetY;
 
-  function handleTouchStart(event) {
-    event.preventDefault();
-   //event.dataTransfer.setData('text/plain', event.target.src);
-    offsetX = event.touches[0].clientX - draggable.getBoundingClientRect().left;
-    offsetY = event.touches[0].clientY - draggable.getBoundingClientRect().top;
-  }
-  function handleTouchMove(event) {
-    event.preventDefault();
-    const x = event.touches[0].clientX - offsetX;
-    const y = event.touches[0].clientY - offsetY;
-    draggable.style.left = `${x}px`;
-    draggable.style.top = `${y}px`;
-    document.getElementById('resolve').style.display="none";
-    document.getElementById('stacking').style.display="none";
-    document.getElementById('comb').style.display="none";
-  }
-  
-  // Touch end handler
-  function handleTouchEnd(event) {
-    event.preventDefault();
-    document.getElementById("combin").style.display="block";
-  document.getElementById('case').style.display="block";
+
+let offsetX, offsetY;
+
+function handleTouchStart(event) {
+  event.preventDefault();
+  //event.dataTransfer.setData('text/plain', event.target.src);
+  offsetX = event.touches[0].clientX - draggable.getBoundingClientRect().left;
+  offsetY = event.touches[0].clientY - draggable.getBoundingClientRect().top;
+}
+function handleTouchMove(event) {
+  event.preventDefault();
+  const x = event.touches[0].clientX - offsetX;
+  const y = event.touches[0].clientY - offsetY;
+  draggable.style.left = `${x}px`;
+  draggable.style.top = `${y}px`;
+  document.getElementById('resolve').style.display = "none";
+  document.getElementById('stacking').style.display = "none";
+  document.getElementById('comb').style.display = "none";
+}
+
+// Touch end handler
+function handleTouchEnd(event) {
+  event.preventDefault();
+  document.getElementById("combin").style.display = "block";
+  document.getElementById('case').style.display = "block";
   //document.getElementById("combin").setAttribute("onclick", "removecomb()");
- 
+
   document.getElementById("removecomb").disabled = false;
   droppable.innerHTML = '';
-  }
-  
- 
-  /*let startX, startY, offsetX, offsetY, isDragging = false;
- 
-  draggable.addEventListener('touchstart', handleTouchStart);
-  draggable.addEventListener('touchmove', handleTouchMove);
-  draggable.addEventListener('touchend', handleTouchEnd);
+}
 
-  function handleTouchStart(event) {
-    isDragging = true;
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-    offsetX = parseFloat(getComputedStyle(event.target).left);
-    offsetY = parseFloat(getComputedStyle(event.target).top);
-  }
 
-  function handleTouchMove(event) {
-    if (isDragging) {
-      const currentX = event.touches[0].clientX;
-      const currentY = event.touches[0].clientY;
-      const deltaX = currentX - startX;
-      const deltaY = currentY - startY;
-      
-      draggable.style.left = offsetX + deltaX + 'px';
-      draggable.style.top = offsetY + deltaY + 'px';
+/*let startX, startY, offsetX, offsetY, isDragging = false;
+ 
+draggable.addEventListener('touchstart', handleTouchStart);
+draggable.addEventListener('touchmove', handleTouchMove);
+draggable.addEventListener('touchend', handleTouchEnd);
+
+function handleTouchStart(event) {
+  isDragging = true;
+  startX = event.touches[0].clientX;
+  startY = event.touches[0].clientY;
+  offsetX = parseFloat(getComputedStyle(event.target).left);
+  offsetY = parseFloat(getComputedStyle(event.target).top);
+}
+
+function handleTouchMove(event) {
+  if (isDragging) {
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+    const deltaX = currentX - startX;
+    const deltaY = currentY - startY;
+    
+    draggable.style.left = offsetX + deltaX + 'px';
+    draggable.style.top = offsetY + deltaY + 'px';
+  }
+}
+
+function handleTouchEnd(event) {
+  if (isDragging) {
+    isDragging = false;
+
+    // Check if the draggable is inside the drop zone
+    const rect1 = draggable.getBoundingClientRect();
+    const rect2 = droppable.getBoundingClientRect();
+
+    if (
+      rect1.left >= rect2.left &&
+      rect1.right <= rect2.right &&
+      rect1.top >= rect2.top &&
+      rect1.bottom <= rect2.bottom
+    ) {
+      // Log a message to the console
+      console.log('Dropped into the drop zone!');
     }
   }
-
-  function handleTouchEnd(event) {
-    if (isDragging) {
-      isDragging = false;
-
-      // Check if the draggable is inside the drop zone
-      const rect1 = draggable.getBoundingClientRect();
-      const rect2 = droppable.getBoundingClientRect();
-
-      if (
-        rect1.left >= rect2.left &&
-        rect1.right <= rect2.right &&
-        rect1.top >= rect2.top &&
-        rect1.bottom <= rect2.bottom
-      ) {
-        // Log a message to the console
-        console.log('Dropped into the drop zone!');
-      }
-    }
-  }*/
+}*/
 
 
 
 /* drag green case ended*/
 
 //}
-var imgcombin=null;
-function removecomb(){
-  
+var imgcombin = null;
+function removecomb() {
+  window.scrollBy(0, 700);
   var combimgin = document.getElementById("combin");
   var orgtop = 195; //initial position
   clearInterval(imgcombin);
-  imgcombin = setInterval(frame1, 100); 
+  imgcombin = setInterval(frame1, 100);
   function frame1() {
-    if (orgtop == 180) { 
-      clearInterval(imgcombin); 
-   document.getElementById("sampleload1").style.display="block";
-   document.getElementById("sampleload2").style.display="block";
-   document.getElementById("sampleload3").style.display="block";
-   document.getElementById("sampleload4").style.display="block";
-   document.getElementById("combin").style.display="none";
-   document.getElementById("prepproteinsample").disabled = false;
-   document.getElementById("removecomb").disabled = true;
+    if (orgtop == 180) {
+      clearInterval(imgcombin);
+      document.getElementById("sampleload1").style.display = "block";
+      document.getElementById("sampleload2").style.display = "block";
+      document.getElementById("sampleload3").style.display = "block";
+      document.getElementById("sampleload4").style.display = "block";
+      document.getElementById("combin").style.display = "none";
+      document.getElementById("prepproteinsample").disabled = false;
+      document.getElementById("removecomb").disabled = true;
       //document.getElementById("case").setAttribute("onclick", "movecase()");
       //
     } else {
-      orgtop--; 
-      combimgin.style.top = orgtop + '%'; 
-     
-  
-       
+      orgtop--;
+      combimgin.style.top = orgtop + '%';
+      document.getElementById("sampleload1").style.display = "block";
+      document.getElementById("sampleload2").style.display = "block";
+      document.getElementById("sampleload3").style.display = "block";
+      document.getElementById("sampleload4").style.display = "block";
+
+
     }
 
 
 
-  
-  
-}
+
+
+  }
 }
 
 function preprotein_sample() {
   document.getElementById("prepproteinsample").disabled = true;
-  
-  document.getElementById("check1").disabled=false;
-  document.getElementById("check2").disabled=false;
-  document.getElementById("check3").disabled=false;
+
+  document.getElementById("check1").disabled = false;
+  document.getElementById("check2").disabled = false;
+  document.getElementById("check3").disabled = false;
+  document.getElementById("spinsample").disabled = false;
 }
 
-function check1(){
+/*function check1(){
   var checkBox1 = document.getElementById("check1");
 
   if (checkBox1.checked == true){
     //image display block
-    document.getElementById("folded").style.display="block";
-    document.getElementById("bme").style.display="none";
-    document.getElementById("heatd").style.display="none";
-    document.getElementById("check2").checked=false;
+ document.getElementById("folded").style.display="block";
+  document.getElementById("bme").style.display="none";
+   document.getElementById("heatd").style.display="none";
+   document.getElementById("check2").checked=false;
     document.getElementById("check3").checked=false;
     //window.scrollBy(0,700);
   } else {
@@ -366,27 +372,38 @@ function check3(){
     document.getElementById("bme").style.display="none";
     
   }
-}
+}*/
 
-function spin_sample(){
-  document.getElementById("tubesabcd").style.display = "block";
-  document.getElementById("addbuffer").disabled = false;
-  document.getElementById("spinsample").disabled = true;
-  document.getElementById("bme").style.display="none";
-  document.getElementById("check3").checked=false;
+function spin_sample() {
+  var checkBox1 = document.getElementById("check1");
+  var checkBox2 = document.getElementById("check2");
+  var checkBox3 = document.getElementById("check3");
+  if ((checkBox1.checked == true) && (checkBox2.checked == true) && (checkBox3.checked == true)) {
+    document.getElementById("tubesabcd").style.display = "block";
+    document.getElementById("addbuffer").disabled = false;
+    document.getElementById("spinsample").disabled = true;
+    document.getElementById("bme").style.display = "none";
+    document.getElementById("check3").checked = false;
+    window.scrollBy(0,700);
+  }
+
+  else {
+alert("Check all the checkboxes");
+  }
 }
 
 function addbuffer() {
-  document.getElementById("buffer").style.display="block";
+  window.scrollBy(0,700);
+  document.getElementById("buffer").style.display = "block";
   document.getElementById("buffer").setAttribute("onclick", "addbuffertoelec()");
 
 }
- function addbuffertoelec(){
+function addbuffertoelec() {
   document.getElementById("addbuffer").disabled = true;
   document.getElementById("sampleload").disabled = false;
-  document.getElementById('loadsamplea').style.pointerEvents="auto";
-  document.getElementById("canvasbufferfill").style.zIndex=10;
-  window.scrollBy(0,500);
+  document.getElementById('loadsamplea').style.pointerEvents = "auto";
+  document.getElementById("canvasbufferfill").style.zIndex = 10;
+  window.scrollBy(0, 500);
   /**side 1 */
   canvaside1 = document.getElementById("canvasbufferfill");
   ctxs1 = canvaside1.getContext("2d");
@@ -427,7 +444,7 @@ function addbuffer() {
 
 
 function sample_loadA() {
-  document.getElementById('loadsampleb').style.pointerEvents="auto";
+  document.getElementById('loadsampleb').style.pointerEvents = "auto";
   const canvassdrop1 = document.getElementById('sampleload1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
   document.getElementById("peptitea").style.display = "block";
@@ -440,8 +457,8 @@ function sample_loadA() {
 
   // Function to handle mouse/touch down event
   function handleMouseDown(event) {
-   
-   
+
+
     isDragging = true;
     imagepp.style.cursor = 'grabbing';
     /*  imageppb.style.cursor = 'grabbing';
@@ -455,10 +472,10 @@ function sample_loadA() {
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
-     
+
       if (isDragging) {
         // Update the position of the image based on mouse/touch position
-       
+
         imagepp.style.left = event.clientX - offsetX + 'px';
         imagepp.style.top = event.clientY - offsetY + 'px';
 
@@ -488,22 +505,22 @@ function sample_loadA() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
-     
+
       isDragging = false;
       imagepp.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
-    //  imagepp.removeEventListener('touchmove', handleMouseMove);
-    //  imagepp.removeEventListener('touchend', handleMouseUp);
+      //  imagepp.removeEventListener('touchmove', handleMouseMove);
+      //  imagepp.removeEventListener('touchend', handleMouseUp);
 
     }
 
     // Add event listeners for mouse/touch move and up events
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-  //  imagepp.addEventListener('touchmove', handleMouseMove);
-   // imagepp.addEventListener('touchend', handleMouseUp);
+    //  imagepp.addEventListener('touchmove', handleMouseMove);
+    // imagepp.addEventListener('touchend', handleMouseUp);
   }
 
   // Function to change the color when clicked/touched
@@ -513,7 +530,7 @@ function sample_loadA() {
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp.addEventListener('mousedown', handleMouseDown);
- // imagepp.addEventListener('touchstart', handleMouseDown);
+  // imagepp.addEventListener('touchstart', handleMouseDown);
   imagepp.addEventListener('click', changeColor);
   imagepp.addEventListener('touchend', changeColor);
 
@@ -536,47 +553,47 @@ function sample_loadA() {
     // Add a touchmove and touchend event listener
     window.addEventListener('touchmove', handleTouchMove);
     window.addEventListener('touchend', handleTouchEnd);
-}
+  }
 
-function handleTouchMove(event) {
+  function handleTouchMove(event) {
     console.log('Touchmove event triggered');
     const touch = event.touches[0];
 
     if (isDragging) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp.offsetX;
-        const imageY = touch.clientY - imagepp.offsetY;
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imagepp.offsetX;
+      const imageY = touch.clientY - imagepp.offsetY;
 
-        // Update the position of the image based on touch position
-        imagepp.style.left = imageX + 'px';
-        imagepp.style.top = imageY + 'px';
+      // Update the position of the image based on touch position
+      imagepp.style.left = imageX + 'px';
+      imagepp.style.top = imageY + 'px';
 
-        const imageRect = imagepp.getBoundingClientRect();
-        const canvasRect = canvassdrop1.getBoundingClientRect();
-     
+      const imageRect = imagepp.getBoundingClientRect();
+      const canvasRect = canvassdrop1.getBoundingClientRect();
 
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop1.style.backgroundColor = '#7FA9FF';
 
-        }
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop1.style.backgroundColor = '#7FA9FF';
+
+      }
     }
-}
+  }
 
-function handleTouchEnd() {
+  function handleTouchEnd() {
     console.log('Touchend event triggered');
     isDragging = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
     window.removeEventListener('touchmove', handleTouchMove);
     window.removeEventListener('touchend', handleTouchEnd);
-}
+  }
 
-imagepp.addEventListener('touchstart', handleTouchStart);
+  imagepp.addEventListener('touchstart', handleTouchStart);
 
 }
 function sample_loadB() {
-  document.getElementById('loadsamplec').style.pointerEvents="auto";
+  document.getElementById('loadsamplec').style.pointerEvents = "auto";
   document.getElementById("peptitea").style.display = "none";
   const canvassdrop2 = document.getElementById('sampleload2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
@@ -592,10 +609,10 @@ function sample_loadB() {
   function handleMouseDown(event) {
     isDragging2 = true;
     imagepp2.style.cursor = 'grabbing';
-   
+
 
     // Calculate the offset of the mouse/touch position relative to the image
-   let offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
+    let offsetX = event.clientX - imagepp2.getBoundingClientRect().left;
     let offsetY = event.clientY - imagepp2.getBoundingClientRect().top;
 
     // Function to handle mouse/touch move event
@@ -604,11 +621,11 @@ function sample_loadB() {
         // Update the position of the image based on mouse/touch position
         imagepp2.style.left = event.clientX - offsetX + 'px';
         imagepp2.style.top = event.clientY - offsetY + 'px';
-  
+
 
         const imageRect = imagepp2.getBoundingClientRect();
         const canvasRect = canvassdrop2.getBoundingClientRect();
-     
+
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
@@ -633,16 +650,16 @@ function sample_loadB() {
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
-    //  imagepp2.removeEventListener('touchmove', handleMouseMove);
-    //  imagepp2.removeEventListener('touchend', handleMouseUp);
+      //  imagepp2.removeEventListener('touchmove', handleMouseMove);
+      //  imagepp2.removeEventListener('touchend', handleMouseUp);
 
     }
 
     // Add event listeners for mouse/touch move and up events
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-   // imagepp2.addEventListener('touchmove', handleMouseMove);
-   // imagepp2.addEventListener('touchend', handleMouseUp);
+    // imagepp2.addEventListener('touchmove', handleMouseMove);
+    // imagepp2.addEventListener('touchend', handleMouseUp);
   }
 
   // Function to change the color when clicked/touched
@@ -652,38 +669,38 @@ function sample_loadB() {
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp2.addEventListener('mousedown', handleMouseDown);
- // imagepp2.addEventListener('touchstart', handleMouseDown);
+  // imagepp2.addEventListener('touchstart', handleMouseDown);
   imagepp2.addEventListener('click', changeColor);
- // imagepp2.addEventListener('touchend', changeColor);
+  // imagepp2.addEventListener('touchend', changeColor);
 
 
- /********************************* Touch sample b***************************************** */
+  /********************************* Touch sample b***************************************** */
 
- function handleTouchStart(event) {
-  console.log('Touchstart event triggered');
-  const touch = event.touches[0];
-  const boundingRect = imagepp2.getBoundingClientRect();
+  function handleTouchStart(event) {
+    console.log('Touchstart event triggered');
+    const touch = event.touches[0];
+    const boundingRect = imagepp2.getBoundingClientRect();
 
-  isDragging2 = true;
+    isDragging2 = true;
 
-  // Store the initial touch coordinates as properties on the image element
-  imagepp2.initialTouchX = touch.clientX;
-  imagepp2.initialTouchY = touch.clientY;
+    // Store the initial touch coordinates as properties on the image element
+    imagepp2.initialTouchX = touch.clientX;
+    imagepp2.initialTouchY = touch.clientY;
 
-  // Calculate the offset of the touch point relative to the image
-  imagepp2.offsetX = touch.clientX - boundingRect.left;
-  imagepp2.offsetY = touch.clientY - boundingRect.top;
+    // Calculate the offset of the touch point relative to the image
+    imagepp2.offsetX = touch.clientX - boundingRect.left;
+    imagepp2.offsetY = touch.clientY - boundingRect.top;
 
-  // Add a touchmove and touchend event listener
-  window.addEventListener('touchmove', handleTouchMove);
-  window.addEventListener('touchend', handleTouchEnd);
-}
+    // Add a touchmove and touchend event listener
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchend', handleTouchEnd);
+  }
 
-function handleTouchMove(event) {
-  console.log('Touchmove event triggered');
-  const touch = event.touches[0];
+  function handleTouchMove(event) {
+    console.log('Touchmove event triggered');
+    const touch = event.touches[0];
 
-  if (isDragging2) {
+    if (isDragging2) {
       // Use the stored initial touch coordinates to calculate the image position
       const imageX = touch.clientX - imagepp2.offsetX;
       const imageY = touch.clientY - imagepp2.offsetY;
@@ -694,32 +711,32 @@ function handleTouchMove(event) {
 
       const imageRect = imagepp2.getBoundingClientRect();
       const canvasRect = canvassdrop2.getBoundingClientRect();
-   
+
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop2.style.backgroundColor = '#7FA9FF';
 
       }
+    }
   }
-}
 
-function handleTouchEnd() {
-  console.log('Touchend event triggered');
-  isDragging2 = false;
+  function handleTouchEnd() {
+    console.log('Touchend event triggered');
+    isDragging2 = false;
 
-  // Remove the touchmove and touchend event listeners when dragging is complete
-  window.removeEventListener('touchmove', handleTouchMove);
-  window.removeEventListener('touchend', handleTouchEnd);
-}
+    // Remove the touchmove and touchend event listeners when dragging is complete
+    window.removeEventListener('touchmove', handleTouchMove);
+    window.removeEventListener('touchend', handleTouchEnd);
+  }
 
-imagepp2.addEventListener('touchstart', handleTouchStart);
+  imagepp2.addEventListener('touchstart', handleTouchStart);
 
 }
 
 
 function sample_loadC() {
-  document.getElementById('loadsampled').style.pointerEvents="auto";
+  document.getElementById('loadsampled').style.pointerEvents = "auto";
   document.getElementById("peptiteb").style.display = "none";
   const canvassdrop3 = document.getElementById('sampleload3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
@@ -746,7 +763,7 @@ function sample_loadC() {
 
     // Function to handle mouse/touch move event
     function handleMouseMove(event) {
-     
+
       if (isDragging3) {
         // Update the position of the image based on mouse/touch position
         imagepp3.style.left = event.clientX - offsetX + 'px';
@@ -783,16 +800,16 @@ function sample_loadC() {
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
-     // imagepp3.removeEventListener('touchmove', handleMouseMove);
-     // imagepp3.removeEventListener('touchend', handleMouseUp);
+      // imagepp3.removeEventListener('touchmove', handleMouseMove);
+      // imagepp3.removeEventListener('touchend', handleMouseUp);
 
     }
 
     // Add event listeners for mouse/touch move and up events
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-  //  imagepp3.addEventListener('touchmove', handleMouseMove);
-  //  imagepp3.addEventListener('touchend', handleMouseUp);
+    //  imagepp3.addEventListener('touchmove', handleMouseMove);
+    //  imagepp3.addEventListener('touchend', handleMouseUp);
   }
 
   // Function to change the color when clicked/touched
@@ -827,43 +844,43 @@ function sample_loadC() {
     // Add a touchmove and touchend event listener
     window.addEventListener('touchmove', handleTouchMove);
     window.addEventListener('touchend', handleTouchEnd);
-}
+  }
 
-function handleTouchMove(event) {
+  function handleTouchMove(event) {
     console.log('Touchmove event triggered');
     const touch = event.touches[0];
 
     if (isDragging3) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp3.offsetX;
-        const imageY = touch.clientY - imagepp3.offsetY;
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imagepp3.offsetX;
+      const imageY = touch.clientY - imagepp3.offsetY;
 
-        // Update the position of the image based on touch position
-        imagepp3.style.left = imageX + 'px';
-        imagepp3.style.top = imageY + 'px';
+      // Update the position of the image based on touch position
+      imagepp3.style.left = imageX + 'px';
+      imagepp3.style.top = imageY + 'px';
 
-        const imageRect = imagepp3.getBoundingClientRect();
-        const canvasRect = canvassdrop3.getBoundingClientRect();
-     
+      const imageRect = imagepp3.getBoundingClientRect();
+      const canvasRect = canvassdrop3.getBoundingClientRect();
 
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop3.style.backgroundColor = '#7FA9FF';
 
-        }
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop3.style.backgroundColor = '#7FA9FF';
+
+      }
     }
-}
+  }
 
-function handleTouchEnd() {
+  function handleTouchEnd() {
     console.log('Touchend event triggered');
     isDragging3 = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
     window.removeEventListener('touchmove', handleTouchMove);
     window.removeEventListener('touchend', handleTouchEnd);
-}
+  }
 
-imagepp3.addEventListener('touchstart', handleTouchStart);
+  imagepp3.addEventListener('touchstart', handleTouchStart);
 
 
 
@@ -871,7 +888,7 @@ imagepp3.addEventListener('touchstart', handleTouchStart);
 
 function sample_loadD() {
   document.getElementById("gelrun").disabled = false;
- 
+
   document.getElementById("peptitec").style.display = "none";
   const canvassdrop4 = document.getElementById('sampleload4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
@@ -934,16 +951,16 @@ function sample_loadD() {
       // Remove the event listeners when dragging is complete
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
-    //  imagepp4.removeEventListener('touchmove', handleMouseMove);
-     // imagepp4.removeEventListener('touchend', handleMouseUp);
+      //  imagepp4.removeEventListener('touchmove', handleMouseMove);
+      // imagepp4.removeEventListener('touchend', handleMouseUp);
 
     }
 
     // Add event listeners for mouse/touch move and up events
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
-  //  imagepp4.addEventListener('touchmove', handleMouseMove);
-   // imagepp4.addEventListener('touchend', handleMouseUp);
+    //  imagepp4.addEventListener('touchmove', handleMouseMove);
+    // imagepp4.addEventListener('touchend', handleMouseUp);
   }
 
   // Function to change the color when clicked/touched
@@ -953,7 +970,7 @@ function sample_loadD() {
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp4.addEventListener('mousedown', handleMouseDown);
-//  imagepp4.addEventListener('touchstart', handleMouseDown);
+  //  imagepp4.addEventListener('touchstart', handleMouseDown);
   imagepp4.addEventListener('click', changeColor);
   imagepp4.addEventListener('touchend', changeColor);
 
@@ -977,43 +994,43 @@ function sample_loadD() {
     // Add a touchmove and touchend event listener
     window.addEventListener('touchmove', handleTouchMove);
     window.addEventListener('touchend', handleTouchEnd);
-}
+  }
 
-function handleTouchMove(event) {
+  function handleTouchMove(event) {
     console.log('Touchmove event triggered');
     const touch = event.touches[0];
 
     if (isDragging4) {
-        // Use the stored initial touch coordinates to calculate the image position
-        const imageX = touch.clientX - imagepp4.offsetX;
-        const imageY = touch.clientY - imagepp4.offsetY;
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imagepp4.offsetX;
+      const imageY = touch.clientY - imagepp4.offsetY;
 
-        // Update the position of the image based on touch position
-        imagepp4.style.left = imageX + 'px';
-        imagepp4.style.top = imageY + 'px';
+      // Update the position of the image based on touch position
+      imagepp4.style.left = imageX + 'px';
+      imagepp4.style.top = imageY + 'px';
 
-        const imageRect = imagepp4.getBoundingClientRect();
-        const canvasRect = canvassdrop4.getBoundingClientRect();
-     
+      const imageRect = imagepp4.getBoundingClientRect();
+      const canvasRect = canvassdrop4.getBoundingClientRect();
 
-        if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
-          // Change the canvas color when the image touches it
-          canvassdrop4.style.backgroundColor = '#7FA9FF';
 
-        }
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop4.style.backgroundColor = '#7FA9FF';
+
+      }
     }
-}
+  }
 
-function handleTouchEnd() {
+  function handleTouchEnd() {
     console.log('Touchend event triggered');
     isDragging4 = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
     window.removeEventListener('touchmove', handleTouchMove);
     window.removeEventListener('touchend', handleTouchEnd);
-}
+  }
 
-imagepp4.addEventListener('touchstart', handleTouchStart);
+  imagepp4.addEventListener('touchstart', handleTouchStart);
 
 }
 
@@ -1022,18 +1039,18 @@ imagepp4.addEventListener('touchstart', handleTouchStart);
 function start_ele() {
 
   document.getElementById("sampleload").disabled = true;
-  
+
   document.getElementById("topsetup").setAttribute("onclick", "closetopcover()");
   document.getElementById("peptitea").style.display = "none";
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptited").style.display = "none";
 
-  
+
 }
 
 var imgtopsetup = null;
-function closetopcover(){
+function closetopcover() {
   document.getElementById("cvt").style.display = "block";
   document.getElementById("crun").style.display = "block";
   var topsetup = document.getElementById("topsetup");
@@ -1118,7 +1135,7 @@ function txtvoltp() {
   // Draw the text on the canvas
   ctx.fillText(text, x, y);
 
-  
+
 
 }
 function txtvoltd() {
@@ -1164,44 +1181,45 @@ function runningel() {
 }
 
 function staining() {
- if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked)&&(document.getElementById("checks4").checked)) {
+  if ((document.getElementById("checks1").checked) && (document.getElementById("checks2").checked) && (document.getElementById("checks3").checked) && (document.getElementById("checks4").checked)) {
 
- 
-  // Start the rotation animation
-  document.getElementById("gel").style.display = "block";
+    window.scrollBy(0,800);
+    // Start the rotation animation
+    document.getElementById("gel").style.display = "block";
 
-  var btnstaintext = document.getElementById("staingel");
-  if (btnstaintext.innerHTML === "Start Staining") {
-    btnstaintext.innerHTML = "Stop Staining";
-    document.getElementById("sample1").style.display = "none";
-    document.getElementById("sample2").style.display = "none";
-    document.getElementById("sample3").style.display = "none";
-    document.getElementById("sample4").style.display = "none";
-    document.getElementById("sampleload1").style.display = "none";
-    document.getElementById("sampleload2").style.display = "none";
-    document.getElementById("sampleload3").style.display = "none";
-    document.getElementById("sampleload4").style.display = "none";
-    rotateElementst()
-    
-    rotateElementb();
-    //tubeimg.addEventListener('click', tubeinsert);
-  } else {
-    btnstaintext.innerHTML = "Start Staining";
-    document.getElementById("dstaingel").disabled = false;
-    document.getElementById("checks1").checked=false;
-    document.getElementById("checks2").checked=false;
-    document.getElementById("checks3").checked=false;
-    document.getElementById("checks4").checked=false;
-    //document.getElementById("checks4").disabled=true;
-    cancelAnimationFrame(animationIst);
-    cancelAnimationFrame(animationIstb);
-   
+    var btnstaintext = document.getElementById("staingel");
+    if (btnstaintext.innerHTML === "Start Staining") {
+      btnstaintext.innerHTML = "Stop Staining";
+      document.getElementById("sample1").style.display = "none";
+      document.getElementById("sample2").style.display = "none";
+      document.getElementById("sample3").style.display = "none";
+      document.getElementById("sample4").style.display = "none";
+      document.getElementById("sampleload1").style.display = "none";
+      document.getElementById("sampleload2").style.display = "none";
+      document.getElementById("sampleload3").style.display = "none";
+      document.getElementById("sampleload4").style.display = "none";
+      rotateElementst()
+
+      rotateElementb();
+      //tubeimg.addEventListener('click', tubeinsert);
+    } else {
+      btnstaintext.innerHTML = "Start Staining";
+      document.getElementById("dstaingel").disabled = false;
+      document.getElementById("checks1").checked = false;
+      document.getElementById("checks2").checked = false;
+      document.getElementById("checks3").checked = false;
+      document.getElementById("checks4").checked = false;
+      document.getElementById("staingel").disabled = true;
+      //document.getElementById("checks4").disabled=true;
+      cancelAnimationFrame(animationIst);
+      cancelAnimationFrame(animationIstb);
+
+    }
   }
- }
 
- else{
-  alert("Select all the component for staining the gel");
- }
+  else {
+    alert("Select all the component for staining the gel");
+  }
 
 }
 
@@ -1209,35 +1227,34 @@ function staining() {
 
 function dstaining() {
 
-  if((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked) && (document.getElementById("checks4").checked == false)) {
+  if ((document.getElementById("checks1").checked) && (document.getElementById("checks2").checked) && (document.getElementById("checks3").checked) && (document.getElementById("checks4").checked == false)) {
+    window.scrollBy(0,800);
+    document.getElementById("staingel").disabled = true;
+    var btnstaintext = document.getElementById("dstaingel");
+    if (btnstaintext.innerHTML === "Start De-staining") {
+      btnstaintext.innerHTML = "Stop De-staining";
+      document.getElementById("sample1").style.display = "none";
+      document.getElementById("sample2").style.display = "none";
+      document.getElementById("sample3").style.display = "none";
+      document.getElementById("sample4").style.display = "none";
+      document.getElementById("sampleload1").style.display = "none";
+      document.getElementById("sampleload2").style.display = "none";
+      document.getElementById("sampleload3").style.display = "none";
+      document.getElementById("sampleload4").style.display = "none";
 
-    document.getElementById("staingel").disabled=true;
-  var btnstaintext = document.getElementById("dstaingel");
-  if (btnstaintext.innerHTML === "Start De-staining") {
-    btnstaintext.innerHTML = "Stop De-staining";
-    document.getElementById("sample1").style.display = "none";
-    document.getElementById("sample2").style.display = "none";
-    document.getElementById("sample3").style.display = "none";
-    document.getElementById("sample4").style.display = "none";
-    document.getElementById("sampleload1").style.display = "none";
-    document.getElementById("sampleload2").style.display = "none";
-    document.getElementById("sampleload3").style.display = "none";
-    document.getElementById("sampleload4").style.display = "none";
-   
-    rotateElement();
-    rotateElementbd();
-    //tubeimg.addEventListener('click', tubeinsert);
-  } else {
-    btnstaintext.innerHTML = "Start De-staining";
-    document.getElementById("viewsample").disabled = false;
+      rotateElement();
+      rotateElementbd();
+      //tubeimg.addEventListener('click', tubeinsert);
+    } else {
+      btnstaintext.innerHTML = "Start De-staining";
+      document.getElementById("viewsample").disabled = false;
 
-    cancelAnimationFrame(animationIdst1);
-    cancelAnimationFrame(animationIdstbd);
-   
+      cancelAnimationFrame(animationIdst1);
+      cancelAnimationFrame(animationIdstbd);
+
+    }
   }
-  }
-  else if ((document.getElementById("checks1").checked)&& (document.getElementById("checks2").checked)&&(document.getElementById("checks3").checked) && (document.getElementById("checks4").checked))
-  {
+  else if ((document.getElementById("checks1").checked) && (document.getElementById("checks2").checked) && (document.getElementById("checks3").checked) && (document.getElementById("checks4").checked)) {
     alert("De-select Coomassie Brilliant blue (1gm) component");
   }
   else {
@@ -1253,12 +1270,12 @@ function view_sample_UVlight() {
   document.getElementById("rotatingElementdst").style.display = "none";
   document.getElementById("rotatingElementbowld").style.display = "none";
   document.getElementById("staining").style.display = "none";
-  document.getElementById("staingel").disabled=true;
-  document.getElementById("dstaingel").disabled=true;
-  document.getElementById("output").style.display="block";
+  document.getElementById("staingel").disabled = true;
+  document.getElementById("dstaingel").disabled = true;
+  document.getElementById("output").style.display = "block";
   document.getElementById("gel").style.display = "none";
 
-  window.scrollBy(0, 600);
+  window.scrollBy(0, 700);
   // document.getElementById("output").style.display="block";
   canvasuv1 = document.getElementById("myCanvasuv1");
   ctxuv1 = canvasuv1.getContext("2d");
@@ -1324,7 +1341,7 @@ function rungelsample() {
 
 
   /** Sample 1 */
-  
+
   canvass11 = document.getElementById("sample1");
   ctxgs11 = canvass11.getContext("2d");
   var posY = 0;
@@ -1348,7 +1365,7 @@ function rungelsample() {
     //ctxs1.fillRect(10,10,150,80);
     ctxgs11.lineWidth = 600;
     ctxgs11.beginPath();
-    ctxgs11.moveTo(0, posY); 
+    ctxgs11.moveTo(0, posY);
     ctxgs11.lineTo(0, 0);
     ctxgs11.stroke();
   }
@@ -1519,7 +1536,7 @@ function rungelsample() {
 
 
 }
-var animationIst, animationIstb,animationIdst1,  animationIdstbd ;
+var animationIst, animationIstb, animationIdst1, animationIdstbd;
 
 
 const rotatingElementst = document.getElementById('rotatingElementst');
@@ -1552,8 +1569,8 @@ let rotateClockwise = true; // Initial direction
 
 function rotateElement() {
   rotatingElement.style.transform = `rotate(${rotation}deg)`;
-  document.getElementById('rotatingElementdst').style.display="block";
-  document.getElementById('rotatingElementst').style.display="none";
+  document.getElementById('rotatingElementdst').style.display = "block";
+  document.getElementById('rotatingElementst').style.display = "none";
 
   // Update rotation based on direction
   if (rotateClockwise) {
@@ -1578,7 +1595,7 @@ let rotateClockwiseb = true; // Initial direction
 
 function rotateElementb() {
   rotatingElementb.style.transform = `rotate(${rotationb}deg)`;
- 
+
   // Update rotation based on direction
   if (rotateClockwiseb) {
     rotationb -= 0.2;
@@ -1601,8 +1618,8 @@ let rotateClockwisebd = true; // Initial direction
 
 function rotateElementbd() {
   rotatingElementbd.style.transform = `rotate(${rotationbd}deg)`;
-  document.getElementById('rotatingElementbowl').style.display="none";
-  document.getElementById('rotatingElementbowld').style.display="block";
+  document.getElementById('rotatingElementbowl').style.display = "none";
+  document.getElementById('rotatingElementbowld').style.display = "block";
   // Update rotation based on direction
   if (rotateClockwisebd) {
     rotationbd -= 0.2;
