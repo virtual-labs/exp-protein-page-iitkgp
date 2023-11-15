@@ -36,7 +36,7 @@ TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
 
 <div align="center">
-<img src="images/Fig1.png" width="30%">
+<img src="images/Fig1.png" class="img-fluid">
 <p>Figure 1: The polymerization of acrylamide and bisacrylamide to form the polyacrylamide gel used in PAGE.</p>
 </div>
 
@@ -46,12 +46,12 @@ decreases with an increase in the acrylamide content (%T). Based on the molecula
 be analysed, gels of varying acrylamide content (hence different pore size) are used.
 
 <div align="center">
-<img src="images/Eqn3.png" width="30%">
+<img src="images/Eqn3.png" class="img-fluid">
 
 </div>
 
 <div align="center">
-<img src="images/Image.png" width="30%">
+<img src="images/Image.png" class="img-fluid">
 
 </div>
 
@@ -68,7 +68,7 @@ or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein.
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
 <div align="center">
-<img src="images/Fig2.png" width="40%">
+<img src="images/Fig2.png" class="img-fluid">
 <p>Figure 2: The principle of SDS-PAGE</p>
 </div>
 
@@ -76,7 +76,7 @@ The molecular weights of the protein samples can be determined from their relati
 Figure 3) using SDS-PAGE.
 
 <div align="center">
-<img src="images/Graph.png" width="30%">
+<img src="images/Graph.png" class="img-fluid">
 <p>Figure 3: Determination of molecular weight of proteins using SDS-PAGE</p>
 </div>
 
@@ -88,7 +88,7 @@ properties to the stacking and resolving gels. The former has high porosity and 
 the latter has smaller pores and a Tris-Cl buffer pH of 8.8 (Figure 4).
 
 <div align="center">
-<img src="images/SDSPAGErun.png" width="40%">
+<img src="images/SDSPAGErun.png" class="img-fluid">
 <p>Figure 4: Determination of molecular weight of proteins using SDS-PAGE.</p>
 </div>
 
