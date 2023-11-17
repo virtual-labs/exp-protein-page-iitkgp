@@ -620,10 +620,7 @@ jsPlumb.ready(function () {
     document.getElementById('cstop').addEventListener('click', function () {
         // Delete all connections
       //  instance.deleteEveryConnection();
-      document.getElementById("checks1").disabled=false;
-      document.getElementById("checks2").disabled=false;
-      document.getElementById("checks3").disabled=false;
-      document.getElementById("checks4").disabled=false;
+      
        // document.getElementById("staingel").disabled=false;
         document.getElementById("gelrun").disabled = true;
         document.getElementById("topsetup").setAttribute("onclick","puttopup()");
