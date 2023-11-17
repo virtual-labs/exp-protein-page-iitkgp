@@ -402,6 +402,7 @@ function addbuffertoelec() {
   document.getElementById("addbuffer").disabled = true;
   document.getElementById("sampleload").disabled = false;
   document.getElementById('loadsamplea').style.pointerEvents = "auto";
+  document.getElementById("canvasbufferfill").style.display="block";
   document.getElementById("canvasbufferfill").style.zIndex = 10;
   window.scrollBy(0, 500);
   /**side 1 */

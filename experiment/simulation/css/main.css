@@ -81,10 +81,12 @@ Developer: Prakriti Dhang */
 
 #canvasbufferfill {
     position: absolute;
-    width: 11.7%;
-    height: 79%;
+    width: 12.2%;
+    height: 78.5%;
     top: 196%;
-    left: 9%;
+    left: 8.7%;
+    display: none;
+   
    
    
 }
