@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 jsPlumb.ready(function () {
 
     var instance,
@@ -179,6 +181,15 @@ jsPlumb.ready(function () {
 
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     //jsPlumb.fire("jsPlumbDemoLoaded", instance1);
+
+    var is_connected_1_4 = false;
+    var is_connected_1_6 = false;
+    var is_connected_1_8 = false;
+    var is_connected_1_10 = false;
+    var is_connected_2_3 = false;
+    var is_connected_2_5 = false;
+    var is_connected_2_7 = false;
+    var is_connected_2_9 = false;
 
     document.getElementById("cvt").addEventListener("click", function () {
         //var d = instance.exportData();
@@ -384,14 +395,7 @@ jsPlumb.ready(function () {
 
         var actual_connections = instance.getAllConnections();
 
-        var is_connected_1_4 = false;
-        var is_connected_1_6 = false;
-        var is_connected_1_8 = false;
-        var is_connected_1_10 = false;
-        var is_connected_2_3 = false;
-        var is_connected_2_5 = false;
-        var is_connected_2_7 = false;
-        var is_connected_2_9 = false;
+       //connection false statements
 
         var unallowed_connection_present = false;
         var count = 0; // counts number of connection
@@ -620,8 +624,9 @@ jsPlumb.ready(function () {
       document.getElementById("checks2").disabled=false;
       document.getElementById("checks3").disabled=false;
       document.getElementById("checks4").disabled=false;
-        document.getElementById("staingel").disabled=false;
+       // document.getElementById("staingel").disabled=false;
         document.getElementById("gelrun").disabled = true;
+        document.getElementById("topsetup").setAttribute("onclick","puttopup()");
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -646,8 +651,27 @@ jsPlumb.ready(function () {
 
 
     });
+
+
+
+
+    document.getElementById('topsetup').addEventListener('click', function () {
+
+        var cd1s = document.getElementById('cd1');
+        var cd2s= document.getElementById("cd2");
+         if ((is_connected_1_4)|| (is_connected_1_6)||(is_connected_1_8)||(is_connected_1_10) && (is_connected_2_3)|| (is_connected_2_5)||(is_connected_2_7)||(is_connected_2_9)
+         ) {
+          // Move the target element (and connected elements) upwards 
+          
+          cd1s.style.top =  130 + '%';
+          cd2s.style.top =  130 + '%';
+  
+          // Repaint the connections
+          instance.repaintEverything();
+        }   
+    });
 	
 });
 
 
-
+});

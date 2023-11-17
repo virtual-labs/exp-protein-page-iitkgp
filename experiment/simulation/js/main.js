@@ -444,6 +444,7 @@ function addbuffertoelec() {
 
 
 function sample_loadA() {
+  window.scrollBy(0,800);
   document.getElementById('loadsampleb').style.pointerEvents = "auto";
   const canvassdrop1 = document.getElementById('sampleload1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
@@ -489,7 +490,7 @@ function sample_loadA() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
-          canvassdrop1.style.backgroundColor = '#7FA9FF';
+          canvassdrop1.style.backgroundColor = '#B2C9FF'; //#7FA9FF
 
         }
 
@@ -574,7 +575,7 @@ function sample_loadA() {
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
-        canvassdrop1.style.backgroundColor = '#7FA9FF';
+        canvassdrop1.style.backgroundColor = '#B2C9FF';
 
       }
     }
@@ -593,6 +594,7 @@ function sample_loadA() {
 
 }
 function sample_loadB() {
+  window.scrollBy(0,800);
   document.getElementById('loadsamplec').style.pointerEvents = "auto";
   document.getElementById("peptitea").style.display = "none";
   const canvassdrop2 = document.getElementById('sampleload2');
@@ -629,7 +631,7 @@ function sample_loadB() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
-          canvassdrop2.style.backgroundColor = '#7FA9FF';
+          canvassdrop2.style.backgroundColor = '#B2C9FF';
 
         }
 
@@ -715,7 +717,7 @@ function sample_loadB() {
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
-        canvassdrop2.style.backgroundColor = '#7FA9FF';
+        canvassdrop2.style.backgroundColor = '#B2C9FF';
 
       }
     }
@@ -736,6 +738,7 @@ function sample_loadB() {
 
 
 function sample_loadC() {
+  window.scrollBy(0,800);
   document.getElementById('loadsampled').style.pointerEvents = "auto";
   document.getElementById("peptiteb").style.display = "none";
   const canvassdrop3 = document.getElementById('sampleload3');
@@ -779,7 +782,7 @@ function sample_loadC() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
-          canvassdrop3.style.backgroundColor = '#7FA9FF';
+          canvassdrop3.style.backgroundColor = '#B2C9FF';
 
         }
 
@@ -865,7 +868,7 @@ function sample_loadC() {
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
-        canvassdrop3.style.backgroundColor = '#7FA9FF';
+        canvassdrop3.style.backgroundColor = '#B2C9FF';
 
       }
     }
@@ -887,6 +890,7 @@ function sample_loadC() {
 }
 
 function sample_loadD() {
+  window.scrollBy(0,800);
   document.getElementById("gelrun").disabled = false;
 
   document.getElementById("peptitec").style.display = "none";
@@ -930,7 +934,7 @@ function sample_loadD() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
-          canvassdrop4.style.backgroundColor = '#7FA9FF';
+          canvassdrop4.style.backgroundColor = '#B2C9FF';
 
         }
 
@@ -1015,7 +1019,7 @@ function sample_loadD() {
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
-        canvassdrop4.style.backgroundColor = '#7FA9FF';
+        canvassdrop4.style.backgroundColor = '#B2C9FF';
 
       }
     }
@@ -1063,7 +1067,7 @@ function closetopcover() {
     if (topsetupt == 141) {
 
       clearInterval(imgtopsetup);
-
+      document.getElementById("topsetup").removeAttribute("onclick", "closetopcover()");
 
       //imgtbdown = setInterval(frame, 20);
 
@@ -1179,6 +1183,50 @@ function runningel() {
     document.getElementById("cstop").style.display = "block";
   }
 }
+
+
+var imgtopsetup1=null;
+  function puttopup(){
+
+
+    var topsetup1 = document.getElementById("topsetup");
+  
+
+    var topsetupt1 = 141; //initial  position
+    clearInterval(imgtopsetup1);
+    //clearInterval(imgtbdown);
+    imgtopsetup1 = setInterval(frame, 15); /* frame is 10 denotes the speed of the movement*/
+  
+    function frame() {
+      if (topsetupt1 == 120) {
+  
+        clearInterval(imgtopsetup1);
+        document.getElementById("staingel").disabled=false;
+        document.getElementById("topsetup").removeAttribute("onclick","puttopup()");
+        //imgtbdown = setInterval(frame, 20);
+      //  document.getElementById("cd1").style.top= 130 + '%';
+        //document.getElementById("cd2").style.top= 130 + '%';
+      //  var cd1s= document.getElementById("cd1");
+      //  var cd2s= document.getElementById("cd2");
+      //  cd1s.style.top = 130 + '%';
+       // cd2s.style.top = 130 + '%';
+      
+  
+      } else {
+  
+        topsetupt1--;
+        topsetup1.style.top = topsetupt1 + '%';
+  
+      }
+    }
+  
+
+
+  }
+
+
+
+
 
 function staining() {
   if ((document.getElementById("checks1").checked) && (document.getElementById("checks2").checked) && (document.getElementById("checks3").checked) && (document.getElementById("checks4").checked)) {

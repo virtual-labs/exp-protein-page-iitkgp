@@ -322,7 +322,7 @@ Developer: Prakriti Dhang */
 #cd1 {
     position: absolute;
     width: 1%;
-    top: 151%;
+    top: 151%; /*151 -130 */
     left: 6.7%;
 }
 
