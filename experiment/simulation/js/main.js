@@ -21,7 +21,7 @@ function gel_resolve() {
   document.getElementById("sampleprep").disabled = false;
   document.getElementById("gelprep").disabled = true;
   document.getElementById("resolve").style.display = "block";
-  window.scrollBy(0, 600);
+  window.scrollBy(0, 700);
   /**side 1 */
   canvasider = document.getElementById("resolve");
   ctxsr = canvasider.getContext("2d");
@@ -273,7 +273,7 @@ function handleTouchEnd(event) {
 //}
 var imgcombin = null;
 function removecomb() {
-  window.scrollBy(0, 700);
+  window.scrollBy(0, 800);
   var combimgin = document.getElementById("combin");
   var orgtop = 195; //initial position
   clearInterval(imgcombin);
