@@ -388,7 +388,10 @@ function spin_sample() {
   }
 
   else {
-alert("Check all the checkboxes");
+    $('#alertModal').modal('show');
+      $('.modal-body').text('Check all the checkboxes');
+	  
+//alert("Check all the checkboxes");
   }
 }
 
@@ -1173,10 +1176,13 @@ function txtvoltd() {
 function runningel() {
 
   if (volt == null) {
-    alert("Enter volt between 80 and 120");
+  //  alert("Enter volt between 80 and 120");
+    $('#alertModal').modal('show');
+      $('.modal-body').text('Give input voltage between 80 and 120');
   }
   else if (volt < 80 || volt > 120) {
-    alert("Enter volt between 80 and 120");
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Give input voltage between 80 and 120');
   }
   else {
 
@@ -1271,7 +1277,9 @@ function staining() {
   }
 
   else {
-    alert("Select all the component for staining the gel");
+   // alert("Select all the component for staining the gel");
+    $('#alertModal').modal('show');
+      $('.modal-body').text('Select all the components for staining the gel');
   }
 
 }
@@ -1308,10 +1316,13 @@ function dstaining() {
     }
   }
   else if ((document.getElementById("checks1").checked) && (document.getElementById("checks2").checked) && (document.getElementById("checks3").checked) && (document.getElementById("checks4").checked)) {
-    alert("De-select Coomassie Brilliant blue (1gm) component");
+    $('#alertModal').modal('show');
+    $('.modal-body').text('De-select Coomassie Brilliant blue (1gm) component');
+    
   }
   else {
-    alert("Select correct components for de-staining the gel");
+    $('#alertModal').modal('show');
+      $('.modal-body').text('Select correct components for de-staining the gel');
   }
 
 }
@@ -1690,3 +1701,7 @@ function rotateElementbd() {
 }
 
 
+function cancelmsg() {
+  document.getElementById("alertModal").style.display = "none";
+  document.getElementById("alertModal").classList.remove("show");
+}
