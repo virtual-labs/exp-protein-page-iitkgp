@@ -44,14 +44,14 @@ Developer: Prakriti Dhang
 							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
 								chamber to close it. </li>
 							<li>Next to make the connection, click on the negative of
-								electrophorersis chamber, and drag to negative of voltage meter. Click on positive of
-								electrophorersis chamber, drag to positive of voltage meter. (For any wrong connection,
-								click on the wire to disconnect.)</li>
-							<li>Now click on "V" button of the voltage meter to switch on. And "+" sign button of the voltage meter to set the voltage bewteen 80 V and 100 V.</li>
-							<li>Click on the run icon button to run the gel.
+								electrophorersis chamber, and drag to negative of power supply. Click on positive of
+								electrophorersis chamber, drag to positive of power supply. For any wrong connection,
+								click on the wire to disconnect. (The positive electrode is colored red, whereas the negative electrode is colored black.)</li>
+							<li>Now click on "V" button of the power supply to switch ON. And "+" sign button of the power supply to set the voltage bewteen 80 V and 100 V.</li>
+							<li>Click on the run icon button to run the gel and run until bromophenol blue reaches the bottom of the gel.
 								
 							</li>
-							<li>Click on the stop icon button to switch off the power and disconnect the wires(click on
+							<li>Click on the stop icon button to switch OFF the power and disconnect the wires(click on
 								the wire to disconnect). Click on the top cover of the electrophoresis to open it.</li>
 							
 							<li>Check the components required for staining and click "Start Staining" button. Click on "Stop Staining" button. Then check the components required for de-staining and click on "Start De-staining" button and stop it by clicking "Stop De-staning" button.
@@ -231,12 +231,12 @@ Developer: Prakriti Dhang
 					<div class=""> -->
 					<div class="img-container">
 
-						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
-						<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
-						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup">
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer" data-toggle="tooltip" data-placement="top" title="Power supply">
+						<img src="./images/top-cover.png" class="img-fluid" id="topsetup" data-toggle="tooltip" data-placement="top" title="Top cover of Electrophoresis chamber">
+						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup" data-toggle="tooltip" data-placement="top" title="Bottom of Electrophoresis chamber">
 						<img src="./images/buffer.png" class="img-fluid" id="buffer" draggable="false">
 
-						<img src="./images/case.png" class="img-fluid" id="case" draggable="true">
+						<img src="./images/case.png" class="img-fluid" id="case" draggable="true" data-toggle="tooltip" data-placement="top" title="Casting appratus">
 						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);display: block;"></canvas>
 						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);display: block;"></canvas>
 						<img src="./images/comb.png" class="img-fluid" id="comb" style="display: none;">
@@ -401,7 +401,9 @@ Developer: Prakriti Dhang
 		}
 
 
-
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 	</script>
