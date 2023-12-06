@@ -83,7 +83,7 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
 <img src="images/initial.png" class="img-fluid">
 </div>
 
-Bromophenol blue reached the bottom of the gel
+<br>
 <div align="center">
 <img src="images/final.png" class="img-fluid">
 </div>
