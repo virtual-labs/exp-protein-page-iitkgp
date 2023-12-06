@@ -383,7 +383,7 @@ function spin_sample() {
     document.getElementById("addbuffer").disabled = false;
     document.getElementById("spinsample").disabled = true;
     document.getElementById("bme").style.display = "none";
-    document.getElementById("check3").checked = false;
+    
     window.scrollBy(0,700);
   }
 

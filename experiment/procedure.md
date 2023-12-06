@@ -46,7 +46,7 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
     6. Discard the running buffer, rinse the gel sandwich in water and separate the plates to access the gel
 
 6. **Staining and visualization**
-   1. After washing with water, add stain (containing Comassie brilliant blue) to the gel. Keep in rocking
+   1. After washing with water, add stain (containing Coomassie brilliant blue) to the gel. Keep in rocking
       condition for 2-3 hrs.
    2. Then wash off the stain with water and add destain, keep under rocking condition for 4-6 hrs. 
    3. Visualize under UV transilluminator.
@@ -75,7 +75,7 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
 4. **Setting up the apparatus for SDS-PAGE**
 
 <div align="center">
-<img src="images/loading.png" class="img-fluid">
+<img src="images/sloading.png" class="img-fluid">
 </div>
 
 5. **Electrophoresis**  
