@@ -1447,7 +1447,7 @@ function rungelsample() {
     // ctx.clearRect(0,0,canvas.width, canvas.height);
     moveLine();
     drawLine();
-    cancelani = requestAnimationFrame(loop);
+    cancelani1 = requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
 
@@ -1498,7 +1498,7 @@ function rungelsample() {
     // ctx.clearRect(0,0,canvas.width, canvas.height);
     moveLine2();
     drawLine2();
-    cancelani = requestAnimationFrame(loop2);
+    cancelani2 = requestAnimationFrame(loop2);
   }
   requestAnimationFrame(loop2);
 
@@ -1546,7 +1546,7 @@ function rungelsample() {
     // ctx.clearRect(0,0,canvas.width, canvas.height);
     moveLine3();
     drawLine3();
-    cancelani = requestAnimationFrame(loop3);
+    cancelani3 = requestAnimationFrame(loop3);
   }
   requestAnimationFrame(loop3);
 
@@ -1593,7 +1593,7 @@ function rungelsample() {
     // ctx.clearRect(0,0,canvas.width, canvas.height);
     moveLine4();
     drawLine4();
-    cancelani = requestAnimationFrame(loop4);
+    cancelani4 = requestAnimationFrame(loop4);
   }
   requestAnimationFrame(loop4);
 
