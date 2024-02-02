@@ -495,7 +495,17 @@ function sample_loadA() {
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop1.style.backgroundColor = '#B2C9FF'; //#7FA9FF
+          clearInterval(clearmpcnge1);
 
+         /*  document.getElementById("peptitea").style.display = "none";
+            document.getElementById("peptitea1s").style.display = "block";
+         
+          clearmpcnge1s = setInterval(changemp1s, 300);
+
+          function changemp1s() {
+            document.getElementById("peptitea").style.display = "block";
+            document.getElementById("peptitea1s").style.display = "none";
+          } */
         }
 
 
@@ -510,7 +520,7 @@ function sample_loadA() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
-
+      
       isDragging = false;
       imagepp.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
@@ -530,7 +540,14 @@ function sample_loadA() {
 
   // Function to change the color when clicked/touched
   function changeColor() {
-    imagepp.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+    document.getElementById("peptitea").style.display = "none";
+    document.getElementById("peptitea1").style.display = "block";
+    clearmpcnge1 = setInterval(changemp1, 300);
+
+    function changemp1() {
+      document.getElementById("peptitea").style.display = "block";
+      document.getElementById("peptitea1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
@@ -541,7 +558,7 @@ function sample_loadA() {
 
   /*****************************  Touch  *************************************/
   function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
+    
     const touch = event.touches[0];
     const boundingRect = imagepp.getBoundingClientRect();
 
@@ -561,7 +578,7 @@ function sample_loadA() {
   }
 
   function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
+   
     const touch = event.touches[0];
 
     if (isDragging) {
@@ -580,13 +597,13 @@ function sample_loadA() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop1.style.backgroundColor = '#B2C9FF';
-
+        clearInterval(clearmpcnge1);
       }
     }
   }
 
   function handleTouchEnd() {
-    console.log('Touchend event triggered');
+   
     isDragging = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -598,13 +615,14 @@ function sample_loadA() {
 
 }
 function sample_loadB() {
+  //clearInterval(clearmpcnge1s);
   window.scrollBy(0,800);
   document.getElementById('loadsamplec').style.pointerEvents = "auto";
   document.getElementById("peptitea").style.display = "none";
   const canvassdrop2 = document.getElementById('sampleload2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
   document.getElementById("peptiteb").style.display = "block";
-  document.getElementById("peptitea").style.display = "none";
+ 
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptited").style.display = "none";
   const imagepp2 = document.getElementById('peptiteb');
@@ -635,7 +653,17 @@ function sample_loadB() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
+         
           canvassdrop2.style.backgroundColor = '#B2C9FF';
+          clearInterval(clearmpcnge2);
+        /*   document.getElementById("peptiteb").style.display = "none";
+          document.getElementById("peptiteb1s").style.display = "block";
+          clearmpcnge2s = setInterval(changemp2s, 300);
+
+          function changemp2s() {
+            document.getElementById("peptiteb").style.display = "block";
+            document.getElementById("peptiteb1s").style.display = "none";
+          } */
 
         }
 
@@ -651,6 +679,7 @@ function sample_loadB() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
+      
       isDragging2 = false;
       imagepp2.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
@@ -669,21 +698,28 @@ function sample_loadB() {
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp2.style.filter = 'hue-rotate(20deg)'; // Change color  (90 degrees in hue rotation)
+  function changeColorb() {
+    document.getElementById("peptiteb").style.display = "none";
+    document.getElementById("peptiteb1").style.display = "block";
+    clearmpcnge2 = setInterval(changemp2, 300);
+
+    function changemp2() {
+      document.getElementById("peptiteb").style.display = "block";
+      document.getElementById("peptiteb1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp2.addEventListener('mousedown', handleMouseDown);
   // imagepp2.addEventListener('touchstart', handleMouseDown);
-  imagepp2.addEventListener('click', changeColor);
-  // imagepp2.addEventListener('touchend', changeColor);
+  imagepp2.addEventListener('click', changeColorb);
+  imagepp2.addEventListener('touchend', changeColorb);
 
 
   /********************************* Touch sample b***************************************** */
 
   function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
+    
     const touch = event.touches[0];
     const boundingRect = imagepp2.getBoundingClientRect();
 
@@ -703,7 +739,7 @@ function sample_loadB() {
   }
 
   function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
+    
     const touch = event.touches[0];
 
     if (isDragging2) {
@@ -722,13 +758,13 @@ function sample_loadB() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop2.style.backgroundColor = '#B2C9FF';
-
+        clearInterval(clearmpcnge2);
       }
     }
   }
 
   function handleTouchEnd() {
-    console.log('Touchend event triggered');
+   
     isDragging2 = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -742,6 +778,7 @@ function sample_loadB() {
 
 
 function sample_loadC() {
+  //clearInterval(clearmpcnge2s);
   window.scrollBy(0,800);
   document.getElementById('loadsampled').style.pointerEvents = "auto";
   document.getElementById("peptiteb").style.display = "none";
@@ -787,7 +824,16 @@ function sample_loadC() {
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop3.style.backgroundColor = '#B2C9FF';
+          clearInterval(clearmpcnge3);
+          /* document.getElementById("peptitec").style.display = "none";
+            document.getElementById("peptitec1s").style.display = "block";
+         
+          clearmpcnge3s = setInterval(changemp3s, 300);
 
+          function changemp3s() {
+            document.getElementById("peptitec").style.display = "block";
+            document.getElementById("peptitec1s").style.display = "none";
+          } */
         }
 
 
@@ -802,6 +848,7 @@ function sample_loadC() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
+     
       isDragging3 = false;
       imagepp3.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
@@ -820,21 +867,28 @@ function sample_loadC() {
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp3.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  function changeColorc() {
+    document.getElementById("peptitec").style.display = "none";
+    document.getElementById("peptitec1").style.display = "block";
+    clearmpcnge3 = setInterval(changemp3, 300);
+
+    function changemp3() {
+      document.getElementById("peptitec").style.display = "block";
+      document.getElementById("peptitec1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp3.addEventListener('mousedown', handleMouseDown);
   //imagepp3.addEventListener('touchstart', handleMouseDown);
-  imagepp3.addEventListener('click', changeColor);
-  imagepp3.addEventListener('touchend', changeColor);
+  imagepp3.addEventListener('click', changeColorc);
+  imagepp3.addEventListener('touchend', changeColorc);
 
 
   /********************************************* Touch sample c***************************************************** */
 
   function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
+    
     const touch = event.touches[0];
     const boundingRect = imagepp3.getBoundingClientRect();
 
@@ -854,7 +908,7 @@ function sample_loadC() {
   }
 
   function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
+    
     const touch = event.touches[0];
 
     if (isDragging3) {
@@ -873,13 +927,13 @@ function sample_loadC() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop3.style.backgroundColor = '#B2C9FF';
-
+        clearInterval(clearmpcnge3);
       }
     }
   }
 
   function handleTouchEnd() {
-    console.log('Touchend event triggered');
+   
     isDragging3 = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -894,6 +948,7 @@ function sample_loadC() {
 }
 
 function sample_loadD() {
+  //clearInterval(clearmpcnge3s);
   window.scrollBy(0,800);
   document.getElementById("gelrun").disabled = false;
 
@@ -939,7 +994,17 @@ function sample_loadD() {
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           canvassdrop4.style.backgroundColor = '#B2C9FF';
+          clearInterval(clearmpcnge4);
 
+         /*  document.getElementById("peptited").style.display = "none";
+            document.getElementById("peptited1s").style.display = "block";
+         
+          clearmpcnge4s = setInterval(changemp4s, 300);
+
+          function changemp4s() {
+            document.getElementById("peptited").style.display = "block";
+            document.getElementById("peptited1s").style.display = "none";
+          } */
         }
 
 
@@ -954,6 +1019,7 @@ function sample_loadD() {
 
     // Function to handle mouse/touch up event
     function handleMouseUp() {
+     
       isDragging4 = false;
       imagepp4.style.cursor = 'grabbing';
       // Remove the event listeners when dragging is complete
@@ -972,20 +1038,27 @@ function sample_loadD() {
   }
 
   // Function to change the color when clicked/touched
-  function changeColor() {
-    imagepp4.style.filter = 'hue-rotate(20deg)'; // Change color (90 degrees in hue rotation)
+  function changeColord() {
+    document.getElementById("peptited").style.display = "none";
+    document.getElementById("peptited1").style.display = "block";
+    clearmpcnge4 = setInterval(changemp4, 300);
+
+    function changemp4() {
+      document.getElementById("peptited").style.display = "block";
+      document.getElementById("peptited1").style.display = "none";
+    }
   }
 
   // Add event listeners for mouse/touch down and click/touch events
   imagepp4.addEventListener('mousedown', handleMouseDown);
   //  imagepp4.addEventListener('touchstart', handleMouseDown);
-  imagepp4.addEventListener('click', changeColor);
-  imagepp4.addEventListener('touchend', changeColor);
+  imagepp4.addEventListener('click', changeColord);
+  imagepp4.addEventListener('touchend', changeColord);
 
   /********************************************** Touch sample d ******************************************* */
 
   function handleTouchStart(event) {
-    console.log('Touchstart event triggered');
+    
     const touch = event.touches[0];
     const boundingRect = imagepp4.getBoundingClientRect();
 
@@ -1005,7 +1078,7 @@ function sample_loadD() {
   }
 
   function handleTouchMove(event) {
-    console.log('Touchmove event triggered');
+   
     const touch = event.touches[0];
 
     if (isDragging4) {
@@ -1024,13 +1097,13 @@ function sample_loadD() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop4.style.backgroundColor = '#B2C9FF';
-
+        clearInterval(clearmpcnge4);
       }
     }
   }
 
   function handleTouchEnd() {
-    console.log('Touchend event triggered');
+    
     isDragging4 = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -1053,6 +1126,7 @@ function start_ele() {
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptited").style.display = "none";
+  //clearInterval(clearmpcnge4);
 
 
 }
