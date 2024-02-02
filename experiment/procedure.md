@@ -68,14 +68,14 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
 
 3. **Preparation of the protein samples**
 <div align="center">
-<img src="images/msamples.png" class="img-fluid">
+<img src="images/samplemabc.png" class="img-fluid">
 </div>
 
 
 4. **Setting up the apparatus for SDS-PAGE**
 
 <div align="center">
-<img src="images/sloading.png" class="img-fluid">
+<img src="images/sampleloading.png" class="img-fluid">
 </div>
 
 5. **Electrophoresis**  

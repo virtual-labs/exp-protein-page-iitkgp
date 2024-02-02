@@ -538,12 +538,13 @@ path,
     top: 50%;
     left: 50%;
     display: none;
+    z-index: 14 ;
 }
 
 #peptitea {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
     left: 50.9%;
     cursor: pointer;
     z-index: 13;
@@ -552,22 +553,76 @@ path,
 
 }
 
+#peptitea1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+    left: 50.9%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+}
+
+/* #peptitea1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 9.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+} */
+
 #peptiteb {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
    left: 53.8%; 
     cursor: grab;
     z-index: 13;
     display: none;
 
 }
+#peptiteb1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+   left: 53.8%; 
+    cursor: grab;
+    z-index: 13;
+    display: none;
+
+}
+/* #peptiteb1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+   left: 12.5%; 
+    cursor: grab;
+    z-index: 13;
+    display: none;
+
+} */
 
 
 #peptitec {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
+    left: 56.6%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+#peptitec1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
     left: 56.6%;
     cursor: pointer;
     z-index: 13;
@@ -575,16 +630,48 @@ path,
 
 }
 
+/* #peptitec1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 15.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
+
 #peptited {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
     left: 59%;
     cursor: pointer;
     z-index: 13;
     display: none;
 
 }
+#peptited1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+    left: 59%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+
+/* #peptited1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 18.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
 
 #staining {
     position: absolute;
