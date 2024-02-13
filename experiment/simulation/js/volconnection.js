@@ -584,7 +584,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 $('#alertModal').modal('show');
-                $('.modal-body').html('Connection is correct. <br> Click on "V" button of the power supply to switch ON. And "+" sign button of the power supply to set the voltage bewteen 80 V and 100 V.');
+                $('.modal-body').html('Connection is correct. <br> Click "+" sign button of the power supply to set the voltage bewteen 80 V and 100 V.');
                 //document.getElementById("samplerun").disabled = true;
             } else {
                 $('#alertModal').modal('show');
