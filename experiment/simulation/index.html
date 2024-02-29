@@ -24,7 +24,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -34,24 +34,24 @@ Developer: Prakriti Dhang
 						<ol id="inst1">
 							<li>Click on "Start the Experiment" button.</li>
 							<li>Now, click on "Resolving Gel" button. </li>
-							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next click on the gel casting stand; and drag and drop in the green dashed box of the buffer tank (leave the mouse when you see the cursor arrow). Then click on the "Remove Comb" button.</li>
+							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next click on the gel casting apparatus; and drag and drop into the green dashed box of the buffer tank (leave the mouse when you see the cursor arrow). Then click on the "Remove Comb" button.</li>
 							<li>Click on "Prepare Protein Samples" button. Check the checkboxes and click "Spin (1100rpm for 1 min)" button.</li>
 							<li>Now click on "Add Running Buffer" button, then on the buffer bottle to fill up the
 								electrophoresis chamber with SDS gel running buffer.</li>
-							<li>From the "Load Samples" dropdown button select "Load Molecular Marker (M)". Click on the pipette M
+							<li>From the "Load Samples" dropdown button select "Load Molecular Marker (M)". Click on the pipette
 								and drag the peptite to the first well of the gel. Repeat for Load Sample A, B, and C to
 								the consecutive wells.</li>
 							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
 								chamber to close it. </li>
-							<li>Next to make the connection, click on the negative of
-								electrophorersis chamber, and drag to negative of voltage meter. Click on positive of
-								electrophorersis chamber, drag to positive of voltage meter. (For any wrong connection,
-								click on the wire to disconnect.)</li>
-							<li>Now click on "V" button of the voltage meter to switch on. And "+" sign button of the voltage meter to set the voltage bewteen 80 V and 100 V.</li>
-							<li>Click on the run icon button to run the gel.
+							<li>Next to make the connection, click on the negative connector of
+								electrophorersis chamber, and drag to negative connector of power supply. Click on positive connector of
+								electrophorersis chamber, and drag to positive connector of power supply. For any wrong connection,
+								click on the wire to disconnect. (The positive connector is colored red, whereas the negative connector is colored black.)</li>
+							<li>Now click on "V" button of the power supply to switch ON. And click on "+" sign button of the power supply to set the voltage bewteen 80 V and 100 V.</li>
+							<li>Click on the run icon button to run the gel and run until bromophenol blue reaches the bottom of the gel.
 								
 							</li>
-							<li>Click on the stop icon button to switch off the power and disconnect the wires(click on
+							<li>Click on the stop icon button to switch OFF the power and disconnect the wires(click on
 								the wire to disconnect). Click on the top cover of the electrophoresis to open it.</li>
 							
 							<li>Check the components required for staining and click "Start Staining" button. Click on "Stop Staining" button. Then check the components required for de-staining and click on "Start De-staining" button and stop it by clicking "Stop De-staning" button.
@@ -70,10 +70,10 @@ Developer: Prakriti Dhang
 			</div>
 
 
-			<!--/div>
+			</div>
 
-		<div class="row "-->
-			<div class="col-md-6">
+		<div class="row ">
+			<div class="col-md-12">
 
 
 				<div class="card ">
@@ -132,7 +132,7 @@ Developer: Prakriti Dhang
 											value="Add Beta-mercaptoethanol" onclick="check3()"  style="cursor: pointer;" disabled>
 										<label class="form-check-label">Add Beta-mercaptoethanol</label>
 									</div>
-									<button class="btn btn-success" type="button" id="spinsample"
+									<button class="btn btn-info" type="button" id="spinsample"
 										onclick="spin_sample()" disabled>Spin (1100rpm for 1 min)
 									</button>
 								</td>
@@ -146,7 +146,7 @@ Developer: Prakriti Dhang
 									</button>
 									<div class="dropdown div-inline">
 										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
-											data-bs-toggle="dropdown" disabled>
+											data-bs-toggle="dropdown" disabled >
 											Load Samples
 										</button>
 										<ul class="dropdown-menu">
@@ -231,12 +231,12 @@ Developer: Prakriti Dhang
 					<div class=""> -->
 					<div class="img-container">
 
-						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer">
-						<img src="./images/top-cover.png" class="img-fluid" id="topsetup">
-						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup">
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer" data-toggle="tooltip" data-placement="top" title="Power supply">
+						<img src="./images/top-cover.png" class="img-fluid" id="topsetup" data-toggle="tooltip" data-placement="top" title="Top cover of Electrophoresis chamber">
+						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup" data-toggle="tooltip" data-placement="top" title="Bottom of Electrophoresis chamber">
 						<img src="./images/buffer.png" class="img-fluid" id="buffer" draggable="false">
 
-						<img src="./images/case.png" class="img-fluid" id="case" draggable="true">
+						<img src="./images/case.png" class="img-fluid" id="case" draggable="true" data-toggle="tooltip" data-placement="top" title="Casting appratus">
 						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);display: block;"></canvas>
 						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);display: block;"></canvas>
 						<img src="./images/comb.png" class="img-fluid" id="comb" style="display: none;">
@@ -271,10 +271,21 @@ Developer: Prakriti Dhang
 
 						<!-- samples and peptite-->
 						<img src="./images/tubesabcd.png" class="img-fluid" id="tubesabcd">
-						<img src="./images/peptited.png" class="img-fluid" id="peptitea"> <!-- for molecular marker -->
-						<img src="./images/peptitea.png" class="img-fluid" id="peptiteb"> <!-- for load sample a -->
-						<img src="./images/peptiteb.png" class="img-fluid" id="peptitec"> <!-- for load sample b  -->
-						<img src="./images/peptitec.png" class="img-fluid" id="peptited"> <!-- for load sample c -->
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitea"> <!-- for molecular marker -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitea1"> <!-- for molecular marker -->
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptitea1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptiteb"> <!-- for load sample a -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptiteb1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptiteb1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitec"> <!-- for load sample b  -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitec1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptitec1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptited"> <!-- for load sample c -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptited1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptited1s"> -->
 						<!--img src="./images/gel.png" class="img-fluid" id="gel"-->
 
 						<!--- sample load canvases -->
@@ -303,10 +314,11 @@ Developer: Prakriti Dhang
 						<div id="rotatingElementdst"></div>
 						<div id="rotatingElementbowld"></div>
 
-						<canvas style="border: 1px solid black;" id="gel"></canvas>
+						<canvas style="border: 1px solid black;" id="gel" data-toggle="tooltip" data-placement="top" title="Gel"></canvas>
+						
 
 						<img src="./images/staining.png" class="img-fluid" id="staining">
-						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine">
+						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine" data-toggle="tooltip" data-placement="top" title="UV transilluminator">
 						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
 						<img src="./images/outputgel.png" class="img-fluid" id="output">
@@ -337,6 +349,24 @@ Developer: Prakriti Dhang
 				<div class="modal-footer">
 
 					<button type="button" class="btn btn-warning" onclick="start()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="alertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="cancelmsg()" data-bs-dismiss="modal">OK</button>
 				</div>
 			</div>
 		</div>
@@ -383,7 +413,9 @@ Developer: Prakriti Dhang
 		}
 
 
-
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 	</script>

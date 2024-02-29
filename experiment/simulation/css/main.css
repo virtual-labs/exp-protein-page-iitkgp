@@ -22,7 +22,8 @@ Developer: Prakriti Dhang */
     position: relative;
     width: 25%;
     top: 5%;
-    left: 5%
+    left: 5%;
+    cursor:pointer;
 }
 
 
@@ -51,6 +52,7 @@ Developer: Prakriti Dhang */
     left: 40%;
     z-index: 10;
     display: none;
+    cursor: pointer;
 }
 
 
@@ -121,7 +123,7 @@ Developer: Prakriti Dhang */
     position: absolute;
     width: 15.2%;
     height: 90.9%;
-    border: 1px dashed #2ecc71;
+    border: 2px dashed #2ecc71;
     top:195%;
     left:7.2%;
     z-index: 10;
@@ -477,6 +479,7 @@ path,
     width: 30%;
     top: 130%;
     left: 70%;
+    cursor: pointer;
 }
 
 #myCanvasuv1 {
@@ -486,6 +489,7 @@ path,
     top: 163%;
     left: 71%;
     display: block;
+    cursor: pointer;
 }
 
 #myCanvasuv2 {
@@ -496,6 +500,7 @@ path,
     left: 85%;
     display: block;
     rotate: 180deg;
+    cursor: pointer;
 }
 
 #output{
@@ -504,6 +509,7 @@ path,
     top: 185%;
     left: 80%;
     display: none;
+    opacity: 55%;
 }
 
 
@@ -532,12 +538,13 @@ path,
     top: 50%;
     left: 50%;
     display: none;
+    z-index: 14 ;
 }
 
 #peptitea {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
     left: 50.9%;
     cursor: pointer;
     z-index: 13;
@@ -546,22 +553,76 @@ path,
 
 }
 
+#peptitea1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+    left: 50.9%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+}
+
+/* #peptitea1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 9.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+} */
+
 #peptiteb {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
    left: 53.8%; 
     cursor: grab;
     z-index: 13;
     display: none;
 
 }
+#peptiteb1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+   left: 53.8%; 
+    cursor: grab;
+    z-index: 13;
+    display: none;
+
+}
+/* #peptiteb1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+   left: 12.5%; 
+    cursor: grab;
+    z-index: 13;
+    display: none;
+
+} */
 
 
 #peptitec {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
+    left: 56.6%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+#peptitec1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
     left: 56.6%;
     cursor: pointer;
     z-index: 13;
@@ -569,16 +630,48 @@ path,
 
 }
 
+/* #peptitec1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 15.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
+
 #peptited {
     position: absolute;
-    width: 2%;
-    top: 6%;
+    width: 1.6%;
+    top: -2%;
     left: 59%;
     cursor: pointer;
     z-index: 13;
     display: none;
 
 }
+#peptited1 {
+    position: absolute;
+    width: 1.6%;
+    top: -2%;
+    left: 59%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+
+/* #peptited1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 18.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
 
 #staining {
     position: absolute;
