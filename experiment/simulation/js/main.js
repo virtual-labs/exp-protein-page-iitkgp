@@ -396,7 +396,7 @@ function spin_sample() {
 }
 
 function addbuffer() {
-  window.scrollBy(0,700);
+  window.scrollBy(0,600);
   document.getElementById("buffer").style.display = "block";
   document.getElementById("buffer").setAttribute("onclick", "addbuffertoelec()");
 
@@ -448,7 +448,7 @@ function addbuffertoelec() {
 
 
 function sample_loadA() {
-  window.scrollBy(0,800);
+  window.scrollBy(0,600);
   document.getElementById('loadsampleb').style.pointerEvents = "auto";
   const canvassdrop1 = document.getElementById('sampleload1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
@@ -616,7 +616,7 @@ function sample_loadA() {
 }
 function sample_loadB() {
   //clearInterval(clearmpcnge1s);
-  window.scrollBy(0,800);
+  window.scrollBy(0,600);
   document.getElementById('loadsamplec').style.pointerEvents = "auto";
   document.getElementById("peptitea").style.display = "none";
   const canvassdrop2 = document.getElementById('sampleload2');
@@ -779,7 +779,7 @@ function sample_loadB() {
 
 function sample_loadC() {
   //clearInterval(clearmpcnge2s);
-  window.scrollBy(0,800);
+  window.scrollBy(0,600);
   document.getElementById('loadsampled').style.pointerEvents = "auto";
   document.getElementById("peptiteb").style.display = "none";
   const canvassdrop3 = document.getElementById('sampleload3');
@@ -949,7 +949,7 @@ function sample_loadC() {
 
 function sample_loadD() {
   //clearInterval(clearmpcnge3s);
-  window.scrollBy(0,800);
+  window.scrollBy(0,600);
   document.getElementById("gelrun").disabled = false;
 
   document.getElementById("peptitec").style.display = "none";
