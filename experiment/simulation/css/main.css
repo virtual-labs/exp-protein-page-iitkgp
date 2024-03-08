@@ -544,8 +544,8 @@ path,
 #peptitea {
     position: absolute;
     width: 1.6%;
-    top: -2%;
-    left: 50.9%;
+    top: -2%; /*-2*/
+    left: 50.9%; /*50.9*/
     cursor: pointer;
     z-index: 13;
     display: none;
