@@ -582,7 +582,7 @@ path,
     width: 1.6%;
     top: -2%;
    left: 53.8%; 
-    cursor: grab;
+    cursor: pointer;
     z-index: 13;
     display: none;
 
@@ -592,7 +592,7 @@ path,
     width: 1.6%;
     top: 1%;
    left: 53.8%; 
-    cursor: grab;
+    cursor: pointer;
     z-index: 13;
     display: none;
 
