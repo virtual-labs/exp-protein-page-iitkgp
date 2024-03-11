@@ -427,7 +427,7 @@ function movep1() {
   clearInterval(clearmovep1);
   document.getElementById("peptitea").style.top = 120 + "%";
   document.getElementById("peptitea").style.left = 9.5 + "%";
-  document.getElementById("peptitea1").style.top = 120 + "%";
+  document.getElementById("peptitea1").style.top = 123 + "%";
   document.getElementById("peptitea1").style.left = 9.5 + "%";
   document.getElementById("peptitea").setAttribute("onclick", "p11()");
 }
@@ -497,7 +497,7 @@ function movep2() {
   clearInterval(clearmovep2);
   document.getElementById("peptiteb").style.top = 120 + "%";
   document.getElementById("peptiteb").style.left = 12.5 + "%";
-  document.getElementById("peptiteb1").style.top = 120 + "%";
+  document.getElementById("peptiteb1").style.top = 123 + "%";
   document.getElementById("peptiteb1").style.left = 12.5 + "%";
   document.getElementById("peptiteb").setAttribute("onclick", "p22()");
 }
@@ -567,7 +567,7 @@ function movep3() {
   clearInterval(clearmovep3);
   document.getElementById("peptitec").style.top = 120 + "%";
   document.getElementById("peptitec").style.left = 15.5 + "%";
-  document.getElementById("peptitec1").style.top = 120 + "%";
+  document.getElementById("peptitec1").style.top = 123 + "%";
   document.getElementById("peptitec1").style.left = 15.5 + "%";
   document.getElementById("peptitec").setAttribute("onclick", "p33()");
 }
@@ -638,7 +638,7 @@ function sample_loadD() {
     clearInterval(clearmovep4);
     document.getElementById("peptited").style.top = 120 + "%";
     document.getElementById("peptited").style.left = 18.5 + "%";
-    document.getElementById("peptited1").style.top = 120 + "%";
+    document.getElementById("peptited1").style.top = 123 + "%";
     document.getElementById("peptited1").style.left = 18.5 + "%";
     document.getElementById("peptited").setAttribute("onclick", "p44()");
   }
