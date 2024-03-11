@@ -556,7 +556,7 @@ path,
 #peptitea1 {
     position: absolute;
     width: 1.6%;
-    top: -2%;
+    top: 1%;
     left: 50.9%;
     cursor: pointer;
     z-index: 13;
@@ -590,7 +590,7 @@ path,
 #peptiteb1 {
     position: absolute;
     width: 1.6%;
-    top: -2%;
+    top: 1%;
    left: 53.8%; 
     cursor: grab;
     z-index: 13;
@@ -622,7 +622,7 @@ path,
 #peptitec1 {
     position: absolute;
     width: 1.6%;
-    top: -2%;
+    top: 1%;
     left: 56.6%;
     cursor: pointer;
     z-index: 13;
@@ -654,7 +654,7 @@ path,
 #peptited1 {
     position: absolute;
     width: 1.6%;
-    top: -2%;
+    top: 1%;
     left: 59%;
     cursor: pointer;
     z-index: 13;
