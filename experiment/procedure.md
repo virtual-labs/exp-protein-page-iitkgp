@@ -68,7 +68,7 @@ To perform an SDS-PAGE experiment, the following steps must be followed.
 
 3. **Preparation of the protein samples**
 <div align="center">
-<img src="images/samplemabc.png" class="img-fluid">
+<img src="images/mabcsamples.png" class="img-fluid">
 </div>
 
 
