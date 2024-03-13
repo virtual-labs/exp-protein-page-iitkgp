@@ -324,7 +324,11 @@ function spin_sample() {
   var checkBox2 = document.getElementById("check2");
   var checkBox3 = document.getElementById("check3");
   if ((checkBox1.checked == true) && (checkBox2.checked == true) && (checkBox3.checked == true)) {
-    document.getElementById("tubesabcd").style.display = "block";
+    //document.getElementById("tubesabcd").style.display = "block";
+    document.getElementById("tubem").style.display = "block";
+    document.getElementById("tubea").style.display = "block";
+    document.getElementById("tubeb").style.display = "block";
+    document.getElementById("tubec").style.display = "block";
     document.getElementById("addbuffer").disabled = false;
     document.getElementById("spinsample").disabled = true;
     document.getElementById("bme").style.display = "none";
@@ -392,11 +396,13 @@ function addbuffertoelec() {
 
 
 var canvassdrop1, ctxdrop1;
-function sample_loadA() {
+function sample_loadM() {
   window.scrollBy(0, 600);
   document.getElementById('loadsampleb').style.pointerEvents = "auto";
   canvassdrop1 = document.getElementById('sampleload1');
   ctxsdrop1 = canvassdrop1.getContext('2d');
+  document.getElementById("tubem").style.display = "none";
+  document.getElementById("tubemo").style.display = "block";
   document.getElementById("peptitea").style.display = "block";
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
@@ -429,6 +435,8 @@ function movep1() {
   document.getElementById("peptitea").style.left = 9.5 + "%";
   document.getElementById("peptitea1").style.top = 123 + "%";
   document.getElementById("peptitea1").style.left = 9.5 + "%";
+  document.getElementById("tubem").style.display = "block";
+  document.getElementById("tubemo").style.display = "none";
   document.getElementById("peptitea").setAttribute("onclick", "p11()");
 }
 
@@ -460,11 +468,13 @@ function changep11() {
  /*******************  sample load B ********************** */
 
 var canvassdrop2,ctxsdrop2;
-function sample_loadB() {
+function sample_loadA() {
   //clearInterval(clearmpcnge1s);
   window.scrollBy(0, 600);
   document.getElementById('loadsamplec').style.pointerEvents = "auto";
   document.getElementById("peptitea").style.display = "none";
+  document.getElementById("tubea").style.display = "none";
+  document.getElementById("tubeao").style.display = "block";
  canvassdrop2 = document.getElementById('sampleload2');
   ctxsdrop2 = canvassdrop2.getContext('2d');
   document.getElementById("peptiteb").style.display = "block";
@@ -499,6 +509,8 @@ function movep2() {
   document.getElementById("peptiteb").style.left = 12.5 + "%";
   document.getElementById("peptiteb1").style.top = 123 + "%";
   document.getElementById("peptiteb1").style.left = 12.5 + "%";
+  document.getElementById("tubea").style.display = "block";
+  document.getElementById("tubeao").style.display = "none";
   document.getElementById("peptiteb").setAttribute("onclick", "p22()");
 }
 
@@ -530,13 +542,15 @@ function changep22() {
 
 /*******************  sample load C ********************** */
 var canvassdrop3, ctxdrop3;
-function sample_loadC() {
+function sample_loadB() {
   //clearInterval(clearmpcnge2s);
   window.scrollBy(0, 600);
   document.getElementById('loadsampled').style.pointerEvents = "auto";
   document.getElementById("peptiteb").style.display = "none";
   canvassdrop3 = document.getElementById('sampleload3');
   ctxsdrop3 = canvassdrop3.getContext('2d');
+  document.getElementById("tubeb").style.display = "none";
+  document.getElementById("tubebo").style.display = "block";
   document.getElementById("peptitec").style.display = "block";
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitea").style.display = "none";
@@ -569,6 +583,8 @@ function movep3() {
   document.getElementById("peptitec").style.left = 15.5 + "%";
   document.getElementById("peptitec1").style.top = 123 + "%";
   document.getElementById("peptitec1").style.left = 15.5 + "%";
+  document.getElementById("tubeb").style.display = "block";
+  document.getElementById("tubebo").style.display = "none";
   document.getElementById("peptitec").setAttribute("onclick", "p33()");
 }
 
@@ -600,7 +616,7 @@ function changep33() {
 
 /*******************  sample load D ********************** */
 var canvassdrop4, ctxdrop4;
-function sample_loadD() {
+function sample_loadC() {
   //clearInterval(clearmpcnge3s);
   window.scrollBy(0, 600);
   document.getElementById("gelrun").disabled = false;
@@ -609,6 +625,8 @@ function sample_loadD() {
   canvassdrop4 = document.getElementById('sampleload4');
   ctxsdrop4 = canvassdrop4.getContext('2d');
   document.getElementById("peptited").style.display = "block";
+  document.getElementById("tubec").style.display = "none";
+  document.getElementById("tubeco").style.display = "block";
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptitea").style.display = "none";
@@ -640,6 +658,8 @@ function sample_loadD() {
     document.getElementById("peptited").style.left = 18.5 + "%";
     document.getElementById("peptited1").style.top = 123 + "%";
     document.getElementById("peptited1").style.left = 18.5 + "%";
+    document.getElementById("tubec").style.display = "block";
+  document.getElementById("tubeco").style.display = "none";
     document.getElementById("peptited").setAttribute("onclick", "p44()");
   }
   
