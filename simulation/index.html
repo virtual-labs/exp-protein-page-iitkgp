@@ -1,0 +1,436 @@
+<!--
+Lab name: Experimental Biochemistry
+Exp name: Protein analysis of Polyacrylamide gel electrophoresis (PAGE)
+File name: index.html
+Developer: Prakriti Dhang
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+	<div class="container-fluid p-2 mt-2 ">
+
+
+
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Instructions
+					</div>
+
+					<div class="card-body">
+						<ol id="inst1">
+							<li>Click on "Start the Experiment" button.</li>
+							<li>Now, click on "Resolving Gel" button. </li>
+							<li>Next click on "Stacking Gel" button. Now click on "Place Comb" button. Next click on the gel casting apparatus; and drag and drop into the green dashed box of the buffer tank (leave the mouse when you see the cursor arrow). Then click on the "Remove Comb" button.</li>
+							<li>Click on "Prepare Protein Samples" button. Check the checkboxes and click "Spin (1100rpm for 1 min)" button.</li>
+							<li>Now click on "Add Running Buffer" button, then on the buffer bottle to fill up the
+								electrophoresis chamber with SDS gel running buffer.</li>
+							<li>From the "Load Samples" dropdown button select "Load Molecular Marker (M)". Click on the micropipette to draw the molecular marker into the micropipette.
+								Once it is placed over the first well of the gel, click on the mircopipette to load the molecular marker. Repeat for Load Sample A, B, and C to
+								the consecutive wells.</li>
+							<li>Click on "Setting up Electrophoresis" button. Click the top cover of the electrophoresis
+								chamber to close it. </li>
+							<li>Next to make the connection, click on the negative connector of
+								electrophorersis chamber, and drag to negative connector of power supply. Click on positive connector of
+								electrophorersis chamber, and drag to positive connector of power supply. For any wrong connection,
+								click on the wire to disconnect. (The positive connector is colored red, whereas the negative connector is colored black.)</li>
+							<li>Now click on "V" button of the power supply to switch ON. And click on "+" sign button of the power supply to set the voltage bewteen 80 V and 100 V.</li>
+							<li>Click on the run icon button to run the gel and run until bromophenol blue reaches the bottom of the gel.
+								
+							</li>
+							<li>Click on the stop icon button to switch OFF the power and disconnect the wires(click on
+								the wire to disconnect). Click on the top cover of the electrophoresis to open it.</li>
+							
+							<li>Check the components required for staining and click "Start Staining" button. Click on "Stop Staining" button. Then check the components required for de-staining and click on "Start De-staining" button and stop it by clicking "Stop De-staning" button.
+							</li>
+							<li>Next Click on "Visualization under UV light" button, to see the result.</li>
+
+						</ol>
+						<b>Note:</b> To repeat the experiment, click on the "Re-Do the Experiment" button.
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+
+
+			</div>
+
+		<div class="row ">
+			<div class="col-md-12">
+
+
+				<div class="card ">
+					<div class="card-header fs-5 fw-bold">
+						Input Panels
+					</div>
+
+					<div class="card-body ">
+						<table class="table table-bordered">
+							<tr>
+								<td colspan="2">
+									<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										Start the Experiment</button>
+
+									<button class="btn btn-warning" type="button" id="restart" style="float: right;"
+										onclick="restartexp()">Re-Do the Experiment</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Step 1</td>
+								<td><button class="btn btn-primary  " type="button" id="gelprep" onclick="gel_resolve()"
+										disabled>Resolving Gel</button></td>
+							</tr>
+
+							<tr>
+								<td>Step 2</td>
+								<td><button class="btn btn-primary " type="button" id="sampleprep"
+										onclick="stacking_gel()" disabled> Stacking Gel</button>
+									<button class="btn btn-primary " type="button" id="placecomb" onclick="placecomb()"
+										disabled>Place Comb</button>
+										<button class="btn btn-primary " type="button" id="removecomb" onclick="removecomb()"
+										disabled>Remove Comb</button>
+								</td>
+							</tr>
+							<tr>
+
+								<td>Step 3</td>
+
+								<td><button class="btn btn-primary" type="button" id="prepproteinsample"
+										onclick="preprotein_sample()" disabled>Prepare Protein Samples
+									</button>
+									<br>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check1" name="option1"
+											value="Add Loading Dye"  style="cursor: pointer;" disabled>
+										<label class="form-check-label">Add Loading Dye</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check2" name="option2"
+											value="Heat Denature"  style="cursor: pointer;" disabled>
+										<label class="form-check-label">Heat Denature</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="check3" name="option3"
+											value="Add Beta-mercaptoethanol"   style="cursor: pointer;" disabled>
+										<label class="form-check-label">Add Beta-mercaptoethanol</label>
+									</div>
+									<button class="btn btn-info" type="button" id="spinsample"
+										onclick="spin_sample()" disabled>Spin (1100rpm for 1 min)
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Step 4</td>
+								<td>
+
+									<button class="btn btn-primary " type="button" id="addbuffer" onclick="addbuffer()"
+										disabled>Add Running Buffer
+									</button>
+									<div class="dropdown div-inline">
+										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
+											data-bs-toggle="dropdown"  disabled>
+											Load Samples
+										</button>
+										<ul class="dropdown-menu">
+
+											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadM()"
+													style="cursor: pointer;">Load Molecular Marker </a></li>
+											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadA()"
+													style="cursor: pointer;">Load Sample A </a></li>
+											<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadB()"
+													style="cursor: pointer;">Load Sample B </a></li>
+											<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadC()"
+													style="cursor: pointer;">Load Sample C </a></li>
+										</ul>
+									</div>
+
+								</td>
+							</tr>
+
+							<tr>
+								<td>Step 5</td>
+								<td><button class="btn btn-primary" type="button" id="gelrun" onclick="start_ele()"
+										disabled>Setting up Electrophoresis
+									</button></td>
+							</tr>
+							<tr>
+								<td>Step 6</td>
+								<td><div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks1" name="options1"
+										value="Add Loading Dye"  style="cursor:pointer;"  disabled>
+									<label class="form-check-label">Acetic acid (10%)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks2" name="options2"
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
+									<label class="form-check-label">Methanol (45%)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks3" name="options3"
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
+									<label class="form-check-label">Water (45%)</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="checks4" name="options4"
+										value="Add Loading Dye" style="cursor:pointer;" disabled>
+									<label class="form-check-label">Coomassie Brilliant blue (1gm)</label>
+								</div>
+									<br>
+									<button class="btn btn-primary" type="button" id="staingel" onclick="staining()"
+										disabled>Start Staining</button>
+									<button class="btn btn-primary" type="button" id="dstaingel" onclick="dstaining()"
+										disabled>Start De-staining</button>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>Step 7</td>
+								<td>
+									<button class="btn btn-primary " type="button" id="viewsample"
+										onclick="view_sample_UVlight()" disabled>Visualization under UV light</button>
+								</td>
+							</tr>
+
+						</table>
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="card card-body border border-0">
+					<!-- <div class="card-header fs-5 fw-bold">
+						Experimental Setup
+					</div>
+					<div class=""> -->
+					<div class="img-container">
+
+						<img src="./images/voltagetimer.png" class="img-fluid" id="voltagetimer" data-toggle="tooltip" data-placement="top" title="Power supply">
+						<img src="./images/top-cover.png" class="img-fluid" id="topsetup" data-toggle="tooltip" data-placement="top" title="Top cover of Electrophoresis chamber">
+						<img src="./images/bottomcase.png" class="img-fluid" id="bottomsetup" data-toggle="tooltip" data-placement="top" title="Bottom of Electrophoresis chamber">
+						<img src="./images/buffer.png" class="img-fluid" id="buffer" draggable="false">
+
+						<img src="./images/case.png" class="img-fluid" id="case" draggable="true" data-toggle="tooltip" data-placement="top" title="Casting appratus">
+						<canvas id="resolve" style="border: 0px solid rgb(46, 45, 45);display: block;"></canvas>
+						<canvas id="stacking" style="border: 0px solid rgb(63, 63, 63);display: block;"></canvas>
+						<img src="./images/comb.png" class="img-fluid" id="comb" style="display: none;">
+						<img src="./images/comb.png" class="img-fluid" id="combin" style="display: none;">
+						<!--img src="./images/case.png" class="img-fluid" id="casein"-->
+
+
+						<img src="./images/foldedprotein.png" class="img-fluid" id="folded">
+						<img src="./images/denautered.png" class="img-fluid" id="heatd">
+						<img src="./images/SDScoated.png" class="img-fluid" id="bme">
+
+						<div id="droppable">
+							Drop here!
+						</div>
+
+						
+
+						<div id="cd1"></div>
+						<div id="cd2"></div>
+						<div id="cd3"></div>
+						<div id="cd4"></div>
+
+
+						<div id="cd5"></div>
+						<div id="cd6"></div>
+						<div id="cd7"></div>
+						<div id="cd8"></div>
+						<div id="cd9"></div>
+						<div id="cd10"></div>
+
+
+
+						<!-- samples and peptite-->
+						<!--img src="./images/tubemabc.png" class="img-fluid" id="tubesabcd"-->
+						<img src="./images/tubem.png" class="img-fluid" id="tubem">
+						<img src="./images/tubea.png" class="img-fluid" id="tubea">
+						<img src="./images/tubeb.png" class="img-fluid" id="tubeb">
+						<img src="./images/tubec.png" class="img-fluid" id="tubec">
+
+						<img src="./images/tubemo.png" class="img-fluid" id="tubemo">
+						<img src="./images/tubeao.png" class="img-fluid" id="tubeao">
+						<img src="./images/tubebo.png" class="img-fluid" id="tubebo">
+						<img src="./images/tubeco.png" class="img-fluid" id="tubeco">
+						
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitea"> <!-- for molecular marker -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitea1"> <!-- for molecular marker -->
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptitea1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptiteb"> <!-- for load sample a -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptiteb1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptiteb1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptitec"> <!-- for load sample b  -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptitec1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptitec1s"> -->
+
+						<img src="./images/micropipette_1.png" class="img-fluid" id="peptited"> <!-- for load sample c -->
+						<img src="./images/micropipette_2.png" class="img-fluid" id="peptited1">
+						<!-- <img src="./images/micropipette_2.png" class="img-fluid" id="peptited1s"> -->
+						<!--img src="./images/gel.png" class="img-fluid" id="gel"-->
+
+						<!--- sample load canvases -->
+
+						<canvas id="sampleload1"></canvas>
+						<canvas id="sampleload2"></canvas>
+						<canvas id="sampleload3"></canvas>
+						<canvas id="sampleload4"></canvas>
+
+						<canvas id="canvasbufferfill" style="border: 0px solid rgb(46, 46, 46);"></canvas>
+						<canvas id="textvoltimer" style="border: 0px solid black;"></canvas>
+						<canvas id="cvt" style="border:0px solid black;" onclick="txtvolt()"></canvas>
+						<canvas id="cvp" style="border: 0px solid black;" onclick="txtvoltp()"></canvas>
+						<canvas id="cvn" style="border: 0px solid black;" onclick="txtvoltd()"></canvas>
+						<canvas id="crun" style="border: 0px solid black;" onclick="runningel()"></canvas>
+						<canvas id="cstop" style="border: 0px solid black;" ></canvas>
+
+						<!-- sample  top to bottom movement-->
+						<canvas id="sample1" style="border: 0px solid black;"></canvas>
+						<canvas id="sample2" style="border: 0px solid black;"></canvas>
+						<canvas id="sample3" style="border: 0px solid black;"></canvas>
+						<canvas id="sample4" style="border: 0px solid black;"></canvas>
+
+						<div id="rotatingElementst"></div>
+						<div id="rotatingElementbowl"></div>
+						<div id="rotatingElementdst"></div>
+						<div id="rotatingElementbowld"></div>
+
+						<canvas style="border: 1px solid black;" id="gel" data-toggle="tooltip" data-placement="top" title="Gel"></canvas>
+						
+
+						<img src="./images/staining.png" class="img-fluid" id="staining">
+						<img src="./images/uv-machine.png" class="img-fluid" id="uv-machine" data-toggle="tooltip" data-placement="top" title="UV transilluminator">
+						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+						<img src="./images/outputgel.png" class="img-fluid" id="output">
+						<img src="./images/ladder.png" class="img-fluid" id="ladder">
+
+
+					</div>
+					<!-- </div> -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert message: Viewing experience</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>A desktop or laptop is the preferred choice for an enhanced viewing experience.</p>
+					<p> When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing
+						experience.</p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="start()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="alertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="cancelmsg()" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/touchscreendrag.js"></script>
+	<script src="./js/jsplumb.js"></script>
+	<script src="./js/volconnection.js"></script>
+
+	<script>
+		// Get a reference to the canvas element
+		const canvas = document.getElementById('textvoltimer');
+
+		// Check if the browser supports the canvas element
+		if (canvas.getContext) {
+			// Get the 2D drawing context
+			const ctx = canvas.getContext('2d');
+
+			// Set font properties
+			ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+
+			// Set text properties
+			ctx.fillStyle = 'black'; // Text color
+			ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+			ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+			// Define the text to be displayed
+			const text = '';
+
+			// Get the position to place the text (in this case, centered on the canvas)
+			const x = canvas.width / 2;
+			const y = canvas.height / 2;
+
+			// Draw the text on the canvas
+			ctx.fillText(text, x, y);
+		} else {
+			// Canvas not supported, provide a fallback or error message
+			console.log('Canvas is not supported in this browser.');
+		}
+
+
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+	</script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+
+</html>

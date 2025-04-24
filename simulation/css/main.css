@@ -1,0 +1,803 @@
+/* Lab name: Experimental Biochemistry
+Exp name: Protein analysis of Polyacrylamide gel electrophoresis (PAGE)
+File name: main.css
+Developer: Prakriti Dhang */
+
+.card {
+    margin-bottom: 5px;
+
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.div-inline {
+
+    display: inline-block;
+}
+
+#voltagetimer {
+    position: relative;
+    width: 25%;
+    top: 5%;
+    left: 5%;
+    cursor:pointer;
+}
+
+
+#topsetup {
+    position: absolute;
+    width: 20.6%;
+    top: 120%;
+    /* 120 -141*/
+    left: 4.8%;
+    cursor: pointer;
+
+}
+
+#bottomsetup {
+    position: absolute;
+    width: 20%;
+    top: 190%;
+    left: 5%;
+}
+
+#gel{
+    position: absolute;
+    width: 11%;
+    height: 10%;
+    top: 235%;
+    left: 40%;
+    z-index: 10;
+    display: none;
+    cursor: pointer;
+}
+
+
+#case{
+
+    position: absolute;
+    width: 15%; 
+    top:5%; 
+    left: 40%;  
+    cursor: move;
+    z-index: 2;
+    /*width: 100px;
+    height: 100px;
+    position: absolute;
+    touch-action: none;*/
+   
+}
+
+
+#casein{
+
+    position: absolute;
+    width: 15%;
+    top:195%; /* 195.5*/
+    left: 7.3%;  /*7.3*/
+    cursor: pointer;
+}
+
+#canvasbufferfill {
+    position: absolute;
+    width: 12.2%;
+    height: 78.5%;
+    top: 196%;
+    left: 8.7%;
+    display: none;
+   
+   
+   
+}
+
+#folded{
+    position: absolute;
+    width: 9%;
+    top:5%; /* 195.5*/
+    left: 60%;  /*7.3*/
+    display: none;
+  
+}
+
+#heatd{
+    position: absolute;
+    width: 9%;
+    top:5%; /* 195.5*/
+    left: 60%;  /*7.3*/
+    display: none;
+}
+
+#bme{
+    position: absolute;
+    width: 15%;
+    top:5%; /* 195.5*/
+    left: 60%;  /*7.3*/
+    display: none;
+}
+
+
+#droppable {
+    position: absolute;
+    width: 15.2%;
+    height: 90.9%;
+    border: 2px dashed #2ecc71;
+    top:195%;
+    left:7.2%;
+    z-index: 10;
+  }
+
+  #droppable1 {
+    position: absolute;
+    width: 15.2%;
+    height: 90.9%;
+    border: 1px dashed #2ecc71;
+    top:30%;
+    left:70%;
+    z-index: 10;
+  }
+
+#resolve {
+    position: absolute;
+    width: 11.8%;
+    height: 48%;
+    top: 37%;
+    left: 41.55%;
+    
+}
+
+#stacking {
+    position: absolute;
+    width: 11.8%;
+    height: 31%;
+    top: 6%;
+    left: 41.55%;
+}
+
+#comb {
+    position: absolute;
+    width: 11.6%;
+    top:-10%; /* 6*/
+    left: 41.5%; /* 60*/
+    cursor: pointer;
+}
+
+#combin {
+    position: absolute;
+    width: 11.6%;
+    top:196%; /* 6*/
+    left: 9%; /* 41.7*/
+    cursor: pointer;
+    z-index: 12;
+}
+
+#sampleload1 {
+    position: absolute;
+    width: 1.5%;
+    top: 197%;
+    left: 9.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  z-index: 12;
+  display: none;
+
+}
+
+
+#sampleload2 {
+    position: absolute;
+    width: 1.5%;
+    top: 197%;
+    left: 12.5%;
+ border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  z-index: 12;
+  display: none;
+}
+
+#sampleload3 {
+    position: absolute;
+    width: 1.5%;
+    top: 197%;
+    left: 15.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  z-index: 12;
+  display: none;
+
+}
+
+#sampleload4 {
+    position: absolute;
+    width: 1.5%;
+    top: 197%;
+    left: 18.5%;
+    border-width:1px;
+    border-color:rgb(150, 148, 148);
+    border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  z-index: 12;
+  display: none;
+
+}
+
+/* sample movement */
+
+#sample1 {
+    position: absolute;
+    width: 1.5%;
+    height: 72%;
+    top: 197%;
+    left: 9.5%;
+    z-index: 12;
+}
+
+
+#sample2 {
+    position: absolute;
+    width: 1.5%;
+    height: 72%;
+    top: 197%;
+    left: 12.5%;
+    z-index: 12;
+}
+
+#sample3 {
+    position: absolute;
+    width: 1.5%;
+    height: 72%;
+    top: 197%;
+    left: 15.5%;
+    z-index: 12;
+}
+
+#sample4 {
+    position: absolute;
+    width: 1.5%;
+    height: 72%;
+    top: 197%;
+    left: 18.5%;
+    z-index: 12;
+}
+
+
+
+
+
+/* Connect negative -negative  , positive-positive*/
+
+.demo {
+    /* for IE10+ touch devices */
+    touch-action: none;
+}
+
+
+
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+
+
+.littledot {
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+    z-index: 5;
+    position: absolute;
+    border-radius: 2%;
+
+}
+
+.littledot-hover-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+
+
+
+#cd1 {
+    position: absolute;
+    width: 1%;
+    top: 151%; /*151 -130 */
+    left: 6.7%;
+}
+
+#cd2 {
+    position: absolute;
+    width: 0.8%;
+    top: 151%;
+    left: 22.6%;
+}
+
+
+#cd3 {
+    position: absolute;
+    width: 1%;
+    top: 30.8%;
+    left: 7.3%;
+}
+
+#cd4 {
+    position: absolute;
+    width: 1%;
+    top: 30.8%;
+    left: 9.4%;
+
+}
+
+#cd5 {
+    position: absolute;
+    width: 1.2%;
+    top: 69.5%;
+    left: 7.2%;
+}
+
+#cd6 {
+    position: absolute;
+    width: 1%;
+    top: 69.5%;
+    left: 9.4%;
+}
+
+#cd7 {
+    position: absolute;
+    width: 1%;
+    top: 30.8%;
+    left: 24.3%;
+}
+
+#cd8 {
+    position: absolute;
+    width: 1%;
+    top: 30.8%;
+    left: 26.5%;
+
+}
+
+#cd9 {
+    position: absolute;
+    width: 1%;
+    top: 69.8%;
+    left: 24.3%;
+}
+
+#cd10 {
+    position: absolute;
+    width: 1%;
+    top: 69.5%;
+    left: 26.6%;
+}
+
+path,
+.jtk-endpoint {
+    cursor: pointer;
+}
+
+.cmdLink detach {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+
+#textvoltimer {
+    position: absolute;
+    width: 4.8%;
+    top: 27.8%;
+    left: 15%;
+    z-index: 40;
+}
+
+
+#cvt {
+    position: absolute;
+    width: 1.5%;
+    height: 10.5%;
+    top: 25%;
+    left: 12%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#cvp {
+    position: absolute;
+    width: 1.5%;
+    height: 10.5%;
+    top: 25%;
+    left: 21.52%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+
+#cvn {
+    position: absolute;
+    width: 1.5%;
+    height: 10.5%;
+    top: 41%;
+    left: 21.5%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#crun {
+    position: absolute;
+    width: 1.5%;
+    height: 10.5%;
+    top: 68%;
+    left: 15.2%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#cstop {
+    position: absolute;
+    width: 2.3%;
+    height: 10.2%;
+    top: 68%;
+    left: 11.8%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+#uv-machine {
+    position: absolute;
+    width: 30%;
+    top: 130%;
+    left: 70%;
+    cursor: pointer;
+}
+
+#myCanvasuv1 {
+    position: absolute;
+    width: 15%;
+    height: 120%;
+    top: 163%;
+    left: 71%;
+    display: block;
+    cursor: pointer;
+}
+
+#myCanvasuv2 {
+    position: absolute;
+    width: 14%;
+    height: 120%;
+    top: 163%;
+    left: 85%;
+    display: block;
+    rotate: 180deg;
+    cursor: pointer;
+}
+
+#output{
+    position: absolute;
+    width: 10%;
+    top: 185%;
+    left: 80%;
+    display: none;
+    opacity: 55%;
+}
+
+
+#ladder {
+    position: absolute;
+    width: 14%;
+    top: 150%;
+    left: 55.6%;
+    display: none;
+
+}
+
+#buffer{
+    position: absolute;
+    width: 5%;
+    top: 30%;
+    left: 80%;
+    display: none;
+    cursor:pointer;
+    
+}
+
+#tubesabcd {
+    position: absolute;
+    width: 18%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 14 ;
+}
+
+#tubem {
+    position: absolute;
+    width: 3.5%;
+    top: 33%;
+    left: 47.6%;
+    display: none;
+    z-index: 14 ;
+}
+#tubea {
+    position: absolute;
+    width: 3.5%;
+    top: 33%;
+    left: 52.8%;
+    display: none;
+    z-index: 14 ;
+}
+#tubeb {
+    position: absolute;
+    width: 3.5%;
+    top: 33%;
+    left: 57.8%;
+    display: none;
+    z-index: 14 ;
+}
+#tubec {
+    position: absolute;
+    width: 3.5%;
+    top: 33%;
+    left: 62.6%;
+    display: none;
+    z-index: 14 ;
+}
+
+
+#tubemo {
+    position: absolute;
+    width: 6.2%;
+    top: 15%;
+    left: 45%;
+    display: none;
+    z-index: 14 ;
+}
+#tubeao {
+    position: absolute;
+    width: 6.2%;
+    top: 15%;
+    left: 50%;
+    display: none;
+    z-index: 14 ;
+}
+#tubebo {
+    position: absolute;
+    width: 6.2%;
+    top: 15%;
+    left: 55.2%;
+    display: none;
+    z-index: 14 ;
+}
+#tubeco {
+    position: absolute;
+    width: 6.2%;
+    top: 15%;
+    left: 60%;
+    display: none;
+    z-index: 14 ;
+}
+
+
+#peptitea {
+    position: absolute;
+    width: 1.6%;
+    top: -6%; /*-2*/
+    left: 49%; /*50.9*/
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+}
+
+#peptitea1 {
+    position: absolute;
+    width: 1.6%;
+    top: -3%;
+    left: 49%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+}
+
+/* #peptitea1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 9.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+   
+
+} */
+
+#peptiteb {
+    position: absolute;
+    width: 1.6%;
+    top: -6%;
+   left: 53.8%; 
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+#peptiteb1 {
+    position: absolute;
+    width: 1.6%;
+    top: -3%;
+   left: 53.8%; 
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+/* #peptiteb1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+   left: 12.5%; 
+    cursor: grab;
+    z-index: 13;
+    display: none;
+
+} */
+
+
+#peptitec {
+    position: absolute;
+    width: 1.6%;
+    top: -6%;
+    left: 59%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+#peptitec1 {
+    position: absolute;
+    width: 1.6%;
+    top: -3%;
+    left: 59%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+
+/* #peptitec1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 15.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
+
+#peptited {
+    position: absolute;
+    width: 1.6%;
+    top: -6%;
+    left: 63.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+#peptited1 {
+    position: absolute;
+    width: 1.6%;
+    top: -3%;
+    left: 63.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+}
+
+/* #peptited1s {
+    position: absolute;
+    width: 1.6%;
+    top: 123%;
+    left: 18.5%;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+
+} */
+
+#staining {
+    position: absolute;
+    width: 10%;
+    top: 258.5%;
+    left: 41.2%;
+    cursor: pointer;
+}
+
+#rotatingElementst {
+    position: absolute;
+    width: 22.5%;
+    height: 30%;
+    background-color: #0066aa;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 229%;
+    left: 34.6%;
+    z-index: 10;
+}
+
+#rotatingElementbowl {
+    position: absolute;
+    width: 22.9%;
+    height: 38%;
+    border: 2px solid black;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 222%;
+    left: 34.4%;
+    z-index: 10;
+}
+
+
+#rotatingElementdst {
+    position: absolute;
+    width: 22.5%;
+    height: 30%;
+    background-color: #cbe6f8;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 229%;
+    left: 34.6%;
+    z-index: 10;
+display: none;
+   
+}
+
+
+#rotatingElementbowld {
+    position: absolute;
+    width: 22.9%;
+    height: 38%;
+    border: 2px solid black;
+    border-radius: 0 0 100% 100%;
+    /* Border-radius for a semicircle */
+    top: 222%;
+    left: 34.4%;
+    z-index: 10;
+    display: none;
+}
