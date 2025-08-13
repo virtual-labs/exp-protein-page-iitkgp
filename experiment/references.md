@@ -12,7 +12,7 @@
 #### Web-Based learning
 - [NPTEL Experimental Biochemistry](https://onlinecourses.nptel.ac.in/noc22_cy32/preview)
 
-#### References for images -
+#### References for images
 - [https://www.easybiologyclass.com/biophysics-mcq-electrophoresis-for-jrf-net-life-science-examination-biology-mcq-009-biophysical-instrumentation-separation-techniques-part-1](https://www.easybiologyclass.com/biophysics-mcq-electrophoresis-for-jrf-net-life-science-examination-biology-mcq-009-biophysical-instrumentation-separation-techniques-part-1)
 - [https://ruo.mbl.co.jp/bio/e/support/method/sds-page.html](https://ruo.mbl.co.jp/bio/e/support/method/sds-page.html)
 - [https://www.antibodies.com/western-blotting](https://www.antibodies.com/western-blotting)
