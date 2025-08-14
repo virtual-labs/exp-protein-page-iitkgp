@@ -94,13 +94,7 @@ and Arginine to form a protein-dye complex. In silver staining, silver ions are 
 sites occupied by the proteins based on differences in the redox potential.
 
 
-#### Real World Applications
 
-1. **Protein Purity Analysis:** SDS-PAGE is commonly used to assess the purity of a protein sample after purification. A single prominent band indicates a mostly pure protein, while multiple bands suggest contamination or degradation.
-2. **Molecular Weight Determination:** Researchers use SDS-PAGE to estimate the molecular weight of proteins by comparing them to a molecular weight marker or ladder. This is essential for protein identification.
-3. **Monitoring Protein Expression:** In biotechnology and pharmaceutical industries, SDS-PAGE is used to monitor the overexpression of recombinant proteins in host organisms (like E. coli or yeast) during production.
-4. **Quality Control:** SDS-PAGE is routinely employed in the biopharmaceutical industry to check the integrity and consistency of therapeutic proteins, including monoclonal antibodies, before they are released for clinical use.
-5. **Clinical Diagnostics:** SDS-PAGE can be used to diagnose diseases by analyzing abnormal proteins in blood or urine samples. For instance, it can detect abnormal antibodies (paraproteins) in multiple myeloma or changes in hemoglobin proteins in blood disorders like sickle cell anemia. 
 
 
 
