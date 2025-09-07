@@ -45,7 +45,7 @@ be analysed, gels of varying acrylamide content (hence different pore size) are 
 </div>
 
 
-### Types of PAGE
+#### Types of PAGE
 PAGE can be performed in reducing (with the anionic detergent SDS) or non-reducing conditions. In native
 or non-denaturing gel electrophoresis SDS is not used and the proteins retain their native structure and
 enzymatic activity. Here, the separation of proteins is influenced by its the net charge, shape, and size. SDSPAGE,
@@ -69,7 +69,7 @@ Figure 3) using SDS-PAGE.
 <p>Figure 3: Determination of molecular weight of proteins using SDS-PAGE</p>
 </div>
 
-### SDS-PAGE is a discontinuous gel system
+#### SDS-PAGE is a discontinuous gel system
 To improve the resolution, a discontinuous system of stacking and resolving gel is used. The stacking gel
 concentrates all the protein samples into a single band before entering into the resolving gel where the
 separation begins. The differences between the ionic strength and pH of the buffers render different
