@@ -22,7 +22,9 @@ gives a clear transparent gel with pores. This polymerization process is a free 
 Ammonium persulfate (APS) and catalyzed by N, N, N’N’-Tetramethylenediamine (TEMED) (Figure 1).
 TEMED speeds up the decomposition of the persulfate ion to give a free radical.
 
-S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + e<sup>-</sup> &rarr; SO<sub>4</sub> <sup>2-</sup> + SO<sub>4</sub> <sup>-</sup>
+<!-- S<sub>2</sub>O<sub>8</sub> <sup>2-</sup> + TEMED  &rarr;  SO<sub>4</sub> <sup>.-</sup> + TEMED <sup>.+ </sup> + SO<sub>4</sub> <sup>2-</sup> -->
+
+$\mathrm{S_2O_8^{2-} + TEMED \rightarrow SO_4^{\bullet-} + TEMED^{\bullet+} + SO_4^{2-}}$
 
 <div align="center">
 <img src="images/Fig1.png" class="img-fluid">
@@ -57,7 +59,7 @@ or dithiotritol (DTT) helps to break disulphide (-S-S-) linkages in the protein.
 seen as distinct bands corresponding to their molecular weights (Figure 2).
 
 <div align="center">
-<img src="images/Fig2.png" class="img-fluid">
+<img src="images/exp5_fig2.png" class="img-fluid">
 <p>Figure 2: The principle of SDS-PAGE</p>
 </div>
 
