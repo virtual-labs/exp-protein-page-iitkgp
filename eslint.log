@@ -1,0 +1,452 @@
+
+/home/runner/work/exp-protein-page-iitkgp/exp-protein-page-iitkgp/experiment/simulation/js/jsplumb.js
+     68:9   warning  'root' is assigned a value but never used                                  no-unused-vars
+    130:18  warning  'i' is already defined                                                     no-redeclare
+    184:18  warning  'i' is already defined                                                     no-redeclare
+    242:22  warning  'j' is already defined                                                     no-redeclare
+    264:56  warning  't' is defined but never used                                              no-unused-vars
+    279:26  warning  'j' is already defined                                                     no-redeclare
+    582:9   warning  'exports' is not defined                                                   no-undef
+    616:1   warning  Unnecessary semicolon                                                      no-extra-semi
+    626:9   warning  'exports' is not defined                                                   no-undef
+    661:9   warning  '_normal' is assigned a value but never used                               no-unused-vars
+    672:9   warning  '_lineLength' is assigned a value but never used                           no-unused-vars
+    706:9   warning  '_theta' is assigned a value but never used                                no-unused-vars
+    725:9   warning  '_intersects' is assigned a value but never used                           no-unused-vars
+    747:9   warning  '_encloses' is assigned a value but never used                             no-unused-vars
+    764:9   warning  '_pointOnLine' is assigned a value but never used                          no-unused-vars
+    781:9   warning  '_perpendicularLineTo' is assigned a value but never used                  no-unused-vars
+    789:1   warning  Unnecessary semicolon                                                      no-extra-semi
+    846:28  warning  'view' is defined but never used                                           no-unused-vars
+    846:34  warning  'target' is defined but never used                                         no-unused-vars
+    846:42  warning  'pageX' is defined but never used                                          no-unused-vars
+    846:49  warning  'pageY' is defined but never used                                          no-unused-vars
+    846:56  warning  'screenX' is defined but never used                                        no-unused-vars
+    846:65  warning  'screenY' is defined but never used                                        no-unused-vars
+    846:74  warning  'clientX' is defined but never used                                        no-unused-vars
+    846:83  warning  'clientY' is defined but never used                                        no-unused-vars
+   1040:58  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1082:39  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1132:9   warning  'touchstart' is assigned a value but never used                            no-unused-vars
+   1132:36  warning  'touchend' is assigned a value but never used                              no-unused-vars
+   1132:59  warning  'touchmove' is assigned a value but never used                             no-unused-vars
+   1137:54  warning  Unnecessary escape character: \.                                           no-useless-escape
+   1223:73  warning  Invalid typeof comparison value                                            valid-typeof
+   1286:38  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1288:51  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1310:29  warning  'el' is defined but never used                                             no-unused-vars
+   1310:33  warning  'event' is defined but never used                                          no-unused-vars
+   1310:40  warning  'children' is defined but never used                                       no-unused-vars
+   1310:50  warning  'fn' is defined but never used                                             no-unused-vars
+   1457:9   warning  'exports' is not defined                                                   no-undef
+   1490:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   1595:54  warning  Unnecessary escape character: \.                                           no-useless-escape
+   1719:42  warning  'scope' is defined but never used                                          no-unused-vars
+   1727:13  warning  'scroll' is assigned a value but never used                                no-unused-vars
+   1875:13  warning  '_addFilter' is assigned a value but never used                            no-unused-vars
+   1876:13  warning  '_removeFilter' is assigned a value but never used                         no-unused-vars
+   2091:31  warning  Empty block statement                                                      no-empty
+   2280:42  warning  'scope' is defined but never used                                          no-unused-vars
+   2300:56  warning  'drag' is defined but never used                                           no-unused-vars
+   2388:13  warning  '_getMatchingDroppables' is assigned a value but never used                no-unused-vars
+   2432:18  warning  'i' is already defined                                                     no-redeclare
+   2754:40  warning  'spec' is defined but never used                                           no-unused-vars
+   2777:38  warning  'spec' is defined but never used                                           no-unused-vars
+   2862:9   warning  'exports' is not defined                                                   no-undef
+   2874:42  warning  'exports' is not defined                                                   no-undef
+   2915:19  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3011:26  warning  Unnecessary escape character: \.                                           no-useless-escape
+   3012:40  warning  Unnecessary escape character: \[                                           no-useless-escape
+   3180:36  warning  '_protoFn' is defined but never used                                       no-unused-vars
+   3188:45  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3188:83  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3201:41  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3201:79  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3242:42  warning  Empty block statement                                                      no-empty
+   3320:23  warning  Empty block statement                                                      no-empty
+   3488:2   warning  Unnecessary semicolon                                                      no-extra-semi
+   3553:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   3585:9   warning  'eventFilters' is assigned a value but never used                          no-unused-vars
+   3604:9   warning  '_each' is assigned a value but never used                                 no-unused-vars
+   4583:13  warning  '_setDraggable' is assigned a value but never used                         no-unused-vars
+   4807:56  warning  'args' is defined but never used                                           no-unused-vars
+   4855:60  warning  'cEl' is assigned a value but never used                                   no-unused-vars
+   5481:13  warning  '_unmanage' is assigned a value but never used                             no-unused-vars
+   5576:68  warning  'jsPlumbInstance' is assigned a value but never used                       no-unused-vars
+   6146:39  warning  'scope' is defined but never used                                          no-unused-vars
+   6751:9   warning  'exports' is not defined                                                   no-undef
+   6766:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   6882:36  warning  'ignoreAttachedElements' is defined but never used                         no-unused-vars
+   7059:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   7304:41  warning  'doNotRepaint' is defined but never used                                   no-unused-vars
+   7309:50  warning  'doNotRepaint' is defined but never used                                   no-unused-vars
+   7374:53  warning  'fireEvent' is defined but never used                                      no-unused-vars
+   7374:64  warning  'originalEvent' is defined but never used                                  no-unused-vars
+   7488:52  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7534:39  warning  'startParams' is defined but never used                                    no-unused-vars
+   8111:17  warning  'elId' is assigned a value but never used                                  no-unused-vars
+   8348:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   8865:52  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8889:52  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8901:21  warning  'jsPlumb' is not defined                                                   no-undef
+   8984:1   warning  Unnecessary semicolon                                                      no-extra-semi
+   9709:27  warning  'Biltong' is not defined                                                   no-undef
+  10061:23  warning  'jsPlumbUtil' is not defined                                               no-undef
+  10293:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  10323:53  warning  'x' is defined but never used                                              no-unused-vars
+  10323:56  warning  'y' is defined but never used                                              no-unused-vars
+  10350:46  warning  'x1' is defined but never used                                             no-unused-vars
+  10350:50  warning  'y1' is defined but never used                                             no-unused-vars
+  10350:54  warning  'x2' is defined but never used                                             no-unused-vars
+  10350:58  warning  'y2' is defined but never used                                             no-unused-vars
+  10383:17  warning  '_super' is assigned a value but never used                                no-unused-vars
+  10441:46  warning  '_' is defined but never used                                              no-unused-vars
+  10643:17  warning  '_super' is assigned a value but never used                                no-unused-vars
+  10789:17  warning  '_super' is assigned a value but never used                                no-unused-vars
+  11112:13  warning  'dumpSegmentsToConsole' is assigned a value but never used                 no-unused-vars
+  11168:48  warning  'anchorPoint' is defined but never used                                    no-unused-vars
+  11168:61  warning  'orientation' is defined but never used                                    no-unused-vars
+  11168:74  warning  'endpointStyle' is defined but never used                                  no-unused-vars
+  11168:89  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11201:13  warning  '_super' is assigned a value but never used                                no-unused-vars
+  11207:76  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11228:13  warning  '_super' is assigned a value but never used                                no-unused-vars
+  11233:76  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11244:40  warning  'params' is defined but never used                                         no-unused-vars
+  11322:48  warning  'orientation' is defined but never used                                    no-unused-vars
+  11322:61  warning  'endpointStyle' is defined but never used                                  no-unused-vars
+  11322:76  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11348:40  warning  'd' is defined but never used                                              no-unused-vars
+  11348:43  warning  'style' is defined but never used                                          no-unused-vars
+  11348:50  warning  'anchor' is defined but never used                                         no-unused-vars
+  11391:13  warning  '_super' is assigned a value but never used                                no-unused-vars
+  11394:48  warning  'orientation' is defined but never used                                    no-unused-vars
+  11394:61  warning  'endpointStyle' is defined but never used                                  no-unused-vars
+  11394:76  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11410:32  warning  'style' is defined but never used                                          no-unused-vars
+  11410:39  warning  'anchor' is defined but never used                                         no-unused-vars
+  11443:76  warning  'connectorPaintStyle' is defined but never used                            no-unused-vars
+  11472:27  warning  'instance' is defined but never used                                       no-unused-vars
+  11472:37  warning  'component' is defined but never used                                      no-unused-vars
+  11541:43  warning  'component' is defined but never used                                      no-unused-vars
+  11705:17  warning  'jsPlumb' is not defined                                                   no-undef
+  11812:37  warning  'component' is defined but never used                                      no-unused-vars
+  11822:29  warning  'containerExtents' is defined but never used                               no-unused-vars
+  11850:37  warning  'params' is defined but never used                                         no-unused-vars
+  11863:42  warning  'currentConnectionPaintStyle' is defined but never used                    no-unused-vars
+  11907:13  warning  'labelWidth' is assigned a value but never used                            no-unused-vars
+  11907:32  warning  'labelHeight' is assigned a value but never used                           no-unused-vars
+  11907:52  warning  'labelText' is assigned a value but never used                             no-unused-vars
+  11907:70  warning  'labelPadding' is assigned a value but never used                          no-unused-vars
+  11997:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  12441:35  warning  'conn' is defined but never used                                           no-unused-vars
+  12441:41  warning  'endpointIndex' is defined but never used                                  no-unused-vars
+  12445:37  warning  'conn' is defined but never used                                           no-unused-vars
+  12445:43  warning  'endpointIndex' is defined but never used                                  no-unused-vars
+  12453:56  warning  'jsPlumb' is not defined                                                   no-undef
+  12489:38  warning  '_el' is defined but never used                                            no-unused-vars
+  12489:43  warning  'targetGroup' is defined but never used                                    no-unused-vars
+  12539:25  warning  'jsPlumbUtil' is not defined                                               no-undef
+  12883:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  12899:41  warning  'lastOrientation' is assigned a value but never used                       no-unused-vars
+  12903:13  warning  'loopbackRadius' is assigned a value but never used                        no-unused-vars
+  12904:13  warning  'isLoopbackCurrently' is assigned a value but never used                   no-unused-vars
+  13248:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  13257:13  warning  'curviness' is assigned a value but never used                             no-unused-vars
+  13259:13  warning  'proximityLimit' is assigned a value but never used                        no-unused-vars
+  13262:13  warning  'isLoopbackCurrently' is assigned a value but never used                   no-unused-vars
+  13401:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  13496:13  warning  'clockwise' is assigned a value but never used                             no-unused-vars
+  13596:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  13603:30  warning  'params' is defined but never used                                         no-unused-vars
+  13607:46  warning  '_' is defined but never used                                              no-unused-vars
+  13628:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  14033:35  warning  'style' is defined but never used                                          no-unused-vars
+  14056:35  warning  'style' is defined but never used                                          no-unused-vars
+  14092:13  warning  'self' is assigned a value but never used                                  no-unused-vars
+  14251:1   warning  Unnecessary semicolon                                                      no-extra-semi
+  14444:39  warning  'jsPlumb' is not defined                                                   no-undef
+  14473:29  warning  'jsPlumb' is not defined                                                   no-undef
+  14480:38  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  14481:39  warning  'jsPlumb' is not defined                                                   no-undef
+  14548:40  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  14639:22  warning  'jsPlumb' is not defined                                                   no-undef
+  14644:24  warning  'jsPlumb' is not defined                                                   no-undef
+  14770:26  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  14783:13  warning  'jsPlumb' is not defined                                                   no-undef
+  14788:18  warning  'jsPlumb' is not defined                                                   no-undef
+  14797:13  warning  'jsPlumb' is not defined                                                   no-undef
+  14802:17  warning  'jsPlumb' is not defined                                                   no-undef
+  14803:17  warning  'jsPlumb' is not defined                                                   no-undef
+  14805:17  warning  'jsPlumb' is not defined                                                   no-undef
+  14809:13  warning  'jsPlumb' is not defined                                                   no-undef
+  14815:17  warning  'jsPlumb' is not defined                                                   no-undef
+  14853:18  warning  'jsPlumb' is not defined                                                   no-undef
+  14901:22  warning  'jsPlumb' is not defined                                                   no-undef
+  14982:20  warning  'jsPlumb' is not defined                                                   no-undef
+  14996:13  warning  'jsPlumb' is not defined                                                   no-undef
+  15008:18  warning  'jsPlumb' is not defined                                                   no-undef
+  15011:25  warning  'jsPlumb' is not defined                                                   no-undef
+  15013:35  warning  'jsPlumb' is not defined                                                   no-undef
+  15014:30  warning  'jsPlumb' is not defined                                                   no-undef
+  15015:45  warning  'jsPlumb' is not defined                                                   no-undef
+  15016:45  warning  'jsPlumb' is not defined                                                   no-undef
+  15017:46  warning  'jsPlumb' is not defined                                                   no-undef
+  15133:36  warning  'el' is defined but never used                                             no-unused-vars
+  15133:40  warning  'options' is defined but never used                                        no-unused-vars
+  15136:36  warning  'el' is defined but never used                                             no-unused-vars
+  15136:40  warning  'options' is defined but never used                                        no-unused-vars
+  15152:45  warning  'zoom' is defined but never used                                           no-unused-vars
+  15192:33  warning  'spec' is defined but never used                                           no-unused-vars
+  15201:31  warning  'spec' is defined but never used                                           no-unused-vars
+  15210:38  warning  'posseId' is defined but never used                                        no-unused-vars
+  15263:23  warning  'el' is defined but never used                                             no-unused-vars
+  15263:27  warning  'event' is defined but never used                                          no-unused-vars
+  15263:34  warning  'callback' is defined but never used                                       no-unused-vars
+  15272:24  warning  'el' is defined but never used                                             no-unused-vars
+  15272:28  warning  'event' is defined but never used                                          no-unused-vars
+  15272:35  warning  'callback' is defined but never used                                       no-unused-vars
+
+/home/runner/work/exp-protein-page-iitkgp/exp-protein-page-iitkgp/experiment/simulation/js/main.js
+     7:10  warning  'start' is defined but never used                no-unused-vars
+    16:10  warning  'restartexp' is defined but never used           no-unused-vars
+    20:10  warning  'gel_resolve' is defined but never used          no-unused-vars
+    26:3   warning  'canvasider' is not defined                      no-undef
+    27:3   warning  'ctxsr' is not defined                           no-undef
+    27:11  warning  'canvasider' is not defined                      no-undef
+    33:5   warning  'ctxsr' is not defined                           no-undef
+    34:5   warning  'ctxsr' is not defined                           no-undef
+    35:5   warning  'ctxsr' is not defined                           no-undef
+    36:5   warning  'ctxsr' is not defined                           no-undef
+    37:5   warning  'ctxsr' is not defined                           no-undef
+    38:5   warning  'ctxsr' is not defined                           no-undef
+    39:5   warning  'ctxsr' is not defined                           no-undef
+    45:30  warning  'canvasider' is not defined                      no-undef
+    55:5   warning  'cancelani' is not defined                       no-undef
+    63:10  warning  'stacking_gel' is defined but never used         no-unused-vars
+    70:3   warning  'canvasides' is not defined                      no-undef
+    71:3   warning  'ctxss' is not defined                           no-undef
+    71:11  warning  'canvasides' is not defined                      no-undef
+    77:5   warning  'ctxss' is not defined                           no-undef
+    78:5   warning  'ctxss' is not defined                           no-undef
+    79:5   warning  'ctxss' is not defined                           no-undef
+    80:5   warning  'ctxss' is not defined                           no-undef
+    81:5   warning  'ctxss' is not defined                           no-undef
+    82:5   warning  'ctxss' is not defined                           no-undef
+    83:5   warning  'ctxss' is not defined                           no-undef
+    89:30  warning  'canvasides' is not defined                      no-undef
+    99:5   warning  'cancelani' is not defined                       no-undef
+   105:10  warning  'placecomb' is defined but never used            no-unused-vars
+   275:10  warning  'removecomb' is defined but never used           no-unused-vars
+   311:10  warning  'preprotein_sample' is defined but never used    no-unused-vars
+   322:10  warning  'spin_sample' is defined but never used          no-unused-vars
+   340:5   warning  '$' is not defined                               no-undef
+   341:5   warning  '$' is not defined                               no-undef
+   347:10  warning  'addbuffer' is defined but never used            no-unused-vars
+   353:10  warning  'addbuffertoelec' is defined but never used      no-unused-vars
+   361:3   warning  'canvaside1' is not defined                      no-undef
+   362:3   warning  'ctxs1' is not defined                           no-undef
+   362:11  warning  'canvaside1' is not defined                      no-undef
+   368:5   warning  'ctxs1' is not defined                           no-undef
+   369:5   warning  'ctxs1' is not defined                           no-undef
+   370:5   warning  'ctxs1' is not defined                           no-undef
+   371:5   warning  'ctxs1' is not defined                           no-undef
+   372:5   warning  'ctxs1' is not defined                           no-undef
+   373:5   warning  'ctxs1' is not defined                           no-undef
+   374:5   warning  'ctxs1' is not defined                           no-undef
+   380:28  warning  'canvaside1' is not defined                      no-undef
+   390:5   warning  'cancelani' is not defined                       no-undef
+   398:19  warning  'ctxdrop1' is assigned a value but never used    no-unused-vars
+   399:10  warning  'sample_loadM' is defined but never used         no-unused-vars
+   403:3   warning  'ctxsdrop1' is not defined                       no-undef
+   413:10  warning  'p1' is defined but never used                   no-unused-vars
+   414:3   warning  'clearp1' is not defined                         no-undef
+   419:17  warning  'clearp1' is not defined                         no-undef
+   422:3   warning  'clearmpcnge1' is not defined                    no-undef
+   427:5   warning  'clearmovep1' is not defined                     no-undef
+   432:17  warning  'clearmpcnge1' is not defined                    no-undef
+   433:17  warning  'clearmovep1' is not defined                     no-undef
+   443:10  warning  'p11' is defined but never used                  no-unused-vars
+   445:3   warning  'clearp11' is not defined                        no-undef
+   451:17  warning  'clearp11' is not defined                        no-undef
+   454:3   warning  'clearmpcnge11' is not defined                   no-undef
+   462:19  warning  'clearmpcnge11' is not defined                   no-undef
+   470:18  warning  'ctxsdrop2' is assigned a value but never used   no-unused-vars
+   471:10  warning  'sample_loadA' is defined but never used         no-unused-vars
+   487:10  warning  'p2' is defined but never used                   no-unused-vars
+   488:3   warning  'clearp2' is not defined                         no-undef
+   493:17  warning  'clearp2' is not defined                         no-undef
+   496:3   warning  'clearmpcnge2' is not defined                    no-undef
+   501:5   warning  'clearmovep2' is not defined                     no-undef
+   506:17  warning  'clearmpcnge2' is not defined                    no-undef
+   507:17  warning  'clearmovep2' is not defined                     no-undef
+   517:10  warning  'p22' is defined but never used                  no-unused-vars
+   519:3   warning  'clearp22' is not defined                        no-undef
+   525:17  warning  'clearp22' is not defined                        no-undef
+   528:3   warning  'clearmpcnge22' is not defined                   no-undef
+   536:19  warning  'clearmpcnge22' is not defined                   no-undef
+   544:19  warning  'ctxdrop3' is assigned a value but never used    no-unused-vars
+   545:10  warning  'sample_loadB' is defined but never used         no-unused-vars
+   551:3   warning  'ctxsdrop3' is not defined                       no-undef
+   561:10  warning  'p3' is defined but never used                   no-unused-vars
+   562:3   warning  'clearp3' is not defined                         no-undef
+   567:17  warning  'clearp3' is not defined                         no-undef
+   570:3   warning  'clearmpcnge3' is not defined                    no-undef
+   575:5   warning  'clearmovep3' is not defined                     no-undef
+   580:17  warning  'clearmpcnge3' is not defined                    no-undef
+   581:17  warning  'clearmovep3' is not defined                     no-undef
+   591:10  warning  'p33' is defined but never used                  no-unused-vars
+   593:3   warning  'clearp33' is not defined                        no-undef
+   599:17  warning  'clearp33' is not defined                        no-undef
+   602:3   warning  'clearmpcnge33' is not defined                   no-undef
+   610:19  warning  'clearmpcnge33' is not defined                   no-undef
+   618:19  warning  'ctxdrop4' is assigned a value but never used    no-unused-vars
+   619:10  warning  'sample_loadC' is defined but never used         no-unused-vars
+   626:3   warning  'ctxsdrop4' is not defined                       no-undef
+   636:12  warning  'p4' is defined but never used                   no-unused-vars
+   637:5   warning  'clearp4' is not defined                         no-undef
+   642:19  warning  'clearp4' is not defined                         no-undef
+   645:5   warning  'clearmpcnge4' is not defined                    no-undef
+   650:7   warning  'clearmovep4' is not defined                     no-undef
+   655:19  warning  'clearmpcnge4' is not defined                    no-undef
+   656:19  warning  'clearmovep4' is not defined                     no-undef
+   666:12  warning  'p44' is defined but never used                  no-unused-vars
+   668:5   warning  'clearp44' is not defined                        no-undef
+   674:19  warning  'clearp44' is not defined                        no-undef
+   677:5   warning  'clearmpcnge44' is not defined                   no-undef
+   685:21  warning  'clearmpcnge44' is not defined                   no-undef
+   694:10  warning  'start_ele' is defined but never used            no-unused-vars
+   709:10  warning  'closetopcover' is defined but never used        no-unused-vars
+   737:10  warning  'txtvolt' is defined but never used              no-unused-vars
+   767:10  warning  'txtvoltp' is defined but never used             no-unused-vars
+   797:10  warning  'txtvoltd' is defined but never used             no-unused-vars
+   824:10  warning  'runningel' is defined but never used            no-unused-vars
+   828:5   warning  '$' is not defined                               no-undef
+   829:5   warning  '$' is not defined                               no-undef
+   832:5   warning  '$' is not defined                               no-undef
+   833:5   warning  '$' is not defined                               no-undef
+   844:10  warning  'puttopup' is defined but never used             no-unused-vars
+   890:10  warning  'staining' is defined but never used             no-unused-vars
+   929:5   warning  '$' is not defined                               no-undef
+   930:5   warning  '$' is not defined                               no-undef
+   937:10  warning  'dstaining' is defined but never used            no-unused-vars
+   967:5   warning  '$' is not defined                               no-undef
+   968:5   warning  '$' is not defined                               no-undef
+   972:5   warning  '$' is not defined                               no-undef
+   973:5   warning  '$' is not defined                               no-undef
+   978:10  warning  'view_sample_UVlight' is defined but never used  no-unused-vars
+   992:3   warning  'canvasuv1' is not defined                       no-undef
+   993:3   warning  'ctxuv1' is not defined                          no-undef
+   993:12  warning  'canvasuv1' is not defined                       no-undef
+   994:20  warning  'ctxuv1' is not defined                          no-undef
+   994:54  warning  'canvasuv1' is not defined                       no-undef
+  1002:3   warning  'ctxuv1' is not defined                          no-undef
+  1005:3   warning  'ctxuv1' is not defined                          no-undef
+  1006:3   warning  'ctxuv1' is not defined                          no-undef
+  1007:3   warning  'ctxuv1' is not defined                          no-undef
+  1008:3   warning  'ctxuv1' is not defined                          no-undef
+  1009:3   warning  'ctxuv1' is not defined                          no-undef
+  1012:3   warning  'canvasuv2' is not defined                       no-undef
+  1013:3   warning  'ctxuv2' is not defined                          no-undef
+  1013:12  warning  'canvasuv2' is not defined                       no-undef
+  1014:21  warning  'ctxuv1' is not defined                          no-undef
+  1014:55  warning  'canvasuv2' is not defined                       no-undef
+  1022:3   warning  'ctxuv2' is not defined                          no-undef
+  1025:3   warning  'ctxuv2' is not defined                          no-undef
+  1026:3   warning  'ctxuv2' is not defined                          no-undef
+  1027:3   warning  'ctxuv2' is not defined                          no-undef
+  1028:3   warning  'ctxuv2' is not defined                          no-undef
+  1029:3   warning  'ctxuv2' is not defined                          no-undef
+  1057:3   warning  'canvass11' is not defined                       no-undef
+  1058:3   warning  'ctxgs11' is not defined                         no-undef
+  1058:13  warning  'canvass11' is not defined                       no-undef
+  1065:22  warning  'ctxgs11' is not defined                         no-undef
+  1065:60  warning  'canvass11' is not defined                       no-undef
+  1073:5   warning  'ctxgs11' is not defined                         no-undef
+  1078:5   warning  'ctxgs11' is not defined                         no-undef
+  1079:5   warning  'ctxgs11' is not defined                         no-undef
+  1080:5   warning  'ctxgs11' is not defined                         no-undef
+  1081:5   warning  'ctxgs11' is not defined                         no-undef
+  1082:5   warning  'ctxgs11' is not defined                         no-undef
+  1088:28  warning  'canvass11' is not defined                       no-undef
+  1098:5   warning  'cancelani1' is not defined                      no-undef
+  1108:3   warning  'canvass21' is not defined                       no-undef
+  1109:3   warning  'ctxgs21' is not defined                         no-undef
+  1109:13  warning  'canvass21' is not defined                       no-undef
+  1116:23  warning  'ctxgs21' is not defined                         no-undef
+  1116:61  warning  'canvass21' is not defined                       no-undef
+  1124:5   warning  'ctxgs21' is not defined                         no-undef
+  1129:5   warning  'ctxgs21' is not defined                         no-undef
+  1130:5   warning  'ctxgs21' is not defined                         no-undef
+  1131:5   warning  'ctxgs21' is not defined                         no-undef
+  1132:5   warning  'ctxgs21' is not defined                         no-undef
+  1133:5   warning  'ctxgs21' is not defined                         no-undef
+  1139:30  warning  'canvass21' is not defined                       no-undef
+  1149:5   warning  'cancelani2' is not defined                      no-undef
+  1156:3   warning  'canvass31' is not defined                       no-undef
+  1157:3   warning  'ctxgs31' is not defined                         no-undef
+  1157:13  warning  'canvass31' is not defined                       no-undef
+  1164:23  warning  'ctxgs31' is not defined                         no-undef
+  1164:61  warning  'canvass31' is not defined                       no-undef
+  1172:5   warning  'ctxgs31' is not defined                         no-undef
+  1177:5   warning  'ctxgs31' is not defined                         no-undef
+  1178:5   warning  'ctxgs31' is not defined                         no-undef
+  1179:5   warning  'ctxgs31' is not defined                         no-undef
+  1180:5   warning  'ctxgs31' is not defined                         no-undef
+  1181:5   warning  'ctxgs31' is not defined                         no-undef
+  1187:30  warning  'canvass31' is not defined                       no-undef
+  1197:5   warning  'cancelani3' is not defined                      no-undef
+  1203:3   warning  'canvass41' is not defined                       no-undef
+  1204:3   warning  'ctxgs41' is not defined                         no-undef
+  1204:13  warning  'canvass41' is not defined                       no-undef
+  1211:23  warning  'ctxgs41' is not defined                         no-undef
+  1211:61  warning  'canvass41' is not defined                       no-undef
+  1219:5   warning  'ctxgs41' is not defined                         no-undef
+  1224:5   warning  'ctxgs41' is not defined                         no-undef
+  1225:5   warning  'ctxgs41' is not defined                         no-undef
+  1226:5   warning  'ctxgs41' is not defined                         no-undef
+  1227:5   warning  'ctxgs41' is not defined                         no-undef
+  1228:5   warning  'ctxgs41' is not defined                         no-undef
+  1234:30  warning  'canvass41' is not defined                       no-undef
+  1244:5   warning  'cancelani4' is not defined                      no-undef
+  1352:10  warning  'cancelmsg' is defined but never used            no-unused-vars
+
+/home/runner/work/exp-protein-page-iitkgp/exp-protein-page-iitkgp/experiment/simulation/js/volconnection.js
+    3:5   warning  'jsPlumb' is not defined                         no-undef
+    8:13  warning  'addDisc' is assigned a value but never used     no-unused-vars
+   10:21  warning  'e' is assigned a value but never used           no-unused-vars
+   10:25  warning  'prepare' is not defined                         no-undef
+   17:13  warning  'reset' is assigned a value but never used       no-unused-vars
+   30:55  warning  'ui' is defined but never used                   no-unused-vars
+   32:25  warning  'jsPlumb' is not defined                         no-undef
+   38:29  warning  'jsPlumb' is not defined                         no-undef
+   46:25  warning  'id' is assigned a value but never used          no-unused-vars
+  120:20  warning  'jsPlumb' is not defined                         no-undef
+  138:17  warning  'e1' is assigned a value but never used          no-unused-vars
+  140:17  warning  'e2' is assigned a value but never used          no-unused-vars
+  141:17  warning  'e3' is assigned a value but never used          no-unused-vars
+  142:17  warning  'e4' is assigned a value but never used          no-unused-vars
+  143:13  warning  'e5' is not defined                              no-undef
+  144:17  warning  'e6' is not defined                              no-undef
+  146:13  warning  'e7' is not defined                              no-undef
+  147:17  warning  'e8' is not defined                              no-undef
+  149:13  warning  'e9' is not defined                              no-undef
+  150:17  warning  'e10' is not defined                             no-undef
+  158:58  warning  'originalEvent' is defined but never used        no-unused-vars
+  182:9   warning  'jsPlumb' is not defined                         no-undef
+  401:17  warning  'count' is assigned a value but never used       no-unused-vars
+  586:17  warning  '$' is not defined                               no-undef
+  587:17  warning  '$' is not defined                               no-undef
+  590:17  warning  '$' is not defined                               no-undef
+  591:17  warning  '$' is not defined                               no-undef
+  614:17  warning  Unreachable code                                 no-unreachable
+  628:34  warning  'cancelani1' is not defined                      no-undef
+  629:34  warning  'cancelani2' is not defined                      no-undef
+  630:34  warning  'cancelani3' is not defined                      no-undef
+  631:34  warning  'cancelani4' is not defined                      no-undef
+  680:17  warning  Move function declaration to function body root  no-inner-declarations
+  693:17  warning  Move function declaration to function body root  no-inner-declarations
+
+✖ 442 problems (0 errors, 442 warnings)
+  0 errors and 17 warnings potentially fixable with the `--fix` option.
+
